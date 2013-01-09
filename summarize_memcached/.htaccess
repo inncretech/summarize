@@ -1,0 +1,4 @@
+ErrorDocument 404 /summarize_memcached/seo.php
+
+php_flag display_errors 1
+php_value error_reporting 8191

@@ -1,0 +1,1 @@
+[17-Aug-2012 00:42:00] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/codemy23/public_html/fb-sdk/tests/tests.php on line 18
