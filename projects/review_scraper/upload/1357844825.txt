@@ -1,0 +1,229 @@
+//Review
+236 of 244 people found the following review helpful                       5.0 out of 5 stars             Incredible smartphone, best Android device ever, December 13, 2011                        By&nbsp;Keith   - See all my reviews                       This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         Simply put, this is the best Android device ever.
+
+Pros:
+1. Incredibly sexy: thin but not too thin, slightly contoured, more rigid than other Samsung Android devices thanks to the internal metal frame
+2. Large, bright, detailed screen.  However it doesn't come off as huge due to minimal bezel and the use of the bottom portion of the screen for contextual soft-keys.  The screen uses a pentile-matrix configuration, but the pixel density is so good that you really can't notice unless you look very closely and even then it's difficult to tell.  The blacks melt into to the bezel beautifully and the colors pop.
+3. You get the very latest version of Android, with instant updates from Google.  I have grown to despise carrier/OEM UI skins and their accompanying OS update delays.  The Android 4.0 UI is a huge upgrade and behaves much much better, making such carrier/OEM skins even less desirable.  The interface seems to have been reworked from the ground up for smooth, responsive operation.  Transitions are slick, and apps run great.  I haven't had app compatibility issues some others have mentioned; some games haven't been updated for 4.0 yet but most apps I use work fine.  The whole experience is leaps and bounds over any prior version of Android.  4.0 seems made for this phone and works perfectly.
+4. If you get the unlocked GSM version, it works on any GSM network in the world with up to 21mbps HSPA+ speeds.  I bought it overseas and popped in a $30/mo T-Mobile SIM and it works perfectly, I get speeds between 3-8mbps in the SF Bay Area, with seamless transitions between EDGE, HSPA/HSPA+.  Not to mention no carrier bloatware!
+5. Everything in the OS works great: Wifi hotspot, bluetooth tethering, bluetooth HID (I tried Apple wireless keyboard and trackpad), battery and bandwidth monitoring, music controls on earphones, built-in equalizer, HDMI out over MHL.  I am amazed at the relative lack of bugs in the OS given how new it is.
+6. The device is relatively easy to take apart (according to iFixit.com) and OEM parts are popping up on ebay, so if you break something or something stops working, you can fix it relatively easily and cheaply (except the screen, don't break that! You would have to replace the whole screen/digitizer/housing assembly)
+7. Thanks to having a single worldwide GSM model, there are plenty of compatible accessories available already
+8. Touch sensitivity on the screen is great.  The UI 'sticks' to your finger much closer than other Android devices I've used, though still not *quite* as close as iPhone -- however the iPhone people who have used my phone don't seem to notice.  In fact, this is the first Android device I've had where iPhone people don't immediately fault-find when they use it, and seem kind of thoughtful and chagrined instead
+9. Battery life seems pretty good for an Android device.  Not as good as an iPhone, but I can easily make it through a whole day of moderate-to-heavy use.  The removable battery means you can improve the battery life with an extended battery and can replace it when it starts to give out.  The OEM extended battery provides a modest boost in battery life and fits the phone's shape very nicely -- I highly recommend this upgrade unless you really like the phone's recessed back
+
+Cons:
+1. Lack of an SD card slot and only 16GB of internal memory.  This is the only thing that bothers me.  However USB OTG solves part of this problem (with a special cable, you can plug in an external mass storage device -- this does not currently work without rooting, but official support will be included in a future firmware update as confirmed by Google)
+2. Screen is scratchable... it's not Gorilla Glass but the point is, even Gorilla Glass scratches given contact with the right material.  Order a good screen protector when you order the phone and don't take off the retail packaging screen film until you are ready to put on the screen protector.  This will keep your display perfect for years.
+3. Screen doesn't seem *quite* as bright as the SGS2 screen, but it's still brighter than any LCD I've used.
+4. You still can't buy the GSM version with a Samsung USA warranty... but if you buy it from a reputable international retailer they will broker your international warranty claims, or you can get it with a 3rd-party USA warranty from such as Newegg.  Maybe one day you will be able to get the GSM version with a Samsung USA warranty, but I'm starting to lose hope.  I even tried contacting Samsung USA support but they won't touch the i9250 for repairs, even if you're willing to pay
+5. Most of the software issues I previously noted have been fixed with updates from Google.  Camera quality has definitely improved, but still falls short of some Android phones and definitely the iPhone.  Hopefully this will continue to improve with further updates
+6. Buying the unlocked GSM version is still moderately expensive, and will always be more expensive than buying it subsidized on contract.  However no USA carrier has announced they will be carrying the GSM version so maybe it will never happen.  I had a hard time parting with the money until I received the device... but after owning it for a day, any regrets were completely gone.  I would pay that money again in a heartbeat
+
+Here are some additional cons if you decide to get the VZW version:
+1. Locked down to the VZW USA network on an expensive monthly plan (about $80/mo minimum, and a $350 ETF) with data caps (2-4GB/mo)
+2. LTE drains battery life (this has improved considerably with software updates, but still drains battery quicker when the LTE radio is on)
+3. VZW bloatware installed but can be disabled, they charge an extra $20/mo for wifi hotspot, firmware version disparity with GSM model
+4. A little bit fatter and heavier, making it less compatible with accessories for the international GSM version
+5. IMHO: you're not really getting the pure experience in terms of the OS, it's sullied by VZW's strong-arm business decisions
+
+Some pros for the VZW version:
+1. You can pay around 100+tax for the device with new/reup contract
+2. VZW LTE is crazy fast (but you will hit the data cap that much quicker)
+3. USA warranty and carrier support
+4. 32GB internal memory
+
+Bottom line: if you like Android, you will love this phone and won't be able to go back to anything else unless you need/want some hardware support outside of these specs (eg. you really prefer a smaller phone, or you really need an SD slot)                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (58)
+
+
+//Review
+144 of 157 people found the following review helpful                       5.0 out of 5 stars             Awesome Device, although Price is High, December 1, 2011                        By&nbsp;Stephen M Knipe II   - See all my reviews                       This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         The Galaxy Nexus is an awesome device with a stunning display. Despite many other reviews online, ICS (the new version of Android launching with this device) is pretty easy to navigate/figure out. It does have a learning curve (even for die-hard long-time Android users), but much of the OS has been made more intuitive- one just has to step back and quit over-thinking what you are trying to do (or remembering previously complicated menus for those of us that have been around Android for a while), as (generally) everything you need is right there on the screen (unless you can't do it).
+
+  My only two complaints are:
+  1.)  Many apps still have not been updated to play nicely with ICS by  their developers (but this will change when Verizon launches the  device and ICS becomes more prevalent), and
+  2.)  The price. This phone is expensive, and while completely worth it for  power-users such as myself, many people will struggle with this. The  main reason for expense right now is the fact that it must be imported  to the US from the UK (and soon Japan/Germany/elsewhere?), so there  are fees and shipping associated with that. Also, once the device does  officially launch here in the US, Verizon (and other carriers  hopefully) will subsidize it and bring the price down a  bit).
+
+  Some people complain about the camera on this phone, but as with any other camera phone, there is a lot of variation. Yes there are bad pics out there on the various forums, but there are a lot of really good pictures taken with it by people who know the ins and outs of photography. The shutter and operation of the camera is lagless (perfect and fast), and I have found it to perform better than any of my other phones in low-light situations. It performs (in my experience) on par with the iPhone 4 (I have not played with a 4s yet so I can't say anything about that device). At the end of the day, if you want professional pictures, buy a professional camera. No phone will give you the quality of a DSLR. This phone is much more than sufficient for capturing the quick memories relevant for sharing via email/text messages or social media.
+
+  Also, there is a bug where the firmware does not debounce the volume rocker properly (there is an unshielded radio amplifier located near the rocker's circuitry that when connected to or near 2G signal on the 900 mHz band the volume rocker will think it is being pressed due to the interference), a software OTA update began being pushed out to phones yesterday (11/30/2011) to fix this issue (verified by many user reports to have fixed it). This issue affected only users outside of the US (we do not use the 900 mHz frequency band here in the states). If nothing else, this illustrates the greatest reason to buy this phone. The issue was discovered as widespread Sat. 11/19, Google's firmware fix is dated (as being compiled on/completed on) 11/21 (the following Monday), and the 9 days in between fix completion and deployment is due to testing and logistics of pushing out an OTA update. 11 days from issue identification to resolution, which is outstanding. The main reason to buy this phone is Google's dedication to this product line (the "Nexus" Series) and its software. No waiting on carriers and OEMs to write/modify/reject/etc. each little update the phone gets.
+
+I hope this helps someone realize this truly great device.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (9)
+
+
+//Review
+38 of 38 people found the following review helpful                       5.0 out of 5 stars             If you like vanilla Android OS this is the one., April 30, 2012                        By&nbsp;D. Harry   - See all my reviews
+ (REAL NAME)   &nbsp;&nbsp;                          Amazon Verified Purchase(What's this?)                         This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         I have had my Galaxy Nexus (GNex) for about a week and this is what I have observed.
+
+PROS:
+1. Super slim profile.
+2. Vanilla ICS. No Motoblur, Sense or Touchwiz on this. Just stock Android which helps with speed. I think this is the only phone available with the stock experience.
+3. Runs on T-Mobile HSPA+ and AT&T HSPA. The fastest speeds I have gotten were with T-Mobile, 5MBup/5MB down.
+4. 720p screen. Super amoled. People make a big fuss about it being a Pentile matrix screen. It isn't a big deal, I can't tell even when I press my nose up to the screen, and you shouldn't worry about it either.
+5. Build quality is excellent. Again people compare it to the iPhone and it's metal and glass construction. But for that you pay with it being easily broken. The Gnex has a internal metal frame which makes it rugged. Also although the screen isn't Gorilla Glass, it still is fortified glass, which is the same thing as Gorilla Glass, but without the Corning branding.
+6. Decent battery life. On stand by I have no problem getting through 36 hours, also there are extended batteries available right here on Amazon that will extend your battery life even longer. Unfortunately most of them don't come with NFC.
+7. NFC! It stands for Near Field Communication. It is a small wireless chip in the battery which allows you with your phone and the app Google Wallet to pay for purchases with your phone. I use the Google Prepaid card, load it up with money then wherever you have a place that supports wireless payments(tap) you just select credit, hold the phone over the terminal till it beeps, inter your pin and hold it back over and bam you've paid!  LOL it's still sort of a gimmick but I think it's better than Siri.
+
+Cons:
+1. Lack of an SD card slot. This might be a dealbreaker for someone who listens to a lot of music but I have found a compromise. You go to Google play store, and upload your music to the cloud. The service is free, I believe you can upload 20,000 songs for free and stream it unlimited to your phone.
+
+2. No US warranty. If you are buying this to use overseas you might get a warranty overseas, but when I bought my phone and called up Samsung and gave them the IMEI they said it wasn't in their system. I would advise US customers to buy the phone directly from Google because you get a 12 month warranty. I hear if you buy the phone with American Express you get a 1 year warranty as a benefit of the card.
+
+3.Software. The 2 builds that you should have on your phone are "Yakju" or "Takju". If your phone does not, there is a chance that you will not be able to update your phone over the air from Google. You will be at the mercy of Samsung for your Android software updates, which they have a terrible record of. There is a free app in the Play store called GN Official Update Checker that will tell you what build you have. If you are experienced with flashing bootloaders this can be changed to one of the 2 Google builds easily. If you don't want to deal with this please buy your phone from Google directly.
+
+I ended up returning this phone and bought it directly from Google. Your miles may vary.
+
+Essential Software: This is a list of software every Galaxy Nexus owner should have installed.
+I am only listing free software.
+
+1. Lightflow: The Gnex has a multicolored LED at the bottom of the phone near the virtual buttons that flashes and turns different colors depending on the phones status. Lightflow allows you to customize this. One thing about the LED is that it blinks slowly, so unless you are staring at it for a few seconds you might miss the blink. Lightflow can help you speed it up.
+
+2. Juice Defender Free: All GSM phone owners should have Juice Defender. it turns off the mobile data radio when your screen is off, saving valuable power. I have easily doubled my battery life. Unless you "need" to have your phones mobile connection on all the time to get email and Facebook status updates, use this. So when your screen is off you won't get any emails/alerts. You will get texts. When you power up the screen all of the will come at once. I don't think this works with Sprint/Verizon Galaxy Nexuses
+
+3. Volume+ (note do not get the free version on the market) The Gnex speaker can be too quite for some people, luckily there is Volume+ to boost it. Go to the Play store, find Volume+ and note the person who wrote it, then Google for his name. He has a web forum where he lets people download the paid version of his app for free once you register. The free version has a maximum volume boost of 4+, the paid version on his site goes up to 15+ I think.
+
+4. Waze. Google Maps is excellent but not really made for the serious driver. I have been using Waze almost exclusively for the last few months on my previous phone as a well as my Gnex. It is a free app but differences its self from GMaps is that it is community run and connected. You can either stay anonymous or create a profile. It will give you real time status updates of every driver in your area who has Waze on their phone and the traffic conditions that they are in. It also notifies you of speed cameras and radar traps.
+
+5. SMS Popup. Does exactly what it says.
+
+Update 3 weeks in: This is the best phone I have owned. It is super quick, everything works. I feel like it is a mini computer and I don't have to worry about stuff running out of memory or lagging. Just get this phone. The HTC One X and S are faster in benchmarks, but that doesn't make a phone better. Having stock android, decent hardware and direct Google support instead of dealing with the manufacturer for updates makes this the deal.
+
+7/3/12
+STILL the best phone I have ever owned. I installed Jellybean 4.1 on it and it is flowing! The phone is so good Apple went to a judge to ban it from being sold. Haters gonna hate.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (5)
+
+
+//Review
+122 of 140 people found the following review helpful                       5.0 out of 5 stars             Price of the phone Average, November 30, 2011                        By&nbsp;Streak   - See all my reviews                       This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         Everyone needs to realize the price of this phone is average for a brand new phone that's unsubsidized.  I paid this much for my Nexus One when it came out.  You have an option here, either you can buy it from Verizon for $199.99 with a 2 year contract and only be able to use it on verizon (Not bad if you're already with verizon) however if you want to use this phone with AT&T or T-Mobile then you will have to buy the GSM unlocked version which is unsubsidized.  The benefit of this is you can use it on any carrier that has the correct bandwidths (Pretty much an GSM carrier) in any country.  So if you're with AT&T now, you can buy the phone, have full data service but later if your decide to go to T-Mobile you can take your phone with you, exchange sim cards and ta-da...your phone works again, with full 4G data service on T-Mobile as well.
+
+So, there's a plus side and down side to both.  You can make the choice, but don't rate the phone poorly because you don't think it's a good deal because you can get it cheaper by being put under contract.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (8)
+
+
+//Review
+24 of 25 people found the following review helpful                       4.0 out of 5 stars             Generally pleased, January 2, 2012                        By&nbsp;Giovanni Glass  (Alexandria, VA USA)  - See all my reviews
+ (REAL NAME)   &nbsp;&nbsp;                          This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         ----3/22/12 Update----
+I have the 4.0.2 update. OTG USB works with any USB keyboard, USB mouse or Bluetooth keyboard or mouse. Supposedly there is an Ice Cream Sandwhich 4.0.5 update for the Verizon Galaxy Nexus that will trickle down to the GSM version. I hope USB memory stick support will come with that update.
+
+I can only seem to get 720p output from the USB MHL adapter. Some others have been able to get 1080p output. Note it's a *shared* screen, not a special screen for videos. What you see on the phone is what you get on the screen.
+
+I get occasional random reboots like once a week, but it rarely happens.
+
+Battery life is OK. I have a lot of apps installed like Facebook, Twitter and Skype that poll and gather data. The phone will last all day in standby. While surfing or using apps, I can get 2-3hours with the screen continuously on. On balance, I have to leave the phone plugged in at night to stay charged for the next day. The extended battery is available overseas and on eBay.
+
+Regarding Google Wallet, I side-loaded it using an APK from XDM. I was able to pay for some stuff at DuaneReade and 7-Eleven. It also supposedly works at RadioShack, CVS and RiteAide. None of them work with their rewards cards although you'd think it would. It works at the NJ Transit ticket kiosk at Penn Station. Google Wallet has been locked down tight recently and rooted users will have problems using the app. You are basically loading up a pre-paid credit card. When the balance is low, you have to fill it up more cash. It's hard to get to $0 balance. I think it's a neat feature, but I don't find myself using it all that much. Google *really* needs to open this app up to all NFC enabled phones, not just Sprint and AT&T Galaxy Nexus phones. I think there is an issue where the carriers want a cut of the transaction since it goes over their network. As it stands, NFC payments is a non-starter technology with very little market penetration. ISIS, the other competing technology, will release later this year and will probably become available on more phones with more carrier buy-in.
+
+I still haven't used NFC tags. I haven't seen them anywhere in NYC yet.
+
+T-Mobile GSM is decent in NYC. At times it can get really slow (2-3Mbps) with 180ms+ ping. That's not good for real-time gaming or VOIP. They also throttle you even though you have yet to hit your cap. Their web proxy will compress JPG images. You'll notice websites will look more block and pixellated. If you switch to a https/SSL browser connection, your JPGs will look normal.
+
+The OLED screen uses a pentile sub-pixel layout. To my eye, it kind of looks like film grain. You notice it on solid dark colors on the screen. You won't notice it on photographs which look vibrant and bright on OLED. Detail is good, but not as good as high as an iPhone 4s. There is definitely more resolution (1280x720, some of the pixels on the right side are used for the on-screen navigation buttons). 1080p H.264 videos up that I downloaded from Youtube up to 5Mbps streams play well on the phone.
+
+----------------------
+
+I have the GSM version of the Galaxy Nexus. I can't add anything new to what's already been said at length in other reviews. But I can add some observations.
+
+The bad:
+
+- OTG USB cable doesn't work with the current ROM 4.0.1 of Ice Cream Sandwich on the phone. Plugging a keyboard or mouse with the cable doesn't work. Bluetooth devices work however.
+
+- Even with a 4.0.2 ROM, plugging a USB memory stick won't mount. You have to hack around it with 3rd party apps to mount FAT32 partitions.
+
+- There is an issue where in landscape mode, the lower right side of the screen doesn't respond to touch input while in a game.
+
+Supposedly these issues will be fixed in a future update like 4.0.2. So far, I haven't gotten the over-the-air update.
+
+- Using Google Wallet and NFC is useless until Google officially releases Google Wallet in the US. I haven't tested the NFC share feature yet.
+
+- The GSM version only comes in a 16GB model. A 32GB model is supposedly available overseas for pre-order.
+
+- At the moment, you can't buy an official OEM battery that has the NFC antenna built in. You can find knock-off batteries sans NFC antenna for the phone from eBay.
+
+The good:
+
+- The phone accepts a T-Mobile SIM card and an AT&T SIM card in the US. I have a T-Mobile pre-paid SIM card and have a $30 Monthly4G 5GB plan. It works great. I'm getting 5 to 7 megabits down and 1 to 1.5 megabits up on HSPA+ in NYC.
+
+Overall I am pleased with the phone and will hold onto it for the next few years.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (5)
+
+
+//Review
+13 of 13 people found the following review helpful                       3.0 out of 5 stars             Solid phone that needs a bigger battery, August 27, 2012                        By&nbsp;Dave A.   - See all my reviews                       This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         I've used an unlocked HSPA+ Galaxy Nexus for a month. Overall, it's a very good phone. Having switched from a Blackberry (RIP!) this is my first Android phone so I can't compare it to other Android phones. It is thin, light and feels comfortable in my hand. However, it is a large phone and probably feels comfortable in my hand because I wear men's XL gloves.
+
+The screen is fine but not outstanding except maybe in ideal light. I've seen other phones with sharper screens including iPhones. I believe this phone uses a Pen Tile display and that type of display has been criticized for a lack of sharpness.
+
+The phone is fast and lags are not a problem. Some of that may be due to Jelly Bean, see below. HSPA+ seems to deliver data quickly. I understand that LTE is faster but this phone is plenty fast enough for me.
+
+Sound quality with calls is good. Pairing with my Blue Ant was no problem.
+
+The camera is relatively good but I've seen better pictures from other phones.
+
+The major drawback with this phone is it's battery life. It can make it morning to night only with very light usage. To preserve battery life I find myself turning off wifi, bluetooth and GPS if I am not using them. Fortunately, the operating system provides an easy widget to do this but it's still a pain and even then I have days where I have to recharge. The GPS in particular seems to consume power. To compensate I have USB charging cables in my car and briefcase and at my desk. I understand that LTE tends to use more power than HSPA+ and if that's true I would avoid this phone unless they have compensated somehow. This is a pretty good phone but it's of little use dead. I'd much prefer a somewhat thicker and heavier phone that relieves me of power management.
+
+One of the biggest benefits of buying an unlocked phone is that right after I started it up I received the upgrade from Android 4.0 (ICS I think) to 4.1 (Jelly Bean). The geek news regularly reports that users with locked Android phones must wait or do without Android upgrades. Bypassing carrier controls for operating system upgrades is a luxury usually reserved for iPhone users. Jelly Bean is supposed to be smoother and faster and that may be why this phone doesn't lag. If so, then unlocked is definitely the way to go.
+
+Another obvious benefit to buying an unlocked phone is the lack of a contract. I paid 349 for the phone which is a very low price for a phone barely off the cutting edge. I'll make up the premium I paid over a comparable phone had I bought it on contract in less than a year and then I'll be free to move to another device if I want.
+
+This phone would be a 5 if it had better battery life and a better screen.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comment
+
+
+//Review
+13 of 14 people found the following review helpful                       5.0 out of 5 stars             Galaxy Nexus gt-i9250, April 16, 2012                        By&nbsp;thos25   - See all my reviews                       Amazon Verified Purchase(What's this?)                         This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         I have been using this phone for about two weeks. I am very happy with it so far. It is a developers phone, so getting in and unlocking bootloader, rooting, and installing custom ROMS, etc is very easy to do. (Not that most phones arent).
+
+One of the main things people should be aware of is the different builds that are out there. There is a build known as yakju. This is directly updated by Google. You will get the most frequent and timeliest OTA updates with a yakju build. There are other variants out there as well. Yakjuxe, jakjuse, and a few others. These are not as desirable, as they are updated by either Samsung a carrier. You may wait longer to get android updates with these builds.
+
+If you wonder which version you have, install GN official update app, and the app will tell you which build you have. If you have yajku, great. If Not, search the net on how to unlock bootloader and flash yakju image onto it. It is a simple process, then you will be 100% pure Google. Of course, I am not responsible if you brick your phone...! And of course, this is only if you care to do so. Keeping a non yakju build will not harm you in any way. You will still get updates, just not quite as timely.
+
+Second, be aware that many retailers are selling DoCoMo branded Galaxy Nexus devices as a gt-i9250. These are in fact, SC-04D devices. Essentially the same, but often times have a sim lock issue associated with them. They will sometimes lose the unlocked sim and revert to a locked state. There is an app available to unlock it again, but it will lose the unique IMEI, and thereby could cause issues. I would personally stay away from an SC-04d.
+
+Now, to the phone. I love the camera. Coming from an HTC Evo 3D, the camera is very quick to capture the image. In low light situations the flash will slow down how quickly you can take pictures, but not too badly. If no flash is required the camera will take multiple photos quickly. Maybe 1-2 pics per second. Very quick compared to my previous phone. Also, I find that the image quality is superb for a 5mp.
+
+Software is terrific. ICS 4.0 is a huge leap from even where gingerbread left off. I like the ability to make folders especially. It helps me de-clutter my screens, which is always nice.
+
+The screen is very nice. Even though it is a pentile display, it is very nice to look at. Very clear. Again, coming from a QHD resolution on my Evo 3d, I am impressed.
+
+The phone also has a terrific form factor. I love the curved glass. The phone is very thin as well. I also like the overall form being slightly thicker on the bottom than at the top.
+
+The only thing that is potentially a negative is that Google and Facebook are in a bit of a spate with each other. I have found that the facebook integration on this phone is not as nice as on some others. Facebook is not allowed to sync contact info to your phone. So, if you are used to seeing peoples facebook photos on their contact info, you wont see it on this phone (at least for now). You can manually do it via the facebook app, but going through and assigning a pic to each person individually is tedious.
+
+Also, I recommend "myalbum" facebook photo uploader. Coming from my Evo 3d I was used to "FB for HTC sense". It allowed me to upload multiple photos at the same time, which was very nice. The stock FB app will not allow multiple uploads at the same time. MyAlbum is the app that will assist you in doing so.
+
+Overall, excellent phone. Amazing screen. Pure "Vanilla" Android. Can't go wrong.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (2)
+
+
+//Review
+13 of 14 people found the following review helpful                       5.0 out of 5 stars             best phone ever..., December 8, 2011                        By&nbsp;large and in charge  (planet, earth)  - See all my reviews                       This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         This phone hasn't released in the USA yet, but it an absolutely great phone and a strong showing of Google's Android.  The interface is awesome.  If you''re coming from Froyo or Gingerbread expect a learning curve from what you're used to.  Newcomers, welcome to Android 4.0.
+
+I imported mine, but it is the international unlocked gsm version.  To those who care, the cellular radio is average on this phone and par for Samsung.  Perhaps radio flashes might help.  If you're coming from a Nokia or Motorola phone expect a step down in reception.  Earpiece and loudspeaker are kinda low volume but good quality.  Perhaps an app like volume+ might help.  For those who care, it comes with a Texas Instruments sound chip.  Expect sound comparable to a Wolfson found in phones like Samsung Galaxy S or Motorola Atrix.  (extra tidbit, Texas Instruments bought Burr Brown a few years ago, wink) If you don't know, that means exceptional sound quality for a phone.  Bluetooth works great.  No issues so far.  Wifi speeds are great.  Mhl works great and looks great on a big screen.  As of now, using mhl you can only use landscape mode.  Notification led is limited to white with the stock rom.  There's a few bugs here and there but as par for a nexus phone, they will be fixed by google or if you're into flashing roms, fixed even faster by the development community.
+
+If you read my review you might've noticed I mentioned a lot of it's minor flaws.  In reality, this is Google's Developer Phone and will have/has a large development community.  A lot of the flaws/glitches/bugs will be fixed or improved upon.  Or if you prefer, replaced.  And that is part of the beauty of Android.  I was very hesitant to pay the over $700 USD to have this phone imported.  To sum up this phone and my review "This is by far the best phone and $700 I have spent EVER!"  Honestly, if you're itching for a release in your country, Scratch it.  Now.  Till it hurts.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (3)
+
+
+//Review
+9 of 9 people found the following review helpful                       4.0 out of 5 stars             Android 4 rocks!, March 14, 2012                        By&nbsp;Leandro Cassa   - See all my reviews                       Amazon Verified Purchase(What's this?)                         This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         Let ms try to briefly explain my 3 months of Galaxy Nexus.
+The phone is fast, responds very well to touch (indeed the best I've experienced on an Android device). The loud speakers are poor and sometimes I fell the ear speaker could be louder.
+The mic does not have noise reduction, I used to have a Motorola Droid and I could speak at the subway that the person on the otherside would hear me as if I was locked in my room.
+
+The phone is very light and although is big, it is not uncomfortable holding or putting into you pocket. Probably because its quite slima as well.
+
+The screen is big, bright, beautiful and somehow avoids a lot of finger print. The phone might get a bit warm if you abuse 3G (really abuse!Im not talking about syncing your services or using social networks).
+
+Both cameras do a great job and are very very fast without losing quality or resolution (again, the fastest phone camera I've ever seem).
+
+Baterry holds with no problems a whole day of pure abuse, this means I wake up and start hearing local music using my bluetooth headset, when I get to work I turn on wifi and keep on using my bluetooth headset, but now listening online music. Im usually playing around on g+, feeds and browser. So you can count that as well. If I do not abuse as I do usually it can hold on for 2 or 3 days with sync on.
+
+Last but sure not least, Androi 4 (or ICS), this just made ALL the difference. It is beautiful, smart, stable and has a good usability. I wont get in details on that, check out android site or youTube to see what is new.
+
+Bottom line, great device I strongly recommend!                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comment
+
+
+//Review
+8 of 8 people found the following review helpful                       4.0 out of 5 stars             Galaxy Nexus unlocked 16gb review from a former Nexus One user, February 19, 2012                        By&nbsp;umguy   - See all my reviews                       Amazon Verified Purchase(What's this?)                         This review is from:  Samsung I9250 Galaxy Nexus 16GB (Unlocked) (Wireless Phone Accessory)         I've had this phone for a weekend so far and I really like it.  Bought it from Global Mobiles and it came in 2 days.  Popped my T-Mobile sim right out of my Nexus One and into this phone and it was off and running (gotta love GSM).  Was worried that it wouldn't be a "yakju" device like others have reported and I would have to re-image it to get the proper Google updates.  Checked it and it was a "yakju" device out of the box.  It asked me to update the phone minutes after I turned it on for the first time to 4.0.2 which was great.  Haven't had any of the issues that others have reported.  It did crash and reboot once while I was in the middle of using an app but this was a little while after I had went into the developer setting and set the phone to force hardware 2D rendering.  I promptly went back and turned this setting off and it hasn't crashed since.  Better to wait for developers to enable this in their apps.  The phone feels really fast especially compared to my Nexus One (as expected for a dual-core device).  The phone has pretty good reception, I get HSPA+ in most places averaging 3 to 4 bars.  I'm still getting used to some of the changes in Android and the size of the phone as well.  Even though its made of plastic,  the phone feels well put together (other then the battery cover, see below), its no iPhone, but I feel it holds its own.  The screen is amazing on phone.  The camera is so so, if you want to take nice pictures then buy a real camera.
+
+My big gripes with the phone are:
+
+- The battery cover is a bit of a pain to put back on.  I was a little nervous I was going to break it putting it back on.
+- 16gb only with no mico-sd card slot.  I was holding out for the 32gb model which would have taken care of this but after it was confirmed there would be no 32gb GSM model I went and bought this phone.
+- The phone felt a little slick in my hands and I felt like I was going to drop it.  I bought an Otterbox Commuter case and I can't recommend it enough.  Best phone case I've seen so far.  Otterbox SAM4-I515X-20-E4OTR Commuter Series Hybrid Case for Samsung Galaxy Nexus - 1 Pack - Retail Packaging - Black
+-Charging adapter is kinda cheap looking and the way the U.S. plug inserts into it feels really loose.
+-Some apps aren't fully ICS ready yet.  Example: the Twitter app will not sync with my contacts.  Not a deal breaker and will subside with time.
+
+If you want a pure Android phone and you don't want to go to Verizon (or eventually Sprint) this is your best bet.  Like I said above I ordered it from Global Mobiles which qualifies for Amazon Prime and I ended up with a "yakju" phone so keep this in mind when you buy.  They also include instructions for setting up the APN's if you're an AT&T customer which was nice (I didn't have to set anything up for T-Mobile).  So far I'm very happy with the device they sent me and I would recommend them to everyone else.  Except for one crash which I'm convinced was my doing, I haven't had any of the issues that other users have reported.  I'll update further if I run into any serious issues.  So far this phone has been a great upgrade from the Nexus One.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (12)
+
+
