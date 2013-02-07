@@ -92,7 +92,6 @@
 }
 
 .compare-container {
-  // width: 0;
   height: 0;
   position: absolute;
   visibility: hidden;
@@ -107,10 +106,8 @@
     visibility: visible;
     opacity: 1;
     z-index: 999999;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.97);
     padding-right: 20px;
-    // width: 720px;
-    // left: 12%;
     height: 100%;
   }
   .back-button {
