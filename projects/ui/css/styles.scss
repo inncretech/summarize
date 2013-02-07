@@ -1,0 +1,76 @@
+.thumbnail a.thumb .overlay {
+  opacity: 0;
+
+  position: absolute;
+  /*top: 0;*/
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  padding: 15px 15px 0px 15px;
+  margin-bottom: 15px;
+  left: 0;
+  background: rgba('255,255,255,0.8');
+  height: 140px;
+  color: #555;
+  width: 100%;
+  overflow:hidden;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  z-index: 1;
+}
+.thumbnail:hover a.thumb .overlay, .thumbnail:focus a.thumb .overlay {
+  opacity: 1;
+  z-index: 580;
+}
+
+.thumbnail .caption .btn-group {
+  opacity: 0.5;
+}
+
+.thumbnail:hover .caption .btn-group, .thumbnail:focus .caption .btn-group {
+  opacity: 1;
+}
+
+.carousel .carousel-control  {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+
+.carousel:hover .carousel-control, .carousel:focus .carousel-control {
+  opacity:0.5;
+}
+
+
+.span7.search-query {
+  width: 175%;
+  opacity: 0.8;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+
+.span7.search-query:focus {
+  width: 175%;
+  opacity:1;
+}
+
+.feedback li {
+  padding-bottom: 5px;
+}
+
+.brand {
+  width: 150px;
+  height: 100%;
+  background: transparent url('../img/logo_head.png') left center no-repeat;
+  /*background-size: 220px 25px;*/
+  text-indent: -9999px;
+}
