@@ -12,3 +12,10 @@
 .feedback li { padding-bottom: 5px; }
 
 .navbar .brand { width: 150px; height: 100%; background: transparent url("../img/logo_head.png") left center no-repeat; /*background-size: 220px 25px;*/ text-indent: -9999px; margin-left: 0; }
+
+.product-container { -webkit-transition: all 200ms ease-in-out; -moz-transition: all 200ms ease-in-out; -ms-transition: all 200ms ease-in-out; -o-transition: all 200ms ease-in-out; transition: all 200ms ease-in-out; position: relative; left: 0; opacity: 1; }
+.product-container.compared { opacity: 0.02; }
+
+.compare-container { height: 0; position: absolute; visibility: hidden; display: block; opacity: 0; -webkit-transition: opacity 100ms ease-in-out; -moz-transition: opacity 100ms ease-in-out; -ms-transition: opacity 100ms ease-in-out; -o-transition: opacity 100ms ease-in-out; transition: opacity 100ms ease-in-out; }
+.compare-container.compared { visibility: visible; opacity: 1; z-index: 999999; background: rgba(255, 255, 255, 0.9); padding-right: 20px; height: 100%; }
+.compare-container .back-button { float: right; }

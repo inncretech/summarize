@@ -50,7 +50,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="span9">
+        <div class="span9 product-container">
           <ul class="breadcrumb">
             <li><a href="index.html">Home</a> <span class="divider">/</span></li>
             <li><a href="products.html">Highest Rated</a> <span class="divider">/</span></li>
@@ -278,6 +278,36 @@
             </li>
           </ul>
         </div>
+        <div class="compare-container span12">
+          <h2>Compare Items <a href="#" class="back-button btn btn-info">Back</a></h2>
+          <table class="table">
+            <tr>
+              <th>Data Header</th>
+              <th>Product 1</th>
+              <th>Product 2</th>
+            </tr>
+            <tr>
+              <td>Data Title</td>
+              <td>Data 1</td>
+              <td>Data 2</td>
+            </tr>
+            <tr>
+              <td>Data Title</td>
+              <td>Data 1</td>
+              <td>Data 2</td>
+            </tr>
+            <tr>
+              <td>Data Title</td>
+              <td>Data 1</td>
+              <td>Data 2</td>
+            </tr>
+            <tr>
+              <td>Data Title</td>
+              <td>Data 1</td>
+              <td>Data 2</td>
+            </tr>
+          </table>
+        </div>
         <div class="span3">
           <div class="span3" data-spy="affix" data-offset-top="0">
             <a href="#addProduct" role="button" class="btn btn-primary btn-block" data-toggle="modal">Add Product <i class="icon-plus icon-white"></i></a>
@@ -289,7 +319,7 @@
               <li><a href="#"><i class="icon-remove"></i></a><a href="product.html" class="btn btn-link ">iMac 27"</a></li>
               <li><a href="#"><i class="icon-remove"></i></a><a href="product.html" class="btn btn-link ">iPhone 16GB Wi-Fi Black</a></li>
               <li><a href="#"><i class="icon-remove"></i></a><a href="product.html" class="btn btn-link ">iPad 3G AT&amp;T 16GB White </a></li>
-              <li style="margin-top: 10px"><a href="#" class="btn btn-block">Compare Listed Products</a></li>
+              <li style="margin-top: 10px"><a href="#" class="btn btn-block compare-button">Compare Listed Products</a></li>
             </ul>
             <hr />
             <ul class="unstyled well">
@@ -353,8 +383,16 @@
     <script src="js/holder.js"></script>
     <script src="js/bootstrap-tagmanager.js"></script>
     <script>
-      jQuery(".tagManager").tagsManager();
+
+      toggleCompare = function() {
+        var compareContain = $('.compare-container');
+        compareContain.toggleClass('compared');
+      }
+
+      $('.tagManager').tagsManager();
       $('.carousel').carousel();
+      $('.compare-button').click(toggleCompare);
+      $('.back-button').click(toggleCompare);
 
     </script>
   </body>
