@@ -17,5 +17,5 @@
 .product-container.compared { opacity: 0.02; }
 
 .compare-container { height: 0; position: absolute; visibility: hidden; display: block; opacity: 0; -webkit-transition: opacity 100ms ease-in-out; -moz-transition: opacity 100ms ease-in-out; -ms-transition: opacity 100ms ease-in-out; -o-transition: opacity 100ms ease-in-out; transition: opacity 100ms ease-in-out; }
-.compare-container.compared { visibility: visible; opacity: 1; z-index: 999999; background: rgba(255, 255, 255, 0.97); padding-right: 20px; height: 100%; }
+.compare-container.compared { visibility: visible; opacity: 1; z-index: 1000; background: rgba(255, 255, 255, 0.97); padding-right: 20px; height: 95%; }
 .compare-container .back-button { float: right; }

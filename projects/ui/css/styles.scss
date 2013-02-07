@@ -105,10 +105,10 @@
   &.compared {
     visibility: visible;
     opacity: 1;
-    z-index: 999999;
+    z-index: 1000;
     background: rgba(255,255,255,0.97);
     padding-right: 20px;
-    height: 100%;
+    height: 95%;
   }
   .back-button {
     float:right;
