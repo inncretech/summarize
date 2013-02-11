@@ -50,3 +50,5 @@ section h2:hover .section_hide, section h2:focus .section_hide { opacity: 1; }
 section h2 .section_hide { float: right; opacity: 0.4; -webkit-transition: all 100ms ease-in-out; -moz-transition: all 100ms ease-in-out; -ms-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
 
 .level { display: inline-block; }
+
+.btn-half { width: 37.95%; }
