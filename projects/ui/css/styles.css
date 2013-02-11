@@ -26,6 +26,14 @@
 
 .social_signin { float: right; }
 
+.buy_links { float: right; }
+
+.btn-amazon { background: #ffc418; color: #134490; font-weight: bold; border: 2px solid #134490; border-radius: 20px; }
+.btn-amazon:hover, .btn-amazon:focus { background: #ffd14b; color: #134490; }
+
+.btn-generic-buy { background: #fff; color: #555; font-weight: bold; border: 2px solid #555555; border-radius: 20px; }
+.btn-generic-buy:hover, .btn-generic-buy:focus { background: #f2f2f2; color: #555; }
+
 .btn-facebook { background: #4262a2; color: #fff; }
 .btn-facebook:hover, .btn-facebook:focus { background: #496db4; color: #fff; }
 .btn-facebook:active { background: #334c7e; color: #fff; }

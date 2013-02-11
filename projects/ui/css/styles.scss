@@ -126,6 +126,34 @@
   float: right;
 }
 
+
+.buy_links {
+  float:right;
+}
+
+.btn-amazon {
+  background: #ffc418;
+  color: #134490;
+  font-weight: bold;
+  border: 2px solid #134490 ;
+  border-radius: 20px;
+  &:hover, &:focus {
+    background: lighten(#ffc418, 10%);
+    color: #134490;
+  }
+}
+.btn-generic-buy {
+  background: #fff;
+  color: #555;
+  font-weight: bold;
+  border: 2px solid #555 ;
+  border-radius: 20px;
+  &:hover, &:focus {
+    background: darken(#fff, 5%);
+    color: #555;
+  }
+}
+
 .btn-facebook {
   background: #4262a2;
   color: #fff;
