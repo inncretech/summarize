@@ -1,3 +1,5 @@
+@import url('font-awesome.min.css');
+@import url('font-awesome-social.css');
 .thumbnail {
   a.thumb .overlay {
     opacity: 0;
@@ -113,4 +115,44 @@
   .back-button {
     float:right;
   }
+}
+
+
+.user_name {
+  margin-top: 1em;
+}
+
+.social_signin {
+  float: right;
+}
+
+.btn-facebook {
+  background: #4262a2;
+  color: #fff;
+  &:hover, &:focus {
+    background: lighten(#4262a2, 5%);
+    color: #fff;
+  }
+  &:active {
+    background: darken(#4262a2, 10%);
+    color: #fff;
+  }
+}
+.btn-twitter {
+  background: #00c8fd;
+  color: #fff;
+  &:hover, &:focus {
+    background: lighten(#00c8fd, 5%);
+    color: #fff;
+  }
+  &:active {
+    background: darken(#00c8fd, 10%);
+    color: #fff;
+  }
+}
+
+.modal .close {
+  position: relative;
+  top: -6px;
+  right: -6px;
 }

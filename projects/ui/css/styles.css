@@ -1,3 +1,5 @@
+@import url("font-awesome.min.css");
+@import url("font-awesome-social.css");
 .thumbnail a.thumb .overlay { opacity: 0; position: absolute; /*top: 0;*/ -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box; padding: 15px 15px 0px 15px; margin-bottom: 15px; left: 0; background: rgba(255, 255, 255, 0.8); height: 140px; color: #555; width: 100%; overflow: hidden; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -ms-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; z-index: 1; }
 .thumbnail:hover a.thumb .overlay, .thumbnail:focus a.thumb .overlay { opacity: 1; z-index: 580; }
 .thumbnail .caption .btn-group { opacity: 0.5; }
@@ -19,3 +21,17 @@
 .compare-container { height: 0; position: absolute; visibility: hidden; display: block; opacity: 0; -webkit-transition: opacity 100ms ease-in-out; -moz-transition: opacity 100ms ease-in-out; -ms-transition: opacity 100ms ease-in-out; -o-transition: opacity 100ms ease-in-out; transition: opacity 100ms ease-in-out; }
 .compare-container.compared { visibility: visible; opacity: 1; z-index: 1000; background: rgba(255, 255, 255, 0.97); padding-right: 20px; height: 95%; }
 .compare-container .back-button { float: right; }
+
+.user_name { margin-top: 1em; }
+
+.social_signin { float: right; }
+
+.btn-facebook { background: #4262a2; color: #fff; }
+.btn-facebook:hover, .btn-facebook:focus { background: #496db4; color: #fff; }
+.btn-facebook:active { background: #334c7e; color: #fff; }
+
+.btn-twitter { background: #00c8fd; color: #fff; }
+.btn-twitter:hover, .btn-twitter:focus { background: #18cfff; color: #fff; }
+.btn-twitter:active { background: #00a0ca; color: #fff; }
+
+.modal .close { position: relative; top: -6px; right: -6px; }
