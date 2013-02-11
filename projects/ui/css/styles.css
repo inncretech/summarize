@@ -35,3 +35,18 @@
 .btn-twitter:active { background: #00a0ca; color: #fff; }
 
 .modal .close { position: relative; top: -6px; right: -6px; }
+
+.account_settings_wrap { display: none; }
+
+.notification { line-height: 2em; }
+
+.message { line-height: 2em; position: relative; background: #f9f9f9; margin-bottom: 5px; padding: 1em; }
+
+.message_actions { display: inline-block; opacity: 0; visibility: hidden; float: right; width: 0; height: 30px; overflow: hidden; -webkit-transition: all 100ms ease-in-out; -moz-transition: all 100ms ease-in-out; -ms-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
+.message_actions.active { opacity: 1; visibility: visible; width: auto; }
+
+section h2 { margin-top: 1em; margin-bottom: 0; padding-bottom: 0; line-height: 0.7em; }
+section h2:hover .section_hide, section h2:focus .section_hide { opacity: 1; }
+section h2 .section_hide { float: right; opacity: 0.4; -webkit-transition: all 100ms ease-in-out; -moz-transition: all 100ms ease-in-out; -ms-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
+
+.level { display: inline-block; }
