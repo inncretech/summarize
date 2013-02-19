@@ -1,5 +1,12 @@
 @import url('font-awesome.min.css');
 @import url('font-awesome-social.css');
+
+.register_buttons {
+  width: 300px;
+  position: absolute;
+  right: 50px;
+  top: 132px;
+}
 .thumbnail {
   a.thumb .overlay {
     opacity: 0;
