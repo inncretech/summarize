@@ -2,12 +2,15 @@
   <div class="navbar-inner">
 	<div class="container">
 	  <a class="brand" href="index.php">SummarizeIt</a>
-	  <div class="form-search navbar-search">
-		<div class="input-append">
-		  <input type="text" class="span7 search-query" id="global-search" autocomplete="off"  placeholder="Search products...">
-		  <button type="submit" class="btn btn-success" id="global-search-btn" onclick="return false;">Search</button>
-		</div>
-	  </div>
+	  <div class="navbar-search">
+				<div class="input-append">
+					<input type="text" class="span5" id="global-search" autocomplete="off" placeholder="Search products...">
+					<button type="submit" class="btn btn-success" onclick="return false;" id="global-search-btn" >Search</button>
+					<a  href="#advancedSearchModal" data-toggle="modal"><button type="submit" class="btn" onclick="return false;" >Filter</button></a>
+					<a  href="#signInModal" role="button" class="btn btn-primary" data-toggle="modal" id="addProductBtn">Add<i class="icon-plus icon-white"></i>
+					</a>
+				</div>
+			</div>
 	  <ul class="nav pull-right">
 
 		<li>

@@ -16,7 +16,7 @@ class Panasonic
 		$data 	= Array();
 		$title 	= null;
 		$descr 	= null;
-		$image 	= null;
+		$image 	= null;$cost 	= null;
 		$opts = array('http' =>
 						  array(
 							'user_agent' => 'MyBot/1.0 (http://www.mysite.com/)'
@@ -26,7 +26,11 @@ class Panasonic
 		
 		$html 	= file_get_html($url, FALSE, $context);
 		
-	
+		foreach($html->find('td[class=price lgprice]') as $element){ //for music
+			$cost = trim(strip_tags($element->plaintext));
+			break;
+		}
+		
 		foreach($html->find('div[id=productInfo]') as $element) //for music
 		$title = trim(strip_tags($element->plaintext));
 		
@@ -68,7 +72,7 @@ class Panasonic
 			}
 		}
 		$data['title']		 = $title;
-		$data['description'] = $descr;
+		$data['description'] = $descr;$data['cost']        = $cost;
 		if (!empty($image)) 	$data['image']       = "http://cdn.panasonic.com".$image;
 		
 		

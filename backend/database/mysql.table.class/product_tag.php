@@ -25,6 +25,22 @@ class product_tag
 		return $tag_id;
 	}
 	
+	function getMultiple($tag_id_array)
+	{
+		$product_info = Array();
+		$query = "SELECT DISTINCT(product_id) FROM ".($this->table)." WHERE ";
+		foreach ($tag_id_array as $id){
+			$query .= " `tag_id` = '$id' OR ";
+		}
+		$query .= " 1=2 ";
+		$data = mysql_query($query,$this->connection);
+		
+		while ($info = mysql_fetch_array($data)){
+			array_push($product_info,$info[0]);
+		}
+		
+		return $product_info;
+	}
 	function getByTag($tag_id)
 	{
 		$product_id = Array();
@@ -34,6 +50,23 @@ class product_tag
 		}
 		return $product_id;
 	}
+	
+	function getByMultipleTags($tag_data)
+	{
+		$product_id = Array();
+		$query = "SELECT * FROM ".($this->table)." WHERE ";
+		foreach ($tag_data as $id){
+			$query .=" `tag_id` = '".$id['id']."' AND ";
+			
+		}
+		$query = substr_replace($query ,"",-4);
+		$data = mysql_query($query,$this->connection);
+		While ($info = mysql_fetch_array($data)){
+			array_push($product_id,$info["product_id"]);
+		}
+		return $product_id;
+	}
+
 	
 	function remove($tag_id,$product_id)
 	{

@@ -1,10 +1,10 @@
 var like = new function() {
 	var parent = this;
 	this.add = function (feedback_id,root_key) {
-		$.post("backend/ajax.post/add_like.php",{product_id:product_id,feedback_id:feedback_id},function(data){
+		$.post(site_root+"/backend/ajax.post/add_like.php",{product_id:product_id,feedback_id:feedback_id},function(data){
 			var like_count = data;
 			
-			$.post("backend/ajax.get/get_single_feedback.php",{feedback_id:feedback_id},function(data){
+			$.post(site_root+"/backend/ajax.get/get_single_feedback.php",{feedback_id:feedback_id},function(data){
 				data = JSON.parse(data);
 				notification.send("<strong>"+data.category+"</strong> "+data.comment,"Like");
 				

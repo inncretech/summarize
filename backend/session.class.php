@@ -8,17 +8,15 @@ include "twitter/twitter.class.php";
 
 class Session
 {
-	var $key = "member_id";
+	var $key 		= "member_id";
+	var $admin_key 	= "permission_level";
 	/* Class constructor */
-	function Session($get = null,$url = null)
+	function Session($path = "/")
 	{	
-		if ($get!=null){
-			if (isset($get['sign_out'])){
-				$this->refresh();
-				if ($url!=null) Redirect($url);
-				Redirect ("index.php");
-			}
-		}else{
+		if (session_id()==""){
+			ini_set('session.use_cookies', true);
+			session_name("WebsiteID");
+			ini_set('session.use_trans_sid',1);
 			session_start();
 		}
 	}
@@ -45,7 +43,12 @@ class Session
 	}
 	function refresh(){
 		session_destroy();
-		session_start();
+		if (session_id()==""){
+			ini_set('session.use_cookies', true);
+			session_name("WebsiteID");
+			ini_set('session.use_trans_sid',1);
+			session_start();
+		}
 	}
 	
 	function destroy(){
@@ -58,6 +61,9 @@ class Session
 		$_SESSION['compare_list'][$key] = $value;
 	}
 	
+	function admin(){
+		return ($_SESSION[$this->admin_key]=="1");
+	}
 	function check(){
 		return (isset($_SESSION[$this->key]));
 	}

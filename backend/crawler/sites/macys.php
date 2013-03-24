@@ -16,7 +16,7 @@ class Macys
 		$data 	= Array();
 		$title 	= null;
 		$descr 	= null;
-		$image 	= null;
+		$image 	= null;$cost 	= null;
 		$opts = array('http' =>
 						  array(
 							'user_agent' => 'MyBot/1.0 (http://www.mysite.com/)'
@@ -26,7 +26,11 @@ class Macys
 		
 		$html 	= file_get_html($url, FALSE, $context);
 		
-	
+		foreach($html->find('span[class=priceSale]') as $element){ //for music
+			$cost = trim(strip_tags($element->plaintext));
+			break;
+		}
+		
 		foreach($html->find('h1[id=productTitle]') as $element) //for music
 		$title = trim(strip_tags($element->plaintext));
 		
@@ -69,7 +73,7 @@ class Macys
 			}
 		}
 		$data['title']		 = $title;
-		$data['description'] = $descr;
+		$data['description'] = $descr;$data['cost']        = $cost;
 		$data['image']       = $image;
 		
 		

@@ -4,7 +4,7 @@
 	
 	$.widget("ui.tagify", {
 		options: {
-			delimiters: [13, 188, 44,9],          // what user can type to complete a tag in char codes: [enter], [comma]
+			delimiters: [9,13, 188, 44],          // what user can type to complete a tag in char codes: [enter], [comma]
 			outputDelimiter: ',',           // delimiter for tags in original input field
 			cssClass: 'tagify-container',   // CSS class to style the tagify div and tags, see stylesheet
 			addTagPrompt: 'add tags',       // placeholder text
@@ -21,16 +21,18 @@
 			// hide text field and replace with a div that contains it's own input field for entering tags
 			this.tagInput = $("<input type='text'>")
 				.attr( 'placeholder', opts.addTagPrompt )
-				.keypress( function(e) {
+				.keydown( function(e) {
 					var $this = $(this),
-					    pressed = e.which;
-
+					    pressed = e.which || e.keyCode;
+						
 					for ( i in opts.delimiters ) {
 						
 						if (pressed == opts.delimiters[i]) {
+							
 							if (typeof product_id != 'undefined'){
-								if (member_login){
-									if ($("#addManualProduct").css('display')!="block")tag.save($this.val(),product_id); // add tag to db
+								if ((member_login)||($("#advancedSearchModal").css('display')=="block")){
+									$this.val($this.val().replace(",",""));
+									if (($("#addManualProduct").css('display')!="block")&&($("#advancedSearchModal").css('display')!="block")) tag.save($this.val(),product_id); // add tag to db
 									self.add( $this.val() );
 								}else{
 									$('#signInModal').modal('show')
@@ -113,7 +115,7 @@
 						self.remove( tagIndex );
 						return false;
 					});
-				var newTag = $("<span style=\"cursor:pointer;\" onclick=\"render.search('"+text+"');return false;\"></span>")
+				var newTag = $("<span style=\"cursor:pointer;\" onclick=\"render.search('"+text+"');return false;\" id='tag-name'></span>")
 					.text( text )
 					.append( removeButton );
 				
@@ -126,20 +128,28 @@
 		// remove a tag by index, public function
 		// if index is blank, remove the last tag
 		remove: function( tagIndex ) {
+			
 			var self = this;
 			var ok = true;
+			
 			if ( tagIndex == null  || tagIndex === (self.tags.length - 1) ) {
+				
 				if (typeof product_id != 'undefined'){
-					if (member_login){
-						tag.remove((this.tagDiv.children("span").last().find('a').remove().end().text()),product_id); //tag remove
+					
+					if ((member_login)||($("#advancedSearchModal").css('display')=="block")){
+						if (($("#addManualProduct").css('display')!="block")&&($("#advancedSearchModal").css('display')!="block")) tag.remove((this.tagDiv.children("span").last().find('a').remove().end().text()),product_id); //tag remove
 						this.tagDiv.children("span").last().remove();
 						self.tags.pop();
 					}else{
 						$('#signInModal').modal('show')
 					}
+				}else{
+					this.tagDiv.children("span").last().remove();
+					self.tags.pop();
 				}
 				ok=false;
 			}
+			
 			if (( typeof(tagIndex) == 'number' )&&(ok)) {
 				
 				if (typeof product_id != 'undefined'){
@@ -201,6 +211,57 @@
 	position: { of: tag_area.tagify('containerDiv') },
 	close: function(event, ui) { tag_area.tagify('add'); },
 });	*/
+
 })(jQuery);
 var tag_area = $('.tagArea').tagify();
 var add_product_tag_area = $('.addProductTagArea').tagify();
+
+
+tag_area.tagify('inputField').autocomplete({
+	source: function(request, response) {
+				
+                $.ajax({
+                    type: "GET",
+                    url: site_root+"/backend/ajax.get/search_tags.php",
+					data: {query: request.term },
+                    dataType: "json",
+                    contentType: "application/json",
+                    success: function(data) {
+						
+                        response($.map(data, function(item) {
+                            return {
+                                label: item,
+                                value: item,
+                            }
+                        }));
+                    }
+                });},
+	position: { of: tag_area.tagify('inputField') },
+	select: function(event, ui) {tag.save(ui.item.value,product_id);},
+	close: function(event, ui) {tag_area.tagify('add'); }
+});
+
+
+add_product_tag_area.tagify('inputField').autocomplete({
+	source: function(request, response) {
+				
+                $.ajax({
+                    type: "GET",
+                    url: site_root+"/backend/ajax.get/search_tags.php",
+					data: {query: request.term },
+                    dataType: "json",
+                    contentType: "application/json",
+                    success: function(data) {
+						
+                        response($.map(data, function(item) {
+                            return {
+                                label: item,
+                                value: item,
+                            }
+                        }));
+                    }
+                });},
+	position: { of: add_product_tag_area.tagify('inputField') },
+	select: function(event, ui) {},
+	close: function(event, ui) {add_product_tag_area.tagify('add'); }
+});

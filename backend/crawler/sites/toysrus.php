@@ -16,7 +16,7 @@ class Toysrus
 		$data 	= Array();
 		$title 	= null;
 		$descr 	= null;
-		$image 	= null;
+		$image 	= null;$cost 	= null;
 		$opts = array('http' =>
 						  array(
 							'user_agent' => 'MyBot/1.0 (http://www.mysite.com/)'
@@ -26,7 +26,12 @@ class Toysrus
 		
 		$html 	= file_get_html($url, FALSE, $context);
 		
+		foreach($html->find('li[class=retail] span') as $element){ //for music
+			$cost = trim(strip_tags($element->plaintext));
+			break;
+		}
 	
+		
 		foreach($html->find('div[id=priceReviewAge]') as $element) //for music
 		$title = trim(strip_tags($element->plaintext));
 		
@@ -69,7 +74,7 @@ class Toysrus
 			}
 		}
 		$data['title']		 = $title;
-		$data['description'] = $descr;
+		$data['description'] = $descr;$data['cost']        = $cost;
 		$data['image']       = $image;
 		
 		

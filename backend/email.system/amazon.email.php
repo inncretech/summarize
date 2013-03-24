@@ -16,9 +16,8 @@ class AmazonEmail
 		$m->addTo($to);
 		$m->setFrom(AWS_SAS_EMAIL);
 		$m->setSubject($subject);
-		$m->setMessageFromString($message);
-		
-		
+		$m->setMessageFromString(null,$message);
+		$result = $this->connection->sendEmail($m);
 	}
 }
 ?>

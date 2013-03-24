@@ -17,7 +17,7 @@ class view_details
 	function getMostViewed($start,$limit){
 		$value = Array();
 	
-		$data = mysql_query("SELECT DISTINCT(viewed_product_id),COUNT(`viewed_product_id`) FROM ".($this->table)." GROUP BY `viewed_product_id` ORDER BY COUNT(`viewed_product_id`) DESC LIMIT ".$limit,$this->connection);
+		$data = mysql_query("SELECT DISTINCT(viewed_product_id),COUNT(`viewed_product_id`) FROM ".($this->table)." GROUP BY `viewed_product_id` ORDER BY COUNT(`viewed_product_id`) DESC LIMIT ".$start.",".$limit,$this->connection);
 		
 		while($info=mysql_fetch_array($data)){
 			array_push($value,$info);

@@ -1,6 +1,3 @@
-<div class="page-header">
-	<h1>Message <small>system.</small></h1>
-  </div>
 
 <div class="prettyprint" style="background-color: transparent;border: none">
 <ul class="nav nav-tabs" style="margin-bottom:0px;">

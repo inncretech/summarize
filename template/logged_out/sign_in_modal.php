@@ -1,39 +1,44 @@
 
 <!-- Modal -->
 <div id="signInModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
-    <h3 id="myModalLabel">Sign in <span id="sign-in-modal-error"></span></h3>
-  </div>
-  <div class="modal-body">
-    <form class="form-horizontal" id="sign-in-form">
-	  <div class="control-group" style='margin-bottom: 10px;'>
-		<label class="control-label" for="login">Username</label>
-		<div class="controls">
-		  <input class="input-xlarge" type="text" id="login" placeholder="Username">
+   <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
+      <h2 id="addProductLabel">Sign In 
+      <div class="social_signin">
+		<a href="<?=SITE_ROOT;?>/backend/facebook/login-facebook.php" class="btn btn-facebook"><i class="icon icon-facebook">&nbsp;</i> Use Facebook</a>
+        <a href="<?=SITE_ROOT;?>/backend/twitter/login-twitter.php" class="btn btn-twitter"><i class="icon icon-twitter">&nbsp;</i> Use Twitter</a>
+      </div>
+      </h2>
+    </div>
+  
+	<div class="modal-body grey">
+	<div id="sign-in-modal-error" style="display:none;margin-bottom: 10px;">
+		<div class="alert alert-danger" id="product-error" style="margin-bottom: 0px;">
+		<strong>Ups!</strong> Invalid Credentials.
 		</div>
-	  </div>
-	  <div class="control-group" style='margin-bottom: 10px;'>
-		<label class="control-label" for="password">Password</label>
-		<div class="controls">
-		  <input class="input-xlarge" type="password" id="password" placeholder="Password">
+	</div>
+	  <form class="form-horizontal" id="sign-in-form">
+		<div class="control-group"  style="margin-bottom: 10px">
+		  <label class="control-label" for="inputLogin">Login</label>
+		  <div class="controls">
+			<input type="text"  id="login" placeholder="Login">
+		  </div>
 		</div>
-	  </div>
-	  <div class="control-group" style='margin-bottom: 10px;'>
-		<div class="controls">
-		  <label class="checkbox">
-			<input type="checkbox"> Remember me
-		  </label>
-		  <button type="submit" class="btn" onclick="return false;" id="sign-in-btn">Sign in</button>
+		<div class="control-group" style="margin-bottom: 10px">
+		  <label class="control-label" for="inputPassword">Password</label>
+		  <div class="controls">
+			<input type="password"  id="password" placeholder="Password">
+		  </div>
 		</div>
-	  </div>
-	</form>
-  </div>
-  <div class="modal-body grey">
-	
-	
-	<a class="btn" data-dismiss="modal" aria-hidden="true" style="float:right;margin-right:5px;">Close</a>
-	<a class="btn btn-primary" style="float:right;margin-right:5px;">Twitter</a>
-	<a href="<?=$facebook->loginUrl;?>" class="btn btn-primary" style="float:right;margin-right:5px;">Facebook</a>
-  </div>
+		<div class="control-group">
+		  <div class="controls">
+			<label class="checkbox" style="padding-bottom: 10px">
+			  <input type="checkbox"> Remember me
+			</label>
+			<button type="submit" class="btn" onclick="return false;" id="sign-in-btn">Sign in</button>
+			<button type="submit" href="#registerModal" role="button" class="btn" data-dismiss="modal" data-toggle="modal">Register</button>
+		  </div>
+		</div>
+	  </form>
+	</div>
 </div>

@@ -11,10 +11,28 @@ class product_info
 	
 	function add($post,$product_id)
 	{
-		$product_cost = $post['cost'];
-		$product_url = $post['externalLink'];
-		$data = mysql_query("INSERT INTO ".($this->table)." (`product_id`,`product_cost`,`product_url`,`created_at`) VALUES ('$product_id','$product_cost','$product_url',now()); ",$this->connection);
+		$product_cost 	= $post['cost'];
+		$product_url 	= $post['externalLink'];
+		$external 		= $post['external'];
+		$data = mysql_query("INSERT INTO ".($this->table)." (`product_id`,`product_cost`,`product_url`,`created_at`,`external`) VALUES ('$product_id','$product_cost','$product_url',now(),'$external'); ",$this->connection);
 		
+	}
+	
+	function getByProduct($product_id)
+	{
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `product_id`='$product_id' ",$this->connection);
+		$info = mysql_fetch_array($data);
+		return $info;
+	}
+	
+	function getByExternalLink($link)
+	{
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `product_url`='$link' ",$this->connection);
+		if (mysql_num_rows($data)>0){
+			$info = mysql_fetch_array($data);
+			return $info['product_id'];
+		}
+		return false;
 	}
 }
 ?>

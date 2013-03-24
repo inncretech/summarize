@@ -9,7 +9,7 @@ var register = new function(object) {
 					$(this).attr("ready","false");
 					if ((this.id == "email")||(this.id == "login")){
 						$(this).parent().find("img").show();
-						$(this).parent().find("img").attr("src","images/general-delete-icon.png");
+						$(this).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 					}
 				}else{
 					if ((this.id == "email")||(this.id == "login")){
@@ -17,32 +17,32 @@ var register = new function(object) {
 							if (item.id == "email"){
 								var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 								if (regex.test($(item).val())){
-									$.post("backend/ajax.get/member_check.php",{key:this.id ,value: $(this).val()},function(data){
+									$.post(site_root+"/backend/ajax.get/member_check.php",{key:this.id ,value: $(this).val()},function(data){
 										if (data=="1"){
 											$(item).parent().find("img").show();
-											$(item).parent().find("img").attr("src","images/general-delete-icon.png");
+											$(item).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 											$(item).attr("ready","false");
 										}else{					
 											$(item).parent().find("img").show();
-											$(item).parent().find("img").attr("src","images/symbol-check-icon.png");
+											$(item).parent().find("img").attr("src",site_root+"/images/symbol-check-icon.png");
 											$(item).attr("ready","true");
 										}
 									});
 									
 								}else{
 									$(item).parent().find("img").show();
-									$(item).parent().find("img").attr("src","images/general-delete-icon.png");
+									$(item).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 									$(item).attr("ready","false");
 								}
 							}else{
-								$.post("backend/ajax.get/member_check.php",{key:this.id ,value: $(this).val()},function(data){
+								$.post(site_root+"/backend/ajax.get/member_check.php",{key:this.id ,value: $(this).val()},function(data){
 									if (data=="1"){
 										$(item).parent().find("img").show();
-										$(item).parent().find("img").attr("src","images/general-delete-icon.png");
+										$(item).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 										$(item).attr("ready","false");
 									}else{					
 										$(item).parent().find("img").show();
-										$(item).parent().find("img").attr("src","images/symbol-check-icon.png");
+										$(item).parent().find("img").attr("src",site_root+"/images/symbol-check-icon.png");
 										$(item).attr("ready","true");
 									}
 								});
@@ -55,12 +55,12 @@ var register = new function(object) {
 								$("#repassword").attr("ready","true"); 
 								$("#regpassword").attr("ready","true");
 								$(this).parent().find("img").show();
-								$(this).parent().find("img").attr("src","images/symbol-check-icon.png");
+								$(this).parent().find("img").attr("src",site_root+"/images/symbol-check-icon.png");
 							}else{
 								$("#repassword").attr("ready","false"); 
 								$("#regpassword").attr("ready","false");
 								$(this).parent().find("img").show();
-								$(this).parent().find("img").attr("src","images/general-delete-icon.png");
+								$(this).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 							}
 						}
 					}
@@ -76,7 +76,7 @@ var register = new function(object) {
 				$(this).attr("ready","false");
 				if ((this.id == "email")||(this.id == "login")){
 					$(this).parent().find("img").show();
-					$(this).parent().find("img").attr("src","images/general-delete-icon.png");
+					$(this).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 				}
 			}else{
 				if ((this.id == "email")||(this.id == "login")){
@@ -84,32 +84,32 @@ var register = new function(object) {
 						if (item.id == "email"){
 							var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 							if (regex.test($(item).val())){
-								$.post("backend/ajax.get/member_check.php",{key:this.id ,value: $(this).val()},function(data){
+								$.post(site_root+"/backend/ajax.get/member_check.php",{key:this.id ,value: $(this).val()},function(data){
 									if (data=="1"){
 										$(item).parent().find("img").show();
-										$(item).parent().find("img").attr("src","images/general-delete-icon.png");
+										$(item).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 										$(item).attr("ready","false");
 									}else{					
 										$(item).parent().find("img").show();
-										$(item).parent().find("img").attr("src","images/symbol-check-icon.png");
+										$(item).parent().find("img").attr("src",site_root+"/images/symbol-check-icon.png");
 										$(item).attr("ready","true");
 									}
 								});
 								
 							}else{
 								$(item).parent().find("img").show();
-								$(item).parent().find("img").attr("src","images/general-delete-icon.png");
+								$(item).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 								$(item).attr("ready","false");
 							}
 						}else{
-							$.post("backend/ajax.get/member_check.php",{key:this.id ,value: $(this).val()},function(data){
+							$.post(site_root+"/backend/ajax.get/member_check.php",{key:this.id ,value: $(this).val()},function(data){
 								if (data=="1"){
 									$(item).parent().find("img").show();
-									$(item).parent().find("img").attr("src","images/general-delete-icon.png");
+									$(item).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 									$(item).attr("ready","false");
 								}else{					
 									$(item).parent().find("img").show();
-									$(item).parent().find("img").attr("src","images/symbol-check-icon.png");
+									$(item).parent().find("img").attr("src",site_root+"/images/symbol-check-icon.png");
 									$(item).attr("ready","true");
 								}
 							});
@@ -122,12 +122,12 @@ var register = new function(object) {
 							$("#repassword").attr("ready","true"); 
 							$("#regpassword").attr("ready","true");
 							$(this).parent().find("img").show();
-							$(this).parent().find("img").attr("src","images/symbol-check-icon.png");
+							$(this).parent().find("img").attr("src",site_root+"/images/symbol-check-icon.png");
 						}else{
 							$("#repassword").attr("ready","false"); 
 							$("#regpassword").attr("ready","false");
 							$(this).parent().find("img").show();
-							$(this).parent().find("img").attr("src","images/general-delete-icon.png");
+							$(this).parent().find("img").attr("src",site_root+"/images/general-delete-icon.png");
 						}
 					}
 				}
@@ -137,11 +137,11 @@ var register = new function(object) {
 	}
 	this.validateCaptcha = function()
 	{
-		challengeField = Recaptcha.get_challenge();
+		/*challengeField = Recaptcha.get_challenge();
 		responseField = Recaptcha.get_response();
 		var html = $.ajax({
 			type: "POST",
-			url: "backend/reCaptcha/validateform.php",
+			url: site_root+"/backend/reCaptcha/validateform.php",
 			data: "form=signup&recaptcha_challenge_field=" + challengeField + "&recaptcha_response_field=" + responseField,
 			async: false
 			}).responseText;
@@ -150,18 +150,12 @@ var register = new function(object) {
 			return true;
 		} else {
 			return false;
-		}
+		}*/
+		return true;
 	}
 	this.check = function (object) {
 		var ok =true;
-		if (!parent.validateCaptcha()) {
-			ok = false; 
-			$("#recaptcha_challenge_field").attr("ready","false");
-			$("#recaptcha_response_field").attr("ready","false");
-		}else {
-			$("#recaptcha_challenge_field").attr("ready","true");
-			$("#recaptcha_response_field").attr("ready","true");
-		}
+
 		$(object+" input").each(function(){
 			//alert($(this).attr("ready")+" "+$(this).attr("id"));
 			if ($(this).attr("ready") != "true") ok = false;
@@ -169,11 +163,12 @@ var register = new function(object) {
 		});
 		
 		//alert(ok);
-		//alert(ok);
+		
 		return ok;
 	};
 	this.trigger = function (trigger,form) {
 		$(trigger).click(function(){
+			
 			if (parent.check(form)) $(form).submit(); else $("#register-modal-error").text(" - please enter all data");
 		});
 		
@@ -186,7 +181,7 @@ register.trigger("#register-btn","#register-form");
 //$('#registerModal').modal({
 //  show: true
 //});
-
+/*
 Recaptcha.create("6Lf2BtwSAAAAAMU0fFe4RVbM7DoI9I--P2cgPZ4b",
     "captcha_div",
     {
@@ -194,4 +189,4 @@ Recaptcha.create("6Lf2BtwSAAAAAMU0fFe4RVbM7DoI9I--P2cgPZ4b",
       callback: Recaptcha.focus_response_field
     }
   );
-
+*/

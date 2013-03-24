@@ -3,19 +3,19 @@
 		var parent = this;
 		this.trigger = function (trigger,form) {
 			$(trigger).click(function(){
-				$.post("backend/ajax.get/sign_in_check.php",{login:$(form+" input :eq(0)").val(),password:$(form+" input :eq(1)").val()},function(data){
+				$.post(site_root+"/backend/ajax.get/sign_in_check.php",{login:$(form+" #login").val(),password:$(form+" #password").val()},function(data){
 					
 					if (data == "true"){
 						document.location.reload(true);
 					}else{
-						$("#sign-in-modal-error").html(" - Invalid Credentials");
+						$("#sign-in-modal-error").show();
 					}
 				});
 			});
 		}
 		
 		this.sign_out = function (trigger) {
-			$.post("backend/ajax.get/sign_out.php",function(data){
+			$.post(site_root+"/backend/ajax.get/sign_out.php",function(data){
 					if (data == "true")	document.location.reload(true);
 			});
 		}

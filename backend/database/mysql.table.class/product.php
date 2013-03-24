@@ -11,10 +11,13 @@ class product
 	
 	function add($post)
 	{
-		$title = $post['title'];
-		$description = $post['description'];
-		$created_by = $post['created_by'];
-		$data = mysql_query("INSERT INTO ".($this->table)." (`title`,`description`,`created_by`,`created_at`) VALUES ('$title','$description','$created_by',now()); ",$this->connection);
+		$title 			= preg_replace("/[^ \w]+/", "", trim(preg_replace('/[\s]+/',' ',str_replace('-',' ', $post['title']))));
+		$description 	= trim(preg_replace('/[\s]+/',' ',$post['description']));
+		$created_by 	= $post['created_by'];
+		$public_id		= $post['public_id'];
+		$seo_title 		= str_replace(' ','-',preg_replace('/[\s]+/',' ',str_replace('-',' ', $title)));
+		
+		$data = mysql_query("INSERT INTO ".($this->table)." (`public_id`,`title`,`seo_title`,`description`,`created_by`,`created_at`) VALUES ('$public_id','$title','$seo_title','$description','$created_by',now()); ",$this->connection);
 		return $this->getLastId();
 	}
 	
@@ -22,6 +25,13 @@ class product
 	{
 		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `product_id` = '$product_id'",$this->connection);
 		return mysql_fetch_array($data);
+	}
+	
+	function getSeoTitle($product_id)
+	{
+		$data = mysql_query("SELECT `seo_title` FROM ".($this->table)." WHERE `product_id` = '$product_id'",$this->connection);
+		$data = mysql_fetch_array($data);
+		return $data[0];
 	}
 	
 	function getRandom($limit)
@@ -73,6 +83,27 @@ class product
 		return $values;
 	}
 	
+	function checkSeoTitle($seo_title)
+	{
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `seo_title`='$seo_title' ",$this->connection);
+		if (mysql_num_rows($data)>0){
+			$info = mysql_fetch_array($data);
+			return $info;
+		}
+		return false;
+	}
+	
+	function getByTitle($title)
+	{
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `title`='$title' ",$this->connection);
+		if (mysql_num_rows($data)>0){
+			$info = mysql_fetch_array($data);
+			return $info['seo_title'];
+		}
+		return false;
+	}
+	
+	
 	function getSearchData($query)
 	{
 		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `title` LIKE '%".$query."%'",$this->connection);
@@ -85,10 +116,10 @@ class product
 		return $values;
 	}
 	
-	function getMostViewed($start,$limit){
+	function getRecentlyAdded($start,$limit){
 		$value = Array();
 	
-		$data = mysql_query("SELECT * FROM ".($this->table)." ORDER BY created_at DESC LIMIT ".$limit,$this->connection);
+		$data = mysql_query("SELECT * FROM ".($this->table)." ORDER BY created_at DESC LIMIT ".$start.",".$limit,$this->connection);
 		
 		while($info=mysql_fetch_array($data)){
 			array_push($value,$info);

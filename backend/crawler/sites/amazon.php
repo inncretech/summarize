@@ -14,10 +14,14 @@ class Amazon
 		$data 	= Array();
 		$title 	= null;
 		$descr 	= null;
-		$image 	= null;
+		$image 	= null;$cost 	= null;
+		
 		$html 	= file_get_html($url);
 		
-	
+		foreach($html->find('b[class=priceLarge]') as $element){ //for music
+			$cost = trim(strip_tags($element->plaintext));
+			break;
+		}
 		foreach($html->find('span[id=btAsinTitle]') as $element) //for music
 		$title = trim(strip_tags($element->plaintext));
 		
@@ -101,7 +105,7 @@ class Amazon
 		}
 		
 		
-		$data['description'] = $descr;
+		$data['description'] = $descr;$data['cost']        = $cost;
 		$data['image']       = $image;
 		
 		

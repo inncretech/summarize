@@ -20,6 +20,23 @@ class product_feedback
 		return $this->getLastId();
 	}
 	
+	function getCateogiresByQueryAndProduct($query)
+	{
+		$value 	= Array();
+		$query  = explode(" ", $query);
+		$code	= " 1=2 ";
+		foreach ($query as $item){
+			$code .= " OR `category` LIKE '%".$item."%' ";
+		}
+		
+		$data 	= mysql_query("SELECT category FROM ".($this->table)." WHERE ".$code." ",$this->connection);
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info[0]);
+		}
+		return $value;
+		
+	}
+	
 	function getByProduct($product_id)
 	{
 		$data = Array();
@@ -68,7 +85,7 @@ class product_feedback
 	{	
 		$value = Array();
 	
-		$data = mysql_query("SELECT product_id FROM ".($this->table)." GROUP BY product_id ORDER BY SUM(total_likes+total_unlikes) DESC LIMIT ".$limit,$this->connection);
+		$data = mysql_query("SELECT product_id FROM ".($this->table)." GROUP BY product_id ORDER BY SUM(total_likes+total_unlikes) DESC LIMIT ".$start.",".$limit,$this->connection);
 		
 		while($info=mysql_fetch_array($data)){
 			
@@ -83,6 +100,16 @@ class product_feedback
 		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `feedback_id`='$feedback_id' AND `product_id` = '$product_id'",$this->connection);
 		$info = mysql_fetch_array($data);
 		return $info['total_likes'];
+	}
+	
+	function getLatest($limit)
+	{
+		$data = mysql_query("SELECT * FROM ".($this->table)." ORDER BY created_at DESC LIMIT 0,".$limit,$this->connection);
+		$value = Array();
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info);
+		}
+		return $value;
 	}
 	
 	function getCategories($product_id)
@@ -125,6 +152,17 @@ class product_feedback
 		$info = mysql_fetch_array($data);
 		
 		return $info[0];
+	}
+	
+	function getProductsByCategory($category)
+	{
+		
+		$product_id = Array();
+		$data = mysql_query("SELECT DISTINCT(product_id) FROM ".($this->table)." WHERE `category`='$category'",$this->connection);
+		While ($info = mysql_fetch_array($data)){
+			array_push($product_id,$info[0]);
+		}
+		return $product_id;
 	}
 	
 	

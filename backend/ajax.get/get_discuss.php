@@ -14,6 +14,7 @@ foreach ($discuss as $item){
 	foreach ($info as $item){
 		$member_data 		= $database->member->get($item['member_id']);
 		$item['login'] 		= $member_data['login'];
+		$item['seo_title']	= $member_data['seo_title'];
 		array_push($tmp,$item);
 	}
 	$aux['answers'] = $tmp;

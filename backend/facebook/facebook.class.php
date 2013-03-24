@@ -17,7 +17,7 @@
  * under the License.
  */
 
-require 'facebook.sdk.class/facebook.php';
+include 'facebook.sdk.class/facebook.php';
 
 class Fb
 {
@@ -27,6 +27,7 @@ class Fb
    var $data;
    var $loginUrl;
    var $logoutUrl;
+   var $social_network_id;
    
    /* Class constructor */
     function Fb(){
@@ -37,6 +38,7 @@ class Fb
 		));
 		// Get User ID
 		$this->user = $this->connection->getUser();
+		
 		// We may or may not have this data based on whether the user is logged in.
 		//
 		// If we have a $user id here, it means we know the user is logged into
@@ -49,45 +51,25 @@ class Fb
 			$params = array( 'next' => 'http://' .$_SERVER['SERVER_NAME'] .'/index.php');
 			
 			$this->data = $this->connection->api('/me');
+			
 			$this->check = true;
-			$this->logoutUrl 	= $this->connection->getLogoutUrl($params);
+			$this->social_network_id = $this->data["id"];
+			//$this->logoutUrl 	= $this->connection->getLogoutUrl($params);
 		  } catch (FacebookApiException $e) {
 			$this->user = null;
 		  }
 		}else{
-			if(strpos($_SERVER["REQUEST_URI"],"?") !== false){
-				$params = array('redirect_uri' => 'http://' .$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"].'&facebook_sign_in=true','scope' => 'email,publish_stream');
-			}else{
-				$params = array('redirect_uri' => 'http://' .$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"].'?facebook_sign_in=true','scope' => 'email,publish_stream');
-			}
-			$this->loginUrl 	= $this->connection->getLoginUrl($params);
-			
+			$params = array( 'next' => 'http://' .$_SERVER['SERVER_NAME'] .'/index.php');
+			$this->logoutUrl = $this->connection->getLogoutUrl($params);
 		}
-		
-		/*
-		public function logout()
-		{
-			$params = array( 'next' => 'http://www.' + $host + '/index.php/authentication_controller/signout');
-			return $this->connection->getLogoutUrl($params));
-		}
-		*/
-		
+
+	}
+
+	function getLoginUrl(){
+		$params = array('scope' => 'email,publish_stream');
+		return $this->connection->getLoginUrl($params);
 	}
 }
 
-/* Example of use
-
-$facebook = new Fb();
-
-if ($facebook->check) {
-  $logoutUrl = $facebook->connection->getLogoutUrl();
-  echo "<a href='".$logoutUrl."'>Logout</a>";
-} else {
-  $loginUrl = $facebook->connection->getLoginUrl();
-  echo "<a href='".$loginUrl."'>Login</a>";
-}
-print_r($facebook->data);
-
-*/
 
 ?>

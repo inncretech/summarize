@@ -1,4 +1,6 @@
 
+
+
 $("#global-search").keyup(function(event){
 
     if(event.keyCode == 13){
@@ -10,65 +12,81 @@ $("#global-search").keyup(function(event){
 $('#global-search').keyup(function(){
 	$("#global-search-btn").attr('onclick',"render.search('"+$(this).val()+"');return false;");
 });
+$('#advanced-search').keyup(function(){
 
-$('#addCompareValue').typeahead({source: function (typeahead, query) {
-		source_data = [];
-		map = {};
-		
-		$.ajax({
-			url: "backend/ajax.get/get_search_data.php",
-			data: { 
-				query: query 
-			},
-			type: "POST",
-			dataType: 'json',
-			success: function(data, textStatus, xhr) {
-				$.each(data, function (i, value) {
-					//alert(value.title);
-					map[value.title] = value.product_id;
-					source_data.push(value.title);
-				});
-				typeahead.process(source_data);
-			},
-			error: function(xhr, textStatus, errorThrown) {
-				alert(textStatus);
-			}
-		});
-	},
-	onselect: function (obj) {
-		
-		//$("#global-search-btn").attr('onclick',"window.location.href='product.php?id="+map[obj]+"';return false;");
-    }
-	
+	if ($(this).val()!='') render.advancedSearchMenu($(this).val());
 });
+if ($('#addCompareValue').length > 0){
+$('#addCompareValue').autocomplete({
+			source: function(request, response) {
+			source_data = [];
+			map = {};	
+						$.ajax({
+							
+							url: site_root+"/backend/ajax.get/get_search_data.php",
+							data: {query: request.term },
+							dataType: "json",
+							contentType: "application/json",
+							success: function(data) {
+								
+								response($.map(data, function(item) {
+									
+									map[item.title] = item.seo_title;
+									return {
+										label: item.title,
+										value: item.title,
+										seo_title: item.seo_title,
+										type: item.type,
+									}
+								}));
+							}
+						});},
+			position: { of: $('#addCompareValue') },
+			select: function(event, ui) { },
+			open: function(event, ui) {
+            $(this).autocomplete("widget").css({
+                "width": "auto"
+            })}, 
+		});
+}
 
-$('#global-search').typeahead({source: function (typeahead, query) {
-		source_data = [];
-		map = {};
-		
-		$.ajax({
-			url: "backend/ajax.get/get_search_data.php",
-			data: { 
-				query: query 
-			},
-			type: "POST",
-			dataType: 'json',
-			success: function(data, textStatus, xhr) {
-				$.each(data, function (i, value) {
-					//alert(value.title);
-					map[value.title] = value.product_id;
-					source_data.push(value.title);
-				});
-				typeahead.process(source_data);
-			},
-			error: function(xhr, textStatus, errorThrown) {
-				alert(textStatus);
-			}
-		});
-	},
-	onselect: function (obj) {
-		//alert(obj);
-		$("#global-search-btn").attr('onclick',"window.location.href='product.php?id="+map[obj]+"';return false;");
-    }
-	
-});
+if ($('#global-search').length > 0){
+$('#global-search').autocomplete({
+			source: function(request, response) {
+			source_data = [];
+			map = {};	
+						$.ajax({
+							
+							url: site_root+"/backend/ajax.get/get_search_data.php?tag=true",
+							data: {query: request.term },
+							dataType: "json",
+							contentType: "application/json",
+							success: function(data) {
+								
+								response($.map(data, function(item) {
+									
+									map[item.title] = item.seo_title;
+									return {
+										label: item.title,
+										value: item.title,
+										seo_title: item.seo_title,
+										type: item.type,
+									}
+								}));
+							}
+						});},
+			open: function(event, ui) {
+            $(this).autocomplete("widget").css({
+                "width": "auto"
+            })},
+			position: { of: $("#global-search") },
+			select: function(event, ui) { if (ui.item.type=="product") $("#global-search-btn").attr('onclick',"window.location.href='"+site_root+"/product/"+ui.item.seo_title+"';return false;"); else { $("#global-search-btn").attr('onclick','render.search(\''+ui.item.value+'\');return false;'); } },
+
+		}).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+			  return $( "<li>" )
+				.append( "<a>" + item.label + "<b style='float:right;padding-left:10px'>" + item.type + "</b>" )
+				.appendTo( ul );
+			};
+}
+
+

@@ -23,7 +23,7 @@ class product_follow
 		while ($info = mysql_fetch_array($data)){
 			array_push($value,$info);
 		}
-		echo "SELECT * FROM ".($this->table)." WHERE `product_id` = '$product_id' ";
+	
 		return $value;
 	}
 	

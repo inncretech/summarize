@@ -20,6 +20,13 @@ class member
 		return (mysql_num_rows($data)>0);
 	}
 	
+	function getSeoTitle($member_id)
+	{
+		$data = mysql_query("SELECT `seo_title` FROM ".($this->table)." WHERE `member_id` = '$member_id'",$this->connection);
+		$data = mysql_fetch_array($data);
+		return $data[0];
+	}
+	
 	function update($post,$member_id)
 	{	
 		$login 			= $post["login"];
@@ -46,11 +53,21 @@ class member
 		return mysql_fetch_array($data);
 	}
 	
-	function checkFacebook($social_network_id)
+	function checkSocialNetwork($social_network_id)
 	{	
 		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `social_network_id`='$social_network_id'",$this->connection);
 		$info = mysql_fetch_array($data);
 		return $info;
+	}
+	
+	function checkSeoTitle($seo_title)
+	{
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `seo_title`='$seo_title' ",$this->connection);
+		if (mysql_num_rows($data)>0){
+			$info = mysql_fetch_array($data);
+			return $info;
+		}
+		return false;
 	}
 	
 	function add($post)
@@ -59,7 +76,11 @@ class member
 		$email 				= $post['email'];
 		$password 			= $post['password'];
 		$social_network_id 	= $post['social_network_id'];
-		$data = mysql_query("INSERT INTO ".($this->table)." (`login`,`email`,`social_network_id`,`crypted_password`,`created_at`) VALUES ('$login','$email','$social_network_id','".md5($password)."',now()); ",$this->connection);
+		$public_id			= $post['public_id'];
+		$seo_title 			= $post['login'];
+		
+		$data = mysql_query("INSERT INTO ".($this->table)." (`public_id`,`login`,`seo_title`,`email`,`social_network_id`,`crypted_password`,`created_at`) VALUES ('$public_id','$login','$seo_title','$email','$social_network_id','".md5($password)."',now()); ",$this->connection);
+		
 		return $this->getLastId();
 	}
 	

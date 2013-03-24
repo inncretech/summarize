@@ -1,7 +1,4 @@
 
-<div class="page-header">
-	<h1>Points <small><?=$visited_member_data['points']['total'];?> total earned.</small></h1>
-</div>
 <div class="prettyprint" style="background-color: transparent;border: none">
 <?php 
 for ($i = 0; $i < count($visited_member_data['points']['data']); $i++) {

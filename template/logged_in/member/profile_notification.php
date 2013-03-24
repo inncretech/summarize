@@ -1,40 +1,34 @@
-<div class="page-header">
-	<h1>Notifications <small></small></h1>
-  </div>
-<div class="prettyprint" style="background-color: transparent;border: none">
-
-           
-           
-          
+<ul class="unstyled">     
 <?php 
 for ($i = 0; $i < count($member_data['notifications']); $i++) {
-	$value 		= $member_data['notifications'][$i];
-	$tmp_member = $database->member->get($value['created_by']);
+	$value 				= $member_data['notifications'][$i];
+	$tmp_member 		= $database->member->get($value['created_by']);
+	$seo_title 			= $database->product->getSeoTitle($value['product_id']);
 	switch ($value['type']){
 		case "Like":
-			$text = '<div class="alert alert-info" style="background:transparent;color:#555;padding: 0;margin-bottom:0px"><button type="button" class="close" data-dismiss="alert" onclick="notification.close(this);" data='.$value['id'].' id="close-notification">&times;</button><a href="member.php?id='.$tmp_member['member_id'].'">'.$tmp_member['login'].'</a> liked "'.$value['comment'].'" on <a href="product.php?id='.$value['product_id'].'">'.$value['product_title'].'</a></div>';
+			$text = '<li class="notification"><a href="#" class="remove" onclick="notification.close(this);" data='.$value['id'].' id="close-notification"><i class="icon icon-remove"></i></a><a href="'.SITE_ROOT."/member/".$tmp_member['seo_title'].'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/m_'.$value['created_by_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$tmp_member['login'].'</a> liked "'.$value['comment'].'" on <a href="'.SITE_ROOT."/product/".$seo_title.'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/p_'.$value['product_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$value['product_title'].'</a></li>';
 		break;
 		case "Feedback":
-			$text = '<div class="alert alert-info" style="background:transparent;color:#555;padding: 0;margin-bottom:0px"><button type="button" class="close" data-dismiss="alert" onclick="notification.close(this);" data='.$value['id'].' id="close-notification">&times;</button><a href="member.php?id='.$tmp_member['member_id'].'">'.$tmp_member['login'].'</a> added a feedback "'.$value['comment'].'" for <a href="product.php?id='.$value['product_id'].'">'.$value['product_title'].'</a></div>';
+			$text = '<li class="notification"><a href="#" class="remove" onclick="notification.close(this);" data='.$value['id'].' id="close-notification"><i class="icon icon-remove"></i></a> <a href="'.SITE_ROOT."/member/".$tmp_member['seo_title'].'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/m_'.$value['created_by_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$tmp_member['login'].'</a> added a feedback "'.$value['comment'].'" for <a href="'.SITE_ROOT."/product/".$seo_title.'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/p_'.$value['product_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$value['product_title'].'</a></li>';
 		break;
 		case "Tag":
-			$text = '<div class="alert alert-info" style="background:transparent;color:#555;padding: 0;margin-bottom:0px"><button type="button" class="close" data-dismiss="alert" onclick="notification.close(this);" data='.$value['id'].' id="close-notification">&times;</button><a href="member.php?id='.$tmp_member['member_id'].'">'.$tmp_member['login'].'</a> '.$value['comment'].' on <a href="product.php?id='.$value['product_id'].'">'.$value['product_title'].'</a></div>';
+			$text = '<li class="notification"><a href="#" class="remove" onclick="notification.close(this);" data='.$value['id'].' id="close-notification"><i class="icon icon-remove"></i></a> <a href="'.SITE_ROOT."/member/".$tmp_member['seo_title'].'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/m_'.$value['created_by_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$tmp_member['login'].'</a> '.$value['comment'].' on <a href="'.SITE_ROOT."/product/".$seo_title.'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/p_'.$value['product_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$value['product_title'].'</a></li>';
 		break;
 		case "Question":
-			$text = '<div class="alert alert-info" style="background:transparent;color:#555;padding: 0;margin-bottom:0px"><button type="button" class="close" data-dismiss="alert" onclick="notification.close(this);" data='.$value['id'].' id="close-notification">&times;</button><a href="member.php?id='.$tmp_member['member_id'].'">'.$tmp_member['login'].'</a> added a question "'.$value['comment'].'" on <a href="product.php?id='.$value['product_id'].'">'.$value['product_title'].'</a></div>';
+			$text = '<li class="notification"><a href="#" class="remove" onclick="notification.close(this);" data='.$value['id'].' id="close-notification"><i class="icon icon-remove"></i></a> <a href="'.SITE_ROOT."/member/".$tmp_member['seo_title'].'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/m_'.$value['created_by_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$tmp_member['login'].'</a> added a question "'.$value['comment'].'" on <a href="'.SITE_ROOT."/product/".$seo_title.'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/p_'.$value['product_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$value['product_title'].'</a></li>';
 		break;
 		case "Answer":
-			$text = '<div class="alert alert-info" style="background:transparent;color:#555;padding: 0;margin-bottom:0px"><button type="button" class="close" data-dismiss="alert" onclick="notification.close(this);" data='.$value['id'].' id="close-notification">&times;</button><a href="member.php?id='.$tmp_member['member_id'].'">'.$tmp_member['login'].'</a> added an answer "'.$value['comment'].'" on <a href="product.php?id='.$value['product_id'].'">'.$value['product_title'].'</a></div>';
+			$text = '<li class="notification"><a href="#" class="remove" onclick="notification.close(this);" data='.$value['id'].' id="close-notification"><i class="icon icon-remove"></i></a> <a href="'.SITE_ROOT."/member/".$tmp_member['seo_title'].'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/m_'.$value['created_by_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$tmp_member['login'].'</a> added an answer "'.$value['comment'].'" on <a href="'.SITE_ROOT."/product/".$seo_title.'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/p_'.$value['product_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$value['product_title'].'</a></li>';
 		break;
 		case "Answer Rate":
-			$text = '<div class="alert alert-info" style="background:transparent;color:#555;padding: 0;margin-bottom:0px"><button type="button" class="close" data-dismiss="alert" onclick="notification.close(this);" data='.$value['id'].' id="close-notification">&times;</button><a href="member.php?id='.$tmp_member['member_id'].'">'.$tmp_member['login'].'</a> rated an answer "'.$value['comment'].'" on <a href="product.php?id='.$value['product_id'].'">'.$value['product_title'].'</a></div>';
+			$text = '<li class="notification"><a href="#" class="remove" onclick="notification.close(this);" data='.$value['id'].' id="close-notification"><i class="icon icon-remove"></i></a> <a href="'.SITE_ROOT."/member/".$tmp_member['seo_title'].'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/m_'.$value['created_by_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$tmp_member['login'].'</a> rated an answer "'.$value['comment'].'" on <a href="'.SITE_ROOT."/product/".$seo_title.'"><img src="http://'.(S3_BUCKET).'.s3.amazonaws.com/p_'.$value['product_public_id'].'_small.jpg" style="margin:3px;width:25px;height:25px;">'.$value['product_title'].'</a></li>';
 		break;
 	}
 	
 	echo $text;
-	if ($i!= count($member_data['activity'])-1)	echo '<hr style="margin:5px;">';
+	
 } 
 
 ?>
-</div>
+</ul>
 

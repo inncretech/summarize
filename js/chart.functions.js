@@ -117,7 +117,7 @@ var chart = new function() {
 	
 	
 	this.getCategories = function (feedback_id) {
-		$.post("backend/ajax.get/get_chart_categories.php",{product_id:product_id},function(data){
+		$.post(site_root+"/backend/ajax.get/get_chart_categories.php",{product_id:product_id},function(data){
 			
 			categories 		= getArray(data,"s");
 			category_check =true;
@@ -125,7 +125,7 @@ var chart = new function() {
 		});
 	}
 	this.getPositiveData = function (feedback_id) {
-		$.post("backend/ajax.get/get_chart_rating.php",{product_id:product_id,type:"0"},function(data){
+		$.post(site_root+"/backend/ajax.get/get_chart_rating.php",{product_id:product_id,type:"0"},function(data){
 				
 				positive_data 	= getArray(data,"i");
 				positive_check =true;
@@ -134,7 +134,7 @@ var chart = new function() {
 		});
 	}
 	this.getNegativeData = function (feedback_id) {
-		$.post("backend/ajax.get/get_chart_rating.php",{product_id:product_id,type:"1"},function(data){
+		$.post(site_root+"/backend/ajax.get/get_chart_rating.php",{product_id:product_id,type:"1"},function(data){
 			
 			negative_data 	= getArray(data,"i");
 			negative_check =true;

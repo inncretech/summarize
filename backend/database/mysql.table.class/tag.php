@@ -22,12 +22,38 @@ class tag
 		
 	}
 	
+	function getByQuery($query)
+	{
+		$value 	= Array();
+		$data 	= mysql_query("SELECT tag_name FROM ".($this->table)." WHERE `tag_name` LIKE '%".$query."%'",$this->connection);
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info[0]);
+		}
+		
+		return $value;
+		
+	}
+	
 	function getSearchData($query)
 	{
 		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `tag_name` LIKE '%".$query."%'",$this->connection);
-		$info = mysql_fetch_array($data);
+		$value = Array();
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info['id']);
+		}
 		
-		return $info;
+		return $value;
+	}
+	
+	function getSearchID($query)
+	{
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `tag_name` LIKE '%".$query."%'",$this->connection);
+		$value = Array();
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info['id']);
+		}
+		
+		return $value;
 	}
 	
 	function getMultiple($tag_id_array)

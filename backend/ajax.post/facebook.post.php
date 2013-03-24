@@ -1,6 +1,8 @@
 <?php
 include "../session.class.php";
+$session	= new Session();
 $facebook 	= new Fb();
+
 $photo 		= $facebook->connection->api('/me/feed/', 'POST',
 										array(
 										'link' => $_POST['url'],

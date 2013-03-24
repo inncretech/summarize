@@ -16,7 +16,7 @@ class Sony
 		$data 	= Array();
 		$title 	= null;
 		$descr 	= null;
-		$image 	= null;
+		$image 	= null;$cost 	= null;
 		$opts = array('http' =>
 						  array(
 							'user_agent' => 'MyBot/1.0 (http://www.mysite.com/)'
@@ -26,7 +26,12 @@ class Sony
 		
 		$html 	= file_get_html($url, FALSE, $context);
 		
+		foreach($html->find('p[class=productPrice]') as $element){ //for music
+			$cost = trim(strip_tags($element->plaintext));
+			break;
+		}
 	
+		
 		foreach($html->find('div[class=info] h1') as $element) //for music
 		$title = trim(strip_tags($element->plaintext));
 		
@@ -68,7 +73,7 @@ class Sony
 			}
 		}
 		$data['title']		 = $title;
-		$data['description'] = $descr;
+		$data['description'] = $descr;$data['cost']        = $cost;
 		if (!empty($image)) $data['image']       = "http://store.sony.com".$image;
 		
 		

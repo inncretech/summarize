@@ -9,9 +9,10 @@ class member_activity
 		$this->connection = $mysql_connection;
 	}
 	
-	function add($member_id,$type,$comment,$product_id,$product_title)
+	function add($member_id,$type,$comment,$product_id,$product_public_id,$product_title)
 	{
-		mysql_query("INSERT INTO ".($this->table)."(`member_id`,`type`,`comment`,`product_id`,`product_title`,`created_at`) VALUES ('$member_id','$type','$comment','$product_id','$product_title',now())",$this->connection);
+		
+		mysql_query("INSERT INTO ".($this->table)."(`member_id`,`type`,`comment`,`product_id`,`product_public_id`,`product_title`,`created_at`) VALUES ('$member_id','$type','$comment','$product_id','$product_public_id','$product_title',now())",$this->connection);
 	}
 	
 	function get($member_id,$limit)

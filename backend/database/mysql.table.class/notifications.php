@@ -9,9 +9,9 @@ class notifications
 		$this->connection = $mysql_connection;
 	}
 	
-	function add($member_id,$created_by,$type,$comment,$product_id,$product_title)
+	function add($member_id,$created_by,$created_by_public_id,$type,$comment,$product_id,$product_public_id,$product_title)
 	{
-			mysql_query("INSERT INTO ".($this->table)." (`member_id`,`created_by`,`type`,`comment`,`created_at`,`product_id`,`product_title`) VALUES ('$member_id','$created_by','$type','$comment',now(),'$product_id','$product_title') ",$this->connection);
+			mysql_query("INSERT INTO ".($this->table)." (`member_id`,`created_by`,`created_by_public_id`,`type`,`comment`,`created_at`,`product_id`,`product_public_id`,`product_title`) VALUES ('$member_id','$created_by','$created_by_public_id','$type','$comment',now(),'$product_id','$product_public_id','$product_title') ",$this->connection);
 		
 	}
 	

@@ -16,6 +16,16 @@ class report_product
 		mysql_query("INSERT INTO ".($this->table)." (`member_id`,`product_id`,`created_at`) VALUES ('$member_id','$product_id',now())",$this->connection);
 	}
 	
+	function get($member_id)
+	{
+		$value = Array();
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `member_id`='$member_id' ",$this->connection);
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info['product_id']);
+		}
+		return $value;
+	}
+	
 	function check($member_id,$product_id)
 	{
 		

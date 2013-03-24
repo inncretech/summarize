@@ -16,7 +16,7 @@ class Staples
 		$data 	= Array();
 		$title 	= null;
 		$descr 	= null;
-		$image 	= null;
+		$image 	= null;$cost 	= null;
 		$opts = array('http' =>
 						  array(
 							'user_agent' => 'MyBot/1.0 (http://www.mysite.com/)'
@@ -26,8 +26,13 @@ class Staples
 		
 		$html 	= file_get_html($url, FALSE, $context);
 		
+		foreach($html->find('dd[class=finalPrice]') as $element){ //for music
+			$cost = trim(strip_tags($element->plaintext));
+			break;
+		}
 	
-		foreach($html->find('div[class=gridWidth04 productDetails]') as $element) //for music
+	
+		foreach($html->find('div[class=gridWidth04 productDetails] h1') as $element) //for music
 		$title = trim(strip_tags($element->plaintext));
 		
 		
@@ -48,7 +53,7 @@ class Staples
 		
 	
 		$data['title']		 = $title;
-		$data['description'] = $descr;
+		$data['description'] = $descr;$data['cost']        = $cost;
 		$data['image']       = $image;
 		
 		

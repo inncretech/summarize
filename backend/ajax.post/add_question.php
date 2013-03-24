@@ -13,5 +13,5 @@ $database->questions->add($data);
 $product_data 		= $database->product->get($data['product_id']);
 
 $database->point->add($member_data['member_id'],"Question",$data['product_id'],QUESTION_POINTS);
-$database->member_activity->add($member_data['member_id'],"Question",$data['question_text'],$data['product_id'],$product_data['title']);
+$database->member_activity->add($member_data['member_id'],"Question",$data['question_text'],$data['product_id'],$product_data['public_id'],$product_data['title']);
 ?>

@@ -37,6 +37,15 @@ include "mysql.table.class/product_image.php";
 include "mysql.table.class/member_feedback.php";
 include "mysql.table.class/member_image.php";
 include "mysql.table.class/member_answer.php";
+include "mysql.table.class/application_id.php";
+include "mysql.table.class/application_info.php";
+include "mysql.table.class/application_thread.php";
+include "mysql.table.class/application_thread_comment.php";
+include "mysql.table.class/survey.php";
+include "mysql.table.class/survey_question.php";
+include "mysql.table.class/survey_answer.php";
+include "mysql.table.class/survey_completed.php";
+include "mysql.table.class/survey_member_answer.php";
 
 /** A PHP class to access MySQL database with convenient methods
 * in an object oriented way, and with a powerful debug system.
@@ -46,38 +55,46 @@ class Database
 {
 	/** Mysql Table Classes Objects
 	  */
-	 var $address;
-	 var $school;
-	 var $employer;
-	 var $member_address;
-	 var $member_school;
-	 var $member_employer;
-	 var $member_info;
-	 var $member_activity;
-	 var $member;
-	 var $member_session;
-	 var $reference_question;
-	 var $report_product;
-	 var $tag;
-	 var $product;
-	 var $product_info;
-	 var $product_tag;
-	 var $product_follow;
-	 var $compare_products;
-	 var $product_feedback;
-	 var $questions;
-	 var $answers;
-	 var $comment_answers;
-	 var $notifications;
-	 var $view_details;
-	 var $message;
-	 var $point;
-	 var $image_table;
-	 var $product_image;
-	 var $member_feedback;
-	 var $member_image;
-	 var $member_answer;
-	
+	var $address;
+	var $school;
+	var $employer;
+	var $member_address;
+	var $member_school;
+	var $member_employer;
+	var $member_info;
+	var $member_activity;
+	var $member;
+	var $member_session;
+	var $reference_question;
+	var $report_product;
+	var $tag;
+	var $product;
+	var $product_info;
+	var $product_tag;
+	var $product_follow;
+	var $compare_products;
+	var $product_feedback;
+	var $questions;
+	var $answers;
+	var $comment_answers;
+	var $notifications;
+	var $view_details;
+	var $message;
+	var $point;
+	var $image_table;
+	var $product_image;
+	var $member_feedback;
+	var $member_image;
+	var $member_answer;
+	var $application_id;
+	var $application_info;
+	var $application_thread;
+	var $application_thread_comment;
+	var $survey;
+	var $survey_question;
+	var $survey_answer;	
+	var $survey_completed;
+	var $survey_member_answer;	
 	/** Put this variable to true if you want ALL queries to be debugged by default:
 	  */
 	var $defaultDebug = false;
@@ -101,43 +118,52 @@ class Database
 	  */
 	function Database()
 	{
-	  $this->connection = mysql_connect(DB_SERVER, DB_USER, DB_PASS) or die('Server connexion not possible.');
-	  mysql_select_db(DB_NAME) or die('Database connexion not possible.');
-	  $this->mtStart    		= $this->getMicroTime();
-	  $this->nbQueries  		= 0;
-	  $this->lastResult		 	= NULL;
-	  
-	  $this->address				= new address($this->connection);
-	  $this->school       			= new school($this->connection);
-	  $this->employer    			= new employer($this->connection);
-	  $this->member_address  		= new member_address($this->connection);
-	  $this->member_school    		= new member_school($this->connection);
-	  $this->member_employer      	= new member_employer($this->connection);
-	  $this->member_info    		= new member_info($this->connection);
-	  $this->member       			= new member($this->connection);
-	  $this->member_session    		= new member_session($this->connection);
-	  $this->reference_question		= new reference_question($this->connection);
-	  $this->report_product    		= new report_product($this->connection);
-	  $this->tag   					= new tag($this->connection);
-	  $this->product 				= new product($this->connection);
-	  $this->product_info 			= new product_info($this->connection);
-	  $this->product_tag 			= new product_tag($this->connection);
-	  $this->product_follow 		= new product_follow($this->connection);
-	  $this->compare_products 		= new compare_products($this->connection);
-	  $this->product_feedback 		= new product_feedback($this->connection);
-	  $this->questions 				= new questions($this->connection);
-	  $this->answers 				= new answers($this->connection);
-	  $this->comment_answers 		= new comment_answers($this->connection);
-	  $this->member_activity 		= new member_activity($this->connection);
-	  $this->notifications 			= new notifications($this->connection);
-	  $this->view_details 			= new view_details($this->connection);
-	  $this->message 				= new message($this->connection);
-	  $this->point 					= new point($this->connection);
-	  $this->image_table 			= new image_table($this->connection);
-	  $this->product_image 			= new product_image($this->connection);
-	  $this->member_feedback 		= new member_feedback($this->connection);
-	  $this->member_image 			= new member_image($this->connection);
-	  $this->member_answer 			= new member_answer($this->connection);
+		$this->connection = mysql_connect(DB_SERVER, DB_USER, DB_PASS) or die('Server connexion not possible.');
+		mysql_select_db(DB_NAME) or die('Database connexion not possible.');
+		$this->mtStart    		= $this->getMicroTime();
+		$this->nbQueries  		= 0;
+		$this->lastResult		 	= NULL;
+
+		$this->address							= new address($this->connection);
+		$this->school       					= new school($this->connection);
+		$this->employer    						= new employer($this->connection);
+		$this->member_address  					= new member_address($this->connection);
+		$this->member_school    				= new member_school($this->connection);
+		$this->member_employer      			= new member_employer($this->connection);
+		$this->member_info    					= new member_info($this->connection);
+		$this->member       					= new member($this->connection);
+		$this->member_session    				= new member_session($this->connection);
+		$this->reference_question				= new reference_question($this->connection);
+		$this->report_product    				= new report_product($this->connection);
+		$this->tag   							= new tag($this->connection);
+		$this->product 							= new product($this->connection);
+		$this->product_info 					= new product_info($this->connection);
+		$this->product_tag 						= new product_tag($this->connection);
+		$this->product_follow 					= new product_follow($this->connection);
+		$this->compare_products 				= new compare_products($this->connection);
+		$this->product_feedback 				= new product_feedback($this->connection);
+		$this->questions 						= new questions($this->connection);
+		$this->answers 							= new answers($this->connection);
+		$this->comment_answers 					= new comment_answers($this->connection);
+		$this->member_activity 					= new member_activity($this->connection);
+		$this->notifications 					= new notifications($this->connection);
+		$this->view_details 					= new view_details($this->connection);
+		$this->message 							= new message($this->connection);
+		$this->point							= new point($this->connection);
+		$this->image_table 						= new image_table($this->connection);
+		$this->product_image 					= new product_image($this->connection);
+		$this->member_feedback 					= new member_feedback($this->connection);
+		$this->member_image 					= new member_image($this->connection);
+		$this->member_answer 					= new member_answer($this->connection);
+		$this->application_id 					= new application_id($this->connection);
+		$this->application_info 				= new application_info($this->connection);
+		$this->application_thread 				= new application_thread($this->connection);
+		$this->application_thread_comment 		= new application_thread_comment($this->connection);
+		$this->survey 							= new survey($this->connection);
+		$this->survey_question 					= new survey_question($this->connection);
+		$this->survey_answer 					= new survey_answer($this->connection);
+		$this->survey_completed 				= new survey_completed($this->connection);
+		$this->survey_member_answer 			= new survey_member_answer($this->connection);
 	}
 	
 	function escape($data)
