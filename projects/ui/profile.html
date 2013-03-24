@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Summarize | Product Page</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-tagmanager.css" rel="stylesheet" media="screen">
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+
+  </head>
+  <body>
+
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="index.html">Summarize</a>
+          <form class="form-search navbar-search">
+            <div class="input-append">
+              <input type="text" class="span7 search-query" placeholder="Search products...">
+              <button type="submit" class="btn btn-success">Search</button>
+            </div>
+          </form>
+          <ul class="nav pull-right">
+            <li><img data-src="holder.js/35x35" class="img-rounded" alt="35x35" style="width: 35px; height: 35px; margin-top: 8px" src="holder.js/35x35"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Artur Pokusin <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="profile.html">Your Profile</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="index-logout.html">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span9">
+          <img class="pull-left" style="margin-right: 3em; margin-top: 1em" src="holder.js/150x150">
+          <h1 class="user_name">Artur Pokusin</h1>
+          <h2>24 points / 15 products</h2>
+          <div class="clearfix"></div>
+          <section class="account_settings_wrap">
+            <h2>Account Settings <a href="#" class="section_hide btn btn-link">Hide Section</a></h2>
+            <hr />
+            <form class="form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="inputUsername">Username</label>
+                <div class="controls">
+                  <input type="text" class="input input-xlarge" id="inputUsername" placeholder="Username">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputEmail">Email</label>
+                <div class="controls">
+                  <input type="text" class="input input-xlarge" id="inputEmail" placeholder="Email">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputFirstName">First Name</label>
+                <div class="controls">
+                  <input type="text" class="input input-xlarge" id="inputFirstName" placeholder="First Name">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputLastName">Last Name</label>
+                <div class="controls">
+                  <input type="text" class="input input-xlarge" id="inputLastName" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="Location">Location</label>
+                <div class="controls">
+                  <input type="text" class="input input-xlarge" id="Location" placeholder="Location">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="Location">Gender</label>
+                <div class="controls">
+                  <div class="btn-group" data-toggle="buttons-radio">
+                    <button type="button" class="btn btn-primary">Male</button>
+                    <button type="button" class="btn btn-primary">Female</button>
+                    <button type="button" class="btn btn-warning"><i class="icon icon-white icon-remove"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputPassword">Password</label>
+                <div class="controls">
+                  <input type="password" class="input input-xlarge" id="inputPassword" placeholder="Enter Password to Save Changes">
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls">
+                  <button type="submit" class="btn">Save Changes</button>
+                </div>
+              </div>
+            </form>
+          </section><!-- .account_settings_wrap -->
+          <section class="notifications_wrap">
+            <h2>Notifications <a href="#" class="section_hide btn btn-link">Hide Section</a></h2>
+            <hr />
+            <ul class="unstyled">
+              <li class="notification"><a href="#" class="remove"><i class="icon icon-remove"></i></a> notification</li>
+              <li class="notification"><a href="#"  class="remove"><i class="icon icon-remove"></i></a> notification</li>
+            </ul>
+          </section><!-- .notifications_wrap -->
+          <section class="messages_wrap">
+            <h2>Messages <a href="#" class="section_hide btn btn-link">Hide Section</a></h2>
+            <hr />
+            <ul class="unstyled">
+              <li class="message">
+                <div class="message_actions">
+                  <a href="#" class="btn btn-link"><i class="icon icon-reply"></i></a>
+                  <a href="#" class="btn btn-link"><i class="icon icon-eye-open"></i></a>
+                  <a href="#" class="btn btn-link"><i class="icon icon-trash"></i></a>
+                </div><!-- .message_actions -->
+                <strong><a href="#">John H</a>:</strong>
+                message this is a long message lksadjflaksdjf adfkasdjf;laskdf sdkj fslkd jflskdj sd fosdfoisjo iesjf s fosei jfosei jfosiejf osief osiejf osei jf
+              </li>
+              <li class="message">
+                <div class="message_actions">
+                  <a href="#" class="btn btn-link"><i class="icon icon-reply"></i></a>
+                  <a href="#" class="btn btn-link"><i class="icon icon-eye-open"></i></a>
+                  <a href="#" class="btn btn-link"><i class="icon icon-trash"></i></a>
+                </div><!-- .message_actions -->
+                <strong><a href="#">John H</a>:</strong> dslkfja  dlfakj sdlafk sd;f lkasd; fakljs d;faslkj dflsd j lf ksdjlfksjd
+              </li>
+            </ul>
+          </section><!-- .messages_wrap -->
+          <section class="expert_wrap">
+            <h2>Expert Level <a href="#" class="section_hide btn btn-link">Hide Section</a></h2>
+            <hr />
+            <ul class="unstyled">
+              <li class="level"><a href="#" class="btn btn-info">Expert in Videography</a></li>
+              <li class="level"><a href="#" class="btn btn-info">Expert in Photography</a></li>
+            </ul>
+          </section><!-- .expert_wrap -->
+          <h2>Your Products <a class="btn btn-warning pull-right" href="products.html">View All <i class="icon-circle-arrow-right icon-white"></i></a></h2>
+          <hr style="margin-top: -5px" />
+          <ul class="thumbnails">
+            <li class="span3">
+              <div class="thumbnail">
+                <a href="product.html" class="thumb">
+                  <div class="overlay">The stunning new all-in-one iMac features a beautiful, completely re-engineered 27-inch widescreen display that's 75 percent less reflective. Third-generation quad-core Intel Core processors and superfast NVIDIA graphics make it the most powerful iMac yet. And it comes standard with 8 GB memory, a 1 TB hard drive, and advanced, high-speed I/O, including two Thunderbolt ports and four USB 3 ports. All in an impossibly thin enclosure that's only 5mm at the edge.
+                  </div>
+                  <img alt="210x140" src="holder.js/210x140">
+                </a>
+                <div class="caption">
+                  <h3>iMac 27"</h3>
+                  <p>
+                    <div class="btn-group">
+                      <button class="btn btn-small btn-success">15</button>
+                      <button class="btn btn-small btn-danger">20</button>
+                    </div>
+                    <a href="product.html" class="btn btn-small pull-right">View Product</a>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="span3">
+              <div class="thumbnail">
+                <a href="product.html" class="thumb">
+                  <div class="overlay">The stunning new all-in-one iMac features a beautiful, completely re-engineered 27-inch widescreen display that's 75 percent less reflective. Third-generation quad-core Intel Core processors and superfast NVIDIA graphics make it the most powerful iMac yet. And it comes standard with 8 GB memory, a 1 TB hard drive, and advanced, high-speed I/O, including two Thunderbolt ports and four USB 3 ports. All in an impossibly thin enclosure that's only 5mm at the edge.
+                  </div>
+                  <img data-src="holder.js/210x140" alt="210x140" src="holder.js/210x140">
+                </a>                <div class="caption">
+                    <h3>iPad Mini 16GB Wi-Fi</h3>
+                    <p>
+                      <div class="btn-group">
+                        <button class="btn btn-small btn-success">15</button>
+                        <button class="btn btn-small btn-danger">20</button>
+                      </div>
+                      <a href="product.html" class="btn btn-small pull-right">View Product</a>
+                    </p>
+                  </div>
+              </div>
+            </li>
+            <li class="span3">
+              <div class="thumbnail">
+                <a href="product.html" class="thumb">
+                  <div class="overlay">The stunning new all-in-one iMac features a beautiful, completely re-engineered 27-inch widescreen display that's 75 percent less reflective. Third-generation quad-core Intel Core processors and superfast NVIDIA graphics make it the most powerful iMac yet. And it comes standard with 8 GB memory, a 1 TB hard drive, and advanced, high-speed I/O, including two Thunderbolt ports and four USB 3 ports. All in an impossibly thin enclosure that's only 5mm at the edge.
+                  </div>
+                  <img data-src="holder.js/210x140" alt="210x140" src="holder.js/210x140">
+                </a>                <div class="caption">
+                    <h3>iPhone 32GB AT&amp;T</h3>
+                    <p>
+                      <div class="btn-group">
+                        <button class="btn btn-small btn-success">15</button>
+                        <button class="btn btn-small btn-danger">20</button>
+                      </div>
+                      <a href="product.html" class="btn btn-small pull-right">View Product</a>
+                    </p>
+                  </div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+        <div class="span3">
+          <div class="span3" data-spy="affix" data-offset-top="0">
+            <a href="#addProduct" role="button" class="btn btn-primary btn-block" data-toggle="modal">Add Product <i class="icon-plus icon-white"></i></a>
+            <a href="#" class="btn btn-link btn-block account_settings_btn">Account Settings</a>
+            <a href="#" class="btn btn-link btn-block notifications_btn">Notifications</a>
+            <a href="#" class="btn btn-link btn-block messages_btn">Messages</a>
+            <a href="#" class="btn btn-link btn-block expert_btn">Expert Level</a>
+            <hr />
+            <ul class="unstyled well">
+              <li><a href="#" class="btn btn-link ">Terms</a></li>
+              <li><a href="#" class="btn btn-link ">Twitter</a></li>
+              <li><a href="#" class="btn btn-link ">Contact</a></li>
+              <li><a href="#" class="btn btn-link ">About</a></li>
+              <li><a href="#" class="btn btn-link ">Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Add Product Modal -->
+  <div id="addProduct" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h2 id="addProductLabel">Add a Product</h2>
+    </div>
+    <div class="modal-body grey">
+      <form class="form-inline" style="margin: 5px">
+        <input type="text" class="input-xlarge" placeholder="URL of Product">
+        <button type="submit" href="#confirmProduct" role="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">Auto-fill Info</button><button type="submit" class="btn">Manually Add Info</button>
+      </form>
+    </div>
+  </div>
+
+    <!-- Confirm Product Modal -->
+  <div id="confirmProduct" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="confirmProductLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h2 id="confirmProductLabel">Confirm Product Info</h2>
+    </div>
+    <div class="modal-body grey">
+      <img data-src="holder.js/120x120" alt="120x120" style="width: 120px; height: 120px; margin-right: 16px;" src="holder.js/120x120" class="pull-left">
+      <h3 style="margin-top: 0; padding-top: 0; font-weight: 500; margin-bottom: 0">iPad Mini 16GB Wi-Fi</h3>
+      <p>
+        Conceived from its sleek, glossy 10" counterpart, the new iPad Mini boasts one gigantic new trait over the full-sized iPad: the ability to hold it in one hand. This almost revolutionary twist on the device that sparked a frenzy in the tablet world has finally brought joy to those that have held out hope of such higher portability in an iPad for so long. But does the iPad Mini live up to the hype? Absolutely.
+      </p>
+    </div>
+    <div class="modal-body">
+      <input type="text" name="tags" placeholder="Add Some Tags" class="tagManager" />
+<!--       <hr style="margin-top: 5px; margin-bottom: 10px"/> -->
+<!--       <form class="form-inline">
+        <input type="text" class="input input-small" placeholder="Category"></input>
+        <input type="text" class="input" placeholder="Your Feedback" style="width: 286px"></input>
+        <button type="submit" class="btn btn-primary pull-right">Add Feedback</button>
+      </form> -->
+    </div>
+    <div class="modal-body grey">
+      <a class="btn btn-info"><i class="icon icon-time icon-white"></i> Finish Later</a>
+      <a class="btn btn-success pull-right"><i class="icon icon-plus icon-white"></i> Submit Product</a>
+     <a class="btn btn-warning pull-right"><i class="icon icon-remove icon-white"></i> Cancel</a>
+
+    </div>
+  </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/bootstrap-tagmanager.js"></script>
+    <script>
+      var toggleSection = function(section) {
+        $(section + '_btn').click(function() {
+          $(section +'_wrap').slideToggle('fast');
+          return false;
+        });
+      };
+      toggleSection('.account_settings');
+      toggleSection('.notifications');
+      toggleSection('.messages');
+      toggleSection('.expert');
+      $('.notification .remove').click(function() {
+        var parent = $(this).parent();
+        parent.fadeOut('fast');
+        return false;
+      });
+      $('.message').hover(function() {
+        $(this).children('.message_actions').toggleClass('active');
+      });
+      $('.section_hide').click(function(){
+        $(this).closest('section').slideToggle();
+      });
+    </script>
+  </body>
+</html>
