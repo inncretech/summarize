@@ -20,6 +20,20 @@ class product
 		$data = mysql_query("INSERT INTO ".($this->table)." (`public_id`,`title`,`seo_title`,`description`,`created_by`,`created_at`) VALUES ('$public_id','$title','$seo_title','$description','$created_by',now()); ",$this->connection);
 		return $this->getLastId();
 	}
+	function getWeeklyCount()
+	{	
+		$data = mysql_query("SELECT COUNT(product_id) FROM ".($this->table)." WHERE created_at >= curdate() - INTERVAL DAYOFWEEK(curdate())+6 DAY
+AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY",$this->connection);
+		$info = mysql_fetch_array($data);
+		return $info[0];
+	}
+	
+	function countActive()
+	{	
+		$data = mysql_query("SELECT COUNT(product_id) FROM ".($this->table),$this->connection);
+		$info = mysql_fetch_array($data);
+		return $info[0];
+	}
 	
 	function get($product_id)
 	{

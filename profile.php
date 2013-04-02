@@ -33,6 +33,7 @@ if (!$session->check()){
 $member_data = $session->get();
 
 $member_data['info'] 						= $database->member_info->get($member_data['member_id']);
+$member_data['survey'] 						= $database->survey->getByMember($member_data['member_id']);
 $member_data['activity'] 					= $database->member_activity->get($member_data['member_id'],10);
 $member_data['notifications'] 				= $database->notifications->get($member_data['member_id'],10);
 $member_data['points']['total'] 			= $database->point->getTotal($member_data['member_id']);
@@ -70,39 +71,43 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 
 
 		<section class="settings_wrap" >
-			<h2>Account Settings <a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a></h2>
+			<h2>Account Settings <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_data.php"; ?>
 		</section>
 
 		<section class="activity_wrap" >
-			<h2>Activity <a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a></h2>
+			<h2>Activity <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_activity.php"; ?>
 		</section>
 						
 		<section class="notifications_wrap" >
-			<h2>Notifications <a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a></h2>
+			<h2>Notifications <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_notification.php"; ?>
 		</section>
 
 		<section  class="points_wrap" >
-			<h2>Total points <?=$member_data['points']['total'];?><a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a></h2>
+			<h2>Total points <?=$member_data['points']['total'];?><!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_points.php"; ?>
 		</section>
-
-		<!--<section class="messages_wrap" style="display:none;">
-			<h2>Messages <a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a></h2>
+		
+		<section class="survey_wrap" >
+			<h2>Survey <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
+			<hr>
+			<?php include "template/logged_in/member/profile_survey.php";?>
+		</section>
+		
+		<section class="messages_wrap" style="display:none;">
+			<h2>Messages <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_message_system.php";?>
-		</section>-->
+		</section>
 
 		<h2>Products You've Added 
-			<a href="#" class="btn btn-warning pull-right" href="products.html" onclick="render.productsAdded(member_id,18);return false;">View More 
-				<i class="icon-circle-arrow-right icon-white"></i>
-			</a>
+			
 		</h2>
 		<hr>
 		<ul class="thumbnails" id="products-added"></ul>
@@ -115,6 +120,8 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 			<a href="#" onclick="goTo('.activity_wrap');return false;" class="btn btn-block activity_btn">Activity</a>
 			<a href="#" onclick="goTo('.notifications_wrap');return false;" class="btn btn-block notifications_btn">Notifications</a>
 			<a href="#" onclick="goTo('.points_wrap');return false;" class="btn btn-block points_btn">Points</a>
+			<a href="#" onclick="goTo('.survey_wrap');return false;" class="btn btn-block points_btn">Survey List</a>
+			<a href="<?=SITE_ROOT."/create-survey.php";?>" onclick="" class="btn btn-block points_btn">Create Survey</a>
 			<!--<a href="#"  class="btn btn-block messages_btn">Messages</a>-->
 			<hr>
 			<ul class="unstyled well">
@@ -131,7 +138,7 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 </div>
 
 <?php include "template/logged_in/footer.php"; ?>
-
+<script type="text/javascript" src="<?=SITE_ROOT;?>/js/survey.functions.js"></script>
 <script>
 goTo(".<?=$_GET['action']?>_wrap")
 function goTo(value){

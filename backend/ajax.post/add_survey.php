@@ -20,6 +20,10 @@ foreach ($data as $key=>$value){
 			if (($index[0]=='answer')&&($index[1]==$key[1])){
 				$database->survey_answer->add($question_id,$survey_id,$item,$member_data['member_id']);
 			}
+			if (($index[0]=='textarea')&&($index[2]==$key[1])){
+				for ($i = 1; $i <= intval($item); $i++)
+				$database->survey_answer->add($question_id,$survey_id,null,$member_data['member_id']);
+			}
 		}
 	}
 }

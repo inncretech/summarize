@@ -104,7 +104,7 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 			<hr>
 			<div id="myCarousel" class="carousel slide pull-left" style="margin-right: 1em; width: 220px; ">
 				<!-- Carousel items -->
-				<div class="carousel-inner">
+				<div class="carousel-inner breadcrumb" style="padding:0px;">
 					<div class="active item">
 						<img src="<?='http://'.(S3_BUCKET).'.s3.amazonaws.com/p_'.$product_data['public_id'].'_normal.jpg';?>" alt="<?=$product_data['title'];?>">
 					</div>
@@ -121,7 +121,7 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 			<div class="clearfix"></div>
 
 			<div class="tabbable">
-			<ul class="nav nav-tabs" style="text-align: center;">
+			<ul class="nav nav-tabs" style="text-align: center;margin: 0px;">
 				<li class="active">
 					<a href="#feedback" data-toggle="tab">Feedback</a>
 				</li>
@@ -132,8 +132,8 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 					<a href="#discuss" data-toggle="tab">Discuss</a>
 				</li>
 			</ul>
-			<div class="tab-content">
-				<div class="tab-pane  active" id="feedback">
+			<div class="tab-content" style="padding:10px;background:white;border-bottom: 1px solid #ddd;border-left: 1px solid #ddd;border-right: 1px solid #ddd;">
+				<div class="tab-pane  active" id="feedback" >
 					<?php  
 					foreach ($product_data['feedback_data'] as $root_key => $root_value )
 					{
@@ -197,7 +197,7 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 
 					<ol id = "questionArea"></ol>
 					<div class="input-append" style="margin-left: 18px;">
-						<input class="span8" id="questionText" type="text" placeholder="Ask a question!">
+						<input class="span7" id="questionText" type="text" placeholder="Ask a question!">
 						<a href="#" class="btn" onclick="return false;" type="button" id="addQuestionBtn" data-toggle="modal">+ Add</a>
 					</div>
 				</div>
@@ -205,9 +205,7 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 			</div>
 			<hr>
 			<h2>Highest Rated 
-				<a class="btn btn-warning pull-right" href="#" onclick="render.HighestRated();">View More 
-					<i class="icon-circle-arrow-right icon-white"></i>
-				</a>
+				
 			</h2> 
 			<hr>
 			<ul class="thumbnails" id="highest-rated"></ul>

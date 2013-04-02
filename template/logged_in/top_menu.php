@@ -30,6 +30,9 @@
 						<li>
 							<a href="<?=SITE_ROOT?>/profile.php?action=points">Points</a>
 						</li>
+						<li>
+							<a href="<?=SITE_ROOT?>/profile.php?action=survey">Survey List</a>
+						</li>
 						<!--<li>
 							<a href="profile.php?action=messages">Messages</a>
 						</li>-->

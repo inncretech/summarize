@@ -37,6 +37,14 @@ class product_feedback
 		
 	}
 	
+	function getTopFeedback($product_id)
+	{
+		
+		$data 	= mysql_query("SELECT * FROM ".$this->table."  WHERE (SELECT MAX(total_likes+total_unlikes) FROM ".$this->table." WHERE `product_id` = '".$product_id."' ) = (total_likes+total_unlikes) AND `product_id` = '".$product_id."' GROUP BY feedback_id",$this->connection);
+		return mysql_fetch_array($data);
+		
+	}
+	
 	function getByProduct($product_id)
 	{
 		$data = Array();
@@ -74,6 +82,14 @@ class product_feedback
 	function changeCategory($old_category,$new_category,$product_id)
 	{
 		$data = mysql_query("UPDATE ".($this->table)." SET `category`='$new_category' WHERE `category`='$old_category' AND `product_id` = '$product_id'",$this->connection);
+	}
+	
+	function getWeeklyCount()
+	{	
+		$data = mysql_query("SELECT COUNT(feedback_id) FROM ".($this->table)." WHERE created_at >= curdate() - INTERVAL DAYOFWEEK(curdate())+6 DAY
+AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY",$this->connection);
+		$info = mysql_fetch_array($data);
+		return $info[0];
 	}
 	
 	function updateLike($feedback_id,$product_id)

@@ -61,6 +61,10 @@ $survey_id = 1;
         <div class="hero-unit">
 			<p style="margin:0px;">This feature allows you to create surveys with three types of answers checkbox, radio button or textbox in a simple and friendly way.</p>
 		</div>
+		<div class="alert alert-danger" id="survey-error" style="display:none;">
+		<strong>Ups!</strong>
+		Please fill all forms to be able to create the survey.
+		</div>
 		<form id="survey-create-form" method="POST" action="<?=SITE_ROOT?>/backend/ajax.post/add_survey.php">
 			<input type="text" placeholder="Title" id="title" name="title" class="span9">
 			<div id="survey-question">

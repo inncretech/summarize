@@ -46,11 +46,53 @@ class member
 		
 	}
 	
+	function countSocialNetwork()
+	{	
+		$data = mysql_query("SELECT COUNT(member_id) FROM ".($this->table)." WHERE social_network_id != 0",$this->connection);
+		$info = mysql_fetch_array($data);
+		return $info[0];
+	}
+	
+	function getLatest()
+	{	
+		$data = mysql_query("SELECT * FROM ".($this->table)." ORDER BY created_at DESC LIMIT 0,4",$this->connection);
+		$value = Array();
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info);
+		}
+		return $value;
+	}
+	
+	function getWeeklyCount()
+	{	
+		$data = mysql_query("SELECT COUNT(member_id) FROM ".($this->table)." WHERE created_at >= curdate() - INTERVAL DAYOFWEEK(curdate())+6 DAY
+AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY",$this->connection);
+		$info = mysql_fetch_array($data);
+		return $info[0];
+	}
+	
+	function countActive()
+	{	
+		$data = mysql_query("SELECT COUNT(member_id) FROM ".($this->table),$this->connection);
+		$info = mysql_fetch_array($data);
+		return $info[0];
+	}
+	
 	function get($member_id)
 	{	
 		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `member_id`='$member_id'",$this->connection);
 
 		return mysql_fetch_array($data);
+	}
+	
+	function getAll()
+	{	
+		$data = mysql_query("SELECT * FROM ".($this->table),$this->connection);
+		$value = Array();
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info);
+		}
+		return $value;
 	}
 	
 	function checkSocialNetwork($social_network_id)

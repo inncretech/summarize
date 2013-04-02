@@ -20,6 +20,14 @@ class answers
 		mysql_query("UPDATE ".($this->table)." SET total_likes = total_likes + 1 WHERE `answers_id` = '$answer_id'",$this->connection);
 
 	}
+	
+	function getWeeklyCount()
+	{	
+		$data = mysql_query("SELECT COUNT(answers_id) FROM ".($this->table)." WHERE created_at >= curdate() - INTERVAL DAYOFWEEK(curdate())+6 DAY
+AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY",$this->connection);
+		$info = mysql_fetch_array($data);
+		return $info[0];
+	}
 
 	function addUnlike($answer_id)
 	{

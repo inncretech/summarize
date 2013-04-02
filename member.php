@@ -101,9 +101,7 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 		</section>-->
 			<hr>
 			<h2>Products You've Added 
-				<a href="#" class="btn btn-warning pull-right" href="products.html" onclick="render.productsAdded(visited_member_id,18);return false;">View More 
-					<i class="icon-circle-arrow-right icon-white"></i>
-				</a>
+				
 			</h2>
 			<hr/></h2>
 			<ul class="thumbnails" id="products-added">

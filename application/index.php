@@ -6,17 +6,38 @@ $database 		= new Database();
 $facebook 		= new Fb();
 $twitter 		= new Tw();
 
+// ######################## Sign Out Check
+if (isset($_GET['sign_out']))
+{
+	$session->refresh();
+	$session->getValue("social_network_name")=="facebook" ? Redirect($facebook->logoutUrl) : Redirect($_SERVER['PHP_SELF']);
+}
 
+// ######################## Member Verifications
+if (!$session->check()){
+	$sn_id = $session->getValue("social_network_id");
+	if (isset($sn_id)){
+		$member_data = $database->member->checkSocialNetwork($sn_id);
+		if ($member_data!=null){
+			$member_image_id		= $database->member_image->get($member_data['member_id']);
+			$member_data['image'] 	=  $database->image_table->get($member_image_id);
+			$session->sign_in($member_data);
+			Redirect($_SERVER['PHP_SELF']);
+		}
+	}
+}
 
 // ######################## Retrive Session Data
 $member_data = $session->get();
 
-echo "<script> var member_login = ".($session->check() ? "true" : "false")."; </script>";
-echo "<script> var application_id = '".($_GET['secret'])."'; </script>";
-echo "<script> var thread_id = '".($_GET['thread_id'])."'; </script>";
+echo "<script> var member_login 	= ".($session->check() ? "true" : "false")."; </script>";
+echo "<script> var application_id 	= '".($_GET['app_id'])."'; </script>";
+echo "<script> var product_id 		= '".($_GET['thread_id'])."'; </script>";
+echo "<script> var site_root 		= '".SITE_ROOT."'; </script>";
 ?>
 <html>
 <head>
+<script src="http://www.summarizit.com/application/js/porthole.js"></script>
 <meta charset="utf-8">
 
 <title>SummarizeIt Application</title>
@@ -24,78 +45,69 @@ echo "<script> var thread_id = '".($_GET['thread_id'])."'; </script>";
 <meta name="description" content="">
 <meta name="author" content="">
 
-<link rel="stylesheet" href="../../css/bootstrap.min.css">
-<link rel="stylesheet" href="../../css/design.css">
+<link rel="stylesheet" href="http://www.summarizit.com/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://www.summarizit.com/css/design.css">
 
-<link rel="stylesheet" href="../../js/bootstrap/google-code-prettify/prettify.css">
 
 
 </head>
-<body>
-<table class="post-form">
-<tr>
-<td>
-<img src="user.png" style="margin-right:5px;margin-top:-2px;">
-<input type="text" class="input-xlarge" id="comment" placeholder="Comment..." style="height:auto;margin-bottom:0px;">
-</td>
-<td>
-<button class="btn btn-primary" onclick="app.post();">Post<?=($session->check() ? " as ".$member_data['login'] : "")?></button>
-</td>
-</tr>
-</table>
+<body class="breadcrumb" style="background: white;border:none;">
 
-<table class="login-form" style="display:none;">
+
+
+<table class="login-form" style="display:none;width:100%">
 <tr>
-<td>
-<input type="text" class="input-xlarge" id="login" placeholder="Username"  style="height:auto;margin-bottom:0px;">
+<td style="width:280px;">
+<input type="text" class="input-xlarge" id="login" placeholder="Username"  style="width:280px;height:auto;margin-bottom:0px;">
 </td>
 <td>
-<input type="password" class="input-xlarge" id="password"  style="height:auto;margin-bottom:0px;">
+<input type="password" class="input-xlarge" id="password"  style="height:auto;width:100%;margin-bottom:0px;">
 </td>
-<td>
+<td style="width: 20px;">
 <button class="btn btn-primary" onclick="app.login();">Login</button>
 </td>
 </tr>
 </table>
-<table class="register-form" style="display:none;">
+<table class="register-form" style="display:none;width:100%">
 <tr>
-<td>
-<input type="text" class="input-xlarge" id="email" placeholder="Email..."  style="height:auto;margin-bottom:0px;">
+<td style="width:280px;">
+<input type="text" class="input-xlarge" id="email" placeholder="Email..."  style="width:280px;height:auto;margin-bottom:0px;">
 </td>
 <td>
 <button class="btn btn-primary" onclick="app.register();">Register</button>
 </td>
 </tr>
 </table>
+ <?=($member_data['login']!="" ? '<h3> Post as '.$member_data['login'].'</h3>' : "");?>
 <div id="feedback" style="margin-top:10px;">
 </div>
-<footer>
+<?php ($session->check() ? include "../template/logged_in/footer.php" : include "../template/logged_out/footer.php" );?>
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
-<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>
-<script type="text/javascript" src="js/bootstrap/google-code-prettify/prettify.js"></script>
-<script type="text/javascript" src="js/bootstrap/application.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-affix.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-transition.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-alert.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-modal.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-dropdown.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-scrollspy.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-tab.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-tooltip.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-popover.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-button.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-collapse.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-carousel.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap-typeahead.js"></script>
-<script type="text/javascript" src="js/feedback.functions.js"></script>
-<script type="text/javascript" src="js/add.like.functions.js"></script>
-<script type="text/javascript" src="js/render.functions.js"></script>
-<script type="text/javascript" src="js/get.functions.js"></script>
-</footer>
+<script type="text/javascript" src="http://www.summarizit.com/application/js/internal.app.functions.js"></script>
+<script>
+var timer;
+var parentUrl = decodeURIComponent((window.location.href).substr((window.location.href).indexOf("#") + 1));
+console.log("iFrame Parent "+document.referrer.split('/')[2]);
+function onMessage(messageEvent) {  
+	if (messageEvent.data["status"]=="ready") {
+		timer = setInterval(function(){sendHeight();},100);
+	}
+}
+
+function sendHeight(){
+	windowProxy.post({'height': $(document).height()});
+}
+window.onload=function(){ 
+	// Create a proxy window to send to and receive message from the guest iframe
+	windowProxy = new Porthole.WindowProxy(parentUrl);
+	windowProxy.addEventListener(onMessage);
+	windowProxy.post({'status': 'ready'});
+};
+
+if (!member_login){ 
+	$(".login-form").show(); 
+	$(".register-form").show();
+}
+</script>
 </body>
 </html>

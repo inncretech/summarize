@@ -166,8 +166,8 @@ var render = new function() {
 		$.each(obj, function(key, val) {
 			
 			var code  = '<p><a href="#" onclick="compare.set(\''+val.title+'\');return false;"><i class="icon-plus-sign"></i></a>';
-				code += '<img src="'+s3_base_link+'.s3.amazonaws.com/p_'+val.public_id+'_small.jpg" style="height: 25px;">';
-				code +='<a href="'+site_root+'/product/'+val.seo_title+'" class="btn btn-link " style="font-weight:bold;color:#555;width:70%;white-space: nowrap;height:19px;overflow:hidden;text-overflow: ellipsis;text-align: left;">'+val.title+'</a></li></p>';
+				code += '<img class="breadcrumb" src="'+s3_base_link+'.s3.amazonaws.com/p_'+val.public_id+'_small.jpg" style="padding:0px;margin:0px;height: 25px;">';
+				code +='<a href="'+site_root+'/product/'+val.seo_title+'" class="btn btn-link " style="font-weight:bold;color:#555;width:69%;white-space: nowrap;height:19px;overflow:hidden;text-overflow: ellipsis;text-align: left;">'+val.title+'</a></li></p>';
 				
 			$(".similar-products").append(code);
 		})
@@ -702,6 +702,9 @@ var render = new function() {
 	}
 	
 	this.homePage = function (limit) {
+		$("#highest-rated").html('');
+		$("#most-viewed").html('');
+		$("#recently-added").html('');
 		var code;
 		$.post(site_root+"/backend/ajax.get/get_highest_rated.php",{start:0,limit:limit},function(data) {
 		
@@ -710,11 +713,12 @@ var render = new function() {
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
 				//alert(val.image);
+				
 				code = "";
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+val.top_feedback.category+"</strong> : "+val.top_feedback.comment+"";
                 code += "</div>";
                 code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
@@ -749,7 +753,7 @@ var render = new function() {
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+val.top_feedback.category+"</strong> : "+val.top_feedback.comment+"";
                 code += "</div>";
                 code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
@@ -785,7 +789,7 @@ var render = new function() {
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+val.top_feedback.category+"</strong> : "+val.top_feedback.comment+"";
                 code += "</div>";
                 code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
