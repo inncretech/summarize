@@ -61,6 +61,7 @@ if ($session->check()){
 	include "template/logged_out/sign_in_modal.php";
 	include "template/logged_out/register_modal.php";
 }
+include "template/summarize_with_friend.php";
 include "template/add_to_compare_modal.php";
 include "template/advanced_search_modal.php";
 
@@ -224,6 +225,8 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 				<p id="social-msg" style="display:none;padding: 5px;text-align: center;">
 					Posted on your timeline!
 				</p>
+				<hr>
+				<a href="#summarizeFriend" class="btn btn-primary btn-block" data-toggle="modal">Summarize With Friends</a>
 				<hr>
 							
 				<a href="#" class="btn btn-success btn-block" id="follow-product-btn" data-toggle="modal">Follow Product</a>

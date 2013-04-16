@@ -9,8 +9,7 @@ $values 	= $database->product_feedback->getHighestRated($data['start'],$data['li
 $data  		= Array();
 foreach ($values as $item){
 	$tmp = $database->product->get($item['product_id']);
-	
-	array_push($data,$tmp);
+	if ($tmp['application']==0)	array_push($data,$tmp);
 }
 $count = count($data);
 for ($i = 0; $i <$count; $i++) {

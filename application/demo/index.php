@@ -136,7 +136,7 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="http://www.summarizit.com/application/js/porthole.js"></script>
 <script type="text/javascript" src="http://www.summarizit.com/application/js/external.app.functions.js"></script>
-<script> summarizit.load("673afcca32d7c0491587abe6d83ad484","<?=$_GET['id'];?>","summarizIt-Container");</script>
+<script> summarizit.load("bec5e936a7e73aeca04244cb076053c5","5","summarizIt-Container");</script>
 <!-- End Application Code -->
 </body>
 </html>

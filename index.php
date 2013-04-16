@@ -58,6 +58,7 @@ echo "<script> var product_id; </script>";
 	<div class="row">
 	<?=!$session->check() ? '<div class="span12">' : '<div class="span9" >';?>
 	<?=($_GET['msg']=="survey" ? '<div class="alert alert-success" id="sign-in-info" style="margin-bottom: 10px;"><strong>Thank you!</strong> With this information we will improve your experience on our site in the future.</div>' : '');?>
+	<!--
 	<div id="latest-feedback-add-form" style="display:none;background:white;border: 1px solid rgb(226, 218, 218);margin-bottom:10px;text-align: center;padding:5px;">
 	</div>
 	<div class="alert alert-success" id="opinion-success" style="display:none">
@@ -66,21 +67,65 @@ echo "<script> var product_id; </script>";
 	
 	<div class="hero-unit" id="latest-feedback" style="display:none;padding:5px;margin-bottom:10px;text-align: left;">
 	</div>
+	-->
 	<?php if (!$session->check()){ ?>
-		<!--
-		<div class="hero-unit">
-        <h1>Hello!</h1>
-        <p>We are SummarizIt.com. We specialize in helping you find and decide upon your desired items fast and easy using user friendly features. </p>
-		<p>
-			<a href="#addToCompare" role="button" class="btn btn-info btn-large" data-toggle="modal">Compare Products</a>
-			<a href="#advancedSearchModal" role="button" class="btn btn-primary btn-large" data-toggle="modal" style="margin-left:5px;">Advanced Search</a>
-			<a href="<?=SITE_ROOT?>/survey.php" role="button" class="btn btn-success btn-large" >Take Survey</a>
-		</p>
+		<div class="hero-unit" style="padding: 20px;font-family: 'calibri';">
+			<table>
+				<tr>
+					<td style="width:60%;color:black;">
+					<h1 style="font-size:32px;">Share your knowledge, Help making better decisions!</h1>
+					<br>
+					<p style="">Earn points when someone is benefited by your opinions.</p>
+					<p style="text-align:center;"><a href="#registerModal" data-toggle="modal" class="btn btn-large btn-primary" style="border-radius:5px;background-color:rgb(32, 32, 211);">Try It Now</a></p>
+					<p style="">Have SummarizIt on your site using our application. <a href="<?=SITE_ROOT."/business"?>">Check It Out</a>.</p>
+					</td>
+					<td>
+						<!--<div id="myCarousel" class="carousel slide" >
+						  <ol class="carousel-indicators" style="list-style: none;text-align:center;">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						  </ol>
+						 
+						  <div class="carousel-inner">
+							<div class="active item"><img src="img/cloud.png" style="margin-left: auto; margin-right: auto;height: 255px;"></div>
+							<div class="item"><img src="img/user.png" style="margin-left: auto; margin-right: auto;height: 255px;"></div>
+							<div class="item"><img src="img/task.png" style="margin-left: auto; margin-right: auto;height: 255px;"></div>
+						  </div>
+						 
+							<a class="carousel-control left" href="#myCarousel" data-slide="prev" style="font-size: 50px;">&lsaquo;</a>
+							<a class="carousel-control right" href="#myCarousel" data-slide="next" style="font-size: 50px;">&rsaquo;</a>
+						</div>
+						-->
+						<iframe style="margin:10px;border:2px solid grey;" width="350" height="255" src="http://www.youtube.com/embed/UGvJQKv51lw" frameborder="0" allowfullscreen></iframe>
+					</td>
+				</tr>
+			</table>
         </div>
-		-->
+		
+		<div class="hero-unit" style="padding: 20px;font-family: 'calibri';">
+			<table>
+				<tr>
+					<td style="width:70%">
+					<a href="<?=SITE_ROOT."/survey.php?id=26";?>" class="btn  btn-success" style="float:left;margin-top: 15px;border-radius:5px;font-size: 18px;rgb(65, 172, 30);">Take a Small Survey</a><span style="float:left;padding:5px;margin-left:5px;margin-top:10px;">(To help us improve summarizit)</span>
+					</td>
+				</tr>
+				<tr>
+				<td>
+					<div>
+					<p style="color:black;line-height: 1.28em;">At Summarizit, We are striving to help you in making better decisions, in less time and based on experiences of real people around you.</p>
+					<p style="color:black;line-height: 1.28em;">We need your help in achieving a better world for each one of us, by helping us organize the information on the internet.</p>
+					<p style="color:black;line-height: 1.28em;">All of us have experienced, that searching online to making decisions like buying a product or choosing a doctor, lawyer or downloading an app can be very time consuming.</p>
+					</div>
+					<p style="text-align:center;"><a href="#registerModal" data-toggle="modal" class="btn btn-large btn-primary" style="border-radius:5px;background-color:rgb(32, 32, 211);">Sign Up Now</a></p>
+				</td>
+				</tr>
+			</table>
+        </div>
+		
 	<?php } ?>
 			
-			<h2>Highest Rated 
+			<h2><a href="#" onclick="render.HighestRated();return false;">Highest Rated </a>
 				
 			</h2>
 			<hr>
@@ -127,7 +172,7 @@ echo "<script> var product_id; </script>";
 				}
 				?>
 			</ul>
-			<h2>Most Viewed 
+			<h2><a href="#" onclick="render.MostViewed();return false;">Most Viewed</a> 
 				
 			</h2>
 			<hr>
@@ -175,7 +220,7 @@ echo "<script> var product_id; </script>";
 				}
 				?>
 			</ul>
-			<h2>Recently Added 
+			<h2><a href="#" onclick="render.RecentlyAdded();return false;">Recently Added </a>
 				
 			</h2>
 			<hr>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Apple iPhone 5 16GB (White) Unlocked</title>
+
+<meta charset="utf-8">
+<meta name="description" content="We are SummarizIt.com. We specialize in helping you find and decide upon your desired items fast and easy using user friendly features." />
+<meta name="keywords" content="features,product category,advance search,compare items" />
+<meta name="author" content="Pietroiu Alexandru">
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://github.com/jebaird/dragtable/raw/master/src/css/dragtable-default.css" type="text/css" />
+<link rel="stylesheet" href="http://www.summarizit.com/css/bootstrap.min.css" >
+<link rel="stylesheet" href="http://www.summarizit.com/css/styles.css"  >
+<link rel="stylesheet" href="http://www.summarizit.com/css/design.css" >
+<link rel="stylesheet" href="http://www.summarizit.com/css/tagify-style.css" >
+
+</head>
+<body style="padding-top:60px;">
+
+<!-- GOOGLE ANALITYCS-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38606317-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+	<div class="container">
+	  <a class="brand" href="index.php">SummarizeIt</a>
+	  <div class="navbar-search">
+				<div class="input-append">
+					<input type="text" class="span5" id="global-search" autocomplete="off" placeholder="Search products...">
+					<button type="submit" class="btn btn-success" onclick="return false;" id="global-search-btn" >Search</button>
+					<a  href="#advancedSearchModal" data-toggle="modal"><button type="submit" class="btn" onclick="return false;" >Filter</button></a>
+					<a  href="#signInModal" role="button" class="btn btn-primary" data-toggle="modal" id="addProductBtn">Add<i class="icon-plus icon-white"></i>
+					</a>
+				</div>
+			</div>
+	  <ul class="nav pull-right">
+
+		<li>
+              <a href="#signInModal" data-toggle="modal" >Sign in</a>
+			  </li>
+			  <li style="margin-left:5px;">
+				<a href="#registerModal" data-toggle="modal">Register</a></button>
+			  </li>
+	  </ul>
+	</div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="signInModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
+      <h2 id="addProductLabel">Sign In 
+      <div class="social_signin">
+		<a href="http://www.summarizit.com/backend/facebook/login-facebook.php" class="btn btn-facebook"><i class="icon icon-facebook">&nbsp;</i> Use Facebook</a>
+        <a href="http://www.summarizit.com/backend/twitter/login-twitter.php" class="btn btn-twitter"><i class="icon icon-twitter">&nbsp;</i> Use Twitter</a>
+      </div>
+      </h2>
+    </div>
+  
+	<div class="modal-body grey">
+	<div id="sign-in-modal-error" style="display:none;margin-bottom: 10px;">
+		<div class="alert alert-danger" id="product-error" style="margin-bottom: 0px;">
+		<strong>Ups!</strong> Invalid Credentials.
+		</div>
+	</div>
+	  <form class="form-horizontal" id="sign-in-form">
+		<div class="control-group"  style="margin-bottom: 10px">
+		  <label class="control-label" for="inputLogin">Login</label>
+		  <div class="controls">
+			<input type="text"  id="login" placeholder="Login">
+		  </div>
+		</div>
+		<div class="control-group" style="margin-bottom: 10px">
+		  <label class="control-label" for="inputPassword">Password</label>
+		  <div class="controls">
+			<input type="password"  id="password" placeholder="Password">
+		  </div>
+		</div>
+		<div class="control-group">
+		  <div class="controls">
+			<label class="checkbox" style="padding-bottom: 10px">
+			  <input type="checkbox"> Remember me
+			</label>
+			<button type="submit" class="btn" onclick="return false;" id="sign-in-btn">Sign in</button>
+			<button type="submit" href="#registerModal" role="button" class="btn" data-dismiss="modal" data-toggle="modal">Register</button>
+		  </div>
+		</div>
+	  </form>
+	</div>
+</div>
+<div id="registerModal"  class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
+      <h2 id="addProductLabel">Sign Up
+      <div class="social_signin">
+		<a href="http://www.summarizit.com/backend/facebook/login-facebook.php" class="btn btn-facebook"><i class="icon icon-facebook">&nbsp;</i> Use Facebook</a>
+        <a href="http://www.summarizit.com/backend/twitter/login-twitter.php" class="btn btn-twitter"><i class="icon icon-twitter">&nbsp;</i> Use Twitter</a>
+      </div>
+      </h2>
+	  <div class="form-horizontal" id="register-text" style="text-align: center;">
+		You can easily sign up using your social network account with just one click.
+	</div>
+  </div>
+  <div class="modal-body grey">
+	
+	
+	<form class="form-horizontal" id="register-form"  method="POST" action="http://www.summarizit.com/backend/ajax.post/add_member.php">
+		<input type="hidden" name="image" value="http://www.summarizit.com/images/default.png">
+		 <input class="input-xlarge" type="hidden" style="width:272px" name="first_name" id="first_name" placeholder="First Name" autocomplete="off" value="First Name">
+		 <input class="input-xlarge" type="hidden" style="width:272px" name="last_name" id="last_name" placeholder="First Name" autocomplete="off" value="Last Name">
+		<div class="control-group" style="margin-bottom: 10px">
+		  <label class="control-label" for="inputEmail">Email</label>
+		  <div class="controls">
+			<input class="input-xlarge" style="width:272px;float: left;" type="text" name="email" id="email" placeholder="Email" autocomplete="off" value="">
+			<img class="email-check" style="display:none;height:30px">
+		  </div>
+		</div>
+		<div class="control-group" style="margin-bottom: 10px">
+		  <label class="control-label" for="inputLogin">Login</label>
+		  <div class="controls">
+			<input class="input-xlarge" type="text" style="width:272px;float: left;" name="login" id="login" placeholder="Username" autocomplete="off" value="">
+		 <img class="login-check" style="float:left;display:none;height:30px">
+		  </div>
+		</div>
+		<div class="control-group" style="margin-bottom: 10px">
+		  <label class="control-label" for="inputPassword">Password</label>
+		  <div class="controls">
+			<input class="input-xlarge" type="password" style="width:272px;float: left;" name="password" id="regpassword" placeholder="Password" autocomplete="off">
+		  </div>
+		</div>
+		<div class="control-group" style="margin-bottom: 10px">
+		  <label class="control-label" for="inputRePassword">Re-Password</label>
+		  <div class="controls">
+			<input class="input-xlarge" type="password" style="width:272px;float: left;" name="repassword" id="repassword" placeholder="Re-password" autocomplete="off">
+		  <img class="password-check" style="float:left;display:none;height:30px">
+		  </div>
+		</div>
+		<div class="control-group">
+		  <div class="controls">
+			
+
+			<button type="submit" class="btn" onclick="return false;" id="register-btn">Register</button>
+			<a href="index.php?sign_out=true" class="btn" data-dismiss="modal"  aria-hidden="true" style="margin-right:5px;">Close</a>
+		  </div>
+		</div>
+	  </form>
+    <div class="form-horizontal" id="register-text" style="text-align: center;">
+		By creating an account, I accept Summarizit's Terms of Service and Privacy Policy.
+	</div>
+	
+  </div>
+</div>
+
+<!-- Add Product Modal -->
+  <div id="addToCompare" style="width:750px;margin-left:-370px;" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
+      <h2 id="addProductLabel">Add products to compares</h2>
+    </div>
+    <div class="modal-body grey" style="height:380px;">
+      <form class="form-inline" style="margin: 5px">
+        <input type="text" class="input-xlarge" id="addCompareValue" style="width: 78%;" placeholder="Enter Product" autocomplete = "off">
+        <button type="submit" id="addCompareBtn" onclick="compare.set(document.getElementById('addCompareValue').value);return false;" role="button" class="btn btn-primary" >Add to compare</button>
+      </form>
+	  <div class="form-horizontal" id="register-text" style="text-align: center;margin-top: 25px;">
+		You can add a product to the compare list simply by searching the product in the form above and clicking the <br> "Add to compare" button. You can also click on the "+" button from products below.
+		</div>
+		<table cellspacing="2">
+		<tr>
+		<td valign="top" >
+		<div class="form-horizontal"   style="text-align: left;padding:10px;float:left;width:330px;">
+			<h3 style="text-align: center;"><strong>Product Compare List</strong></h3>
+			<ul class="unstyled" id="compare-list">
+				<div style="height: 145px;overflow: scroll;overflow-x: hidden;">
+				</div>
+				<li style="margin-top: 10px">
+					<a href="#" class="btn btn-primary compare-button" style="width:93%" data-dismiss="modal">Compare Listed Products</a>
+				</li>
+				</ul>
+		</div>
+		</td><td valign="top" >
+		<div class="form-horizontal" style="text-align: left;padding:10px;float:right;width:330px;">
+			<h3 style="text-align: center;"><strong>Similar Products</strong></h3>
+			<div class="similar-products">
+			</div>
+		</div>
+		</td>
+		</tr>
+		</table>
+		
+    </div>
+  </div><!-- Add Product Modal -->
+  <div id="advancedSearchModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
+      <h2 id="addProductLabel">Advanced Search</h2>
+    </div>
+    <div class="modal-body grey" >
+	  <div class="form-horizontal" id="advanced-search-text" style="text-align: center;margin-bottom: 10px;">
+		This tool can help you search your desired item by your favorite features.
+		</div>
+      <div class="form-inline" style="margin: 5px">
+        <input type="text" class="input-xlarge" id="advanced-search" style="width: 97.4%;" placeholder="Enter features" autocomplete = "off">
+      </div>
+		<div id="draggable-container">
+	  <div class="form-inline" style="margin: 5px">
+		<button class="btn btn-success" id="advance-search-button" style="width:100%;display:none;margin-bottom:5px;" data-dismiss="modal" onclick="render.advancedSearchItems();">Advanced Search your products.</button>
+        <div id="dragg-to-area" class="ui-state-highlight" style="border:1px dashed grey;min-height:40px;padding: 5px;text-align: center;" title="Drag your favorite category here.">
+			<span id="draggable-text">Enter your search item above to drag your favorite category here.</span>
+		</div>
+		
+      </div>
+	  <div id="category-for-search">
+	  </div>
+		</div>
+    </div>
+  </div><script> var member_login  		= false; </script><script> var facebook      		= false; </script><script> var twitter       		= false; </script><script> var site_root 	 		= 'http://www.summarizit.com'; </script><script> var s3_base_link  		= 'http://summarizit'; </script><script> var product_id         	= 5;</script><script> var similar_base_product = 5;</script><script> var pageUrl  	 		= 'http://www.summarizit.com/product/Apple-iPhone-5-16GB-(White)-Unlocked'; </script><script> var compareItems 		= true; </script><script> var product_title 		= 'Apple iPhone 5 16GB (White) Unlocked';</script><script type="text/javascript" src="http://www.summarizit.com/js/facebook.functions.js"></script>
+<script> facebookAPP.init('284555878320108','http://www.summarizit.com'); </script>
+<div class="container" id="main">
+	<div class="row">
+		<div class="span9 product-container">
+			<ul class="breadcrumb">
+
+				<li>
+					<a href="#" onclick="render.HighestRated(0);">Highest Rated</a>
+					<span class="divider">|</span>
+				</li>
+				<li>
+					<a href="#" onclick="render.MostViewed(0);">Most Viewed</a>
+					<span class="divider">|</span>
+				</li>
+				<li>
+					<a href="#" onclick="render.RecentlyAdded(0);">Recently Added</a>
+					
+				</li>
+				
+			</ul>
+			<h1 id="product-title"> Apple iPhone 5 16GB (White) Unlocked </h1>
+			<div style="float: right;"><a href="http://www.amazon.com/Apple-iPhone-16GB-White-Unlocked/dp/B0097CZJEO/ref=sr_1_4?ie=UTF8&qid=1361399977&sr=8-4&keywords=apple+iphone+5" target="_blank"><img src="http://www.summarizit.com/images/earth-icon.png" style="width:40px;"></a></div>			<hr>
+			<div id="myCarousel" class="carousel slide pull-left" style="margin-right: 1em; width: 220px; ">
+				<!-- Carousel items -->
+				<div class="carousel-inner breadcrumb" style="padding:0px;">
+					<div class="active item">
+						<img src="http://summarizit.s3.amazonaws.com/p_13614000862074220911_normal.jpg" alt="Apple iPhone 5 16GB (White) Unlocked">
+					</div>
+				</div>
+				<!-- Carousel nav -->
+				<a class="carousel-control left" style="top: 47%; font-family: Arial; line-height: 0.8em; font-size: 3em;" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" style="top: 47%; font-family: Arial; line-height: 0.8em; font-size: 3em" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			</div>
+			<p>Apple New iPhone 16GB (White) - Unlocked. This iPhone 5 16GB White comes in the original box from Apple with all original accessories in the box. This iPhone 5 16GB comes Factory Unlocked for any GSM and will work with any GSM SIM card in the world.</p>
+			<div style="padding-left: 222px;">
+				<textarea class="tagArea">apple,iphone,cell phone,smartphone,android</textarea>
+			</div>
+			
+			<div class="clearfix"></div>
+
+			<div class="tabbable">
+			<ul class="nav nav-tabs" style="text-align: center;margin: 0px;">
+				<li class="active">
+					<a href="#feedback" data-toggle="tab">Feedback</a>
+				</li>
+				<li>
+					<a href="#graph" data-toggle="tab" onclick="refresh_chart();">Summary Graph</a>
+				</li>
+				<li>
+					<a href="#discuss" data-toggle="tab">Discuss</a>
+				</li>
+			</ul>
+			<div class="tab-content" style="padding:10px;background:white;border-bottom: 1px solid #ddd;border-left: 1px solid #ddd;border-right: 1px solid #ddd;">
+				<div class="tab-pane  active" id="feedback" >
+					<div><p class="lead" id="Design"><a class="btn btn-success" id="total-thumbsUp-0">4</a><a class="btn btn-danger" id="total-thumbsDown-0" style="margin-right: 1em">2</a>Design<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback0"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback0" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-0"><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-24">1</strong> Fancy Design.</p></li><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-30">2</strong> Once I picked it up it fit perfectly in my hand and just felt right.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-33">2</strong> The length to width ratio is just weird.</p></li><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-477">1</strong> Attractive design</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(0,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(0,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-0" value=""></div><input type="hidden" id="add-feedback-category-0" value="Design"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-0" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><div><p class="lead" id="Weight"><a class="btn btn-success" id="total-thumbsUp-1">3</a><a class="btn btn-danger" id="total-thumbsDown-1" style="margin-right: 1em">2</a>Weight<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback1"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback1" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-1"><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-25">2</strong> Light weight.</p></li><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-29">1</strong> Thin, metal, light as heck.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-34">1</strong> The phone's lightness is good when in the pocket, but not good while holding.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-546">1</strong> slightly heavier than i would have liked</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(1,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(1,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-1" value=""></div><input type="hidden" id="add-feedback-category-1" value="Weight"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-1" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><div><p class="lead" id="Display"><a class="btn btn-success" id="total-thumbsUp-2">1</a><a class="btn btn-danger" id="total-thumbsDown-2" style="margin-right: 1em">4</a>Display<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback2"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback2" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-2"><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-26">1</strong> Bigger Screen.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-37">1</strong> I don't like the plastic screen.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-43">1</strong> The long screen does not seem real. I preferred the wider one of other smart phones.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-44">1</strong> A little disappointed that the screen isn't much bigger, but here's the perks.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-45">1</strong> A little disappointed that the screen isn't much bigger, but here's the perks.</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(2,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(2,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-2" value=""></div><input type="hidden" id="add-feedback-category-2" value="Display"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-2" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><div><p class="lead" id="Hardware"><a class="btn btn-success" id="total-thumbsUp-3">1</a><a class="btn btn-danger" id="total-thumbsDown-3" style="margin-right: 1em">1</a>Hardware<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback3"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback3" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-3"><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-27">1</strong> The A6 Chip is dual core and doesn't disappoint.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-28">1</strong> I thought Apple would go all in with a quad-core.</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(3,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(3,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-3" value=""></div><input type="hidden" id="add-feedback-category-3" value="Hardware"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-3" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><div><p class="lead" id="Price"><a class="btn btn-success" id="total-thumbsUp-4">0</a><a class="btn btn-danger" id="total-thumbsDown-4" style="margin-right: 1em">3</a>Price<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback4"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback4" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-4"><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-31">1</strong> Very expensive.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-42">1</strong> This is a great phone you can do more than the 4s but to much money.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-538">1</strong> It is very high for what it offers.</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(4,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(4,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-4" value=""></div><input type="hidden" id="add-feedback-category-4" value="Price"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-4" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><div><p class="lead" id="Battery"><a class="btn btn-success" id="total-thumbsUp-5">1</a><a class="btn btn-danger" id="total-thumbsDown-5" style="margin-right: 1em">2</a>Battery<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback5"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback5" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-5"><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-32">1</strong>  Battery life no better than 4S, which could use more capacity already.</p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-39">1</strong>  If you want better battery life, don't choose to buy an Iphone.</p></li><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-345">1</strong> usable as long as u have USB or car battery charger.</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(5,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(5,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-5" value=""></div><input type="hidden" id="add-feedback-category-5" value="Battery"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-5" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><div><p class="lead" id="Camera"><a class="btn btn-success" id="total-thumbsUp-6">5</a><a class="btn btn-danger" id="total-thumbsDown-6" style="margin-right: 1em">0</a>Camera<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback6"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback6" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-6"><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-35">1</strong> The camera takes excellent pictures, a bit more so now than before.</p></li><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-40">2</strong> Panorama feature in the camera setting it's a fantastic option.</p></li><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-478">2</strong> The quality of the pictures is very good</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(6,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(6,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-6" value=""></div><input type="hidden" id="add-feedback-category-6" value="Camera"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-6" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><div><p class="lead" id="Interface"><a class="btn btn-success" id="total-thumbsUp-7">2</a><a class="btn btn-danger" id="total-thumbsDown-7" style="margin-right: 1em">0</a>Interface<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback7"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback7" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-7"><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-36">1</strong> I truly enjoy this software over my Android counterparts</p></li><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-41">1</strong> The Software is really good.</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(7,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(7,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-7" value=""></div><input type="hidden" id="add-feedback-category-7" value="Interface"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-7" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><div><p class="lead" id="Speed"><a class="btn btn-success" id="total-thumbsUp-8">2</a><a class="btn btn-danger" id="total-thumbsDown-8" style="margin-right: 1em">1</a>Speed<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback8"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback8" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-8"><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-38">1</strong> It works better than the older models.</p></li><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-46">1</strong> It's a great phone, I love it, the apps load much quicker and I was desperate for the extra speed. </p></li><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-144">1</strong> only drawback is about background apps</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(8,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(8,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-8" value=""></div><input type="hidden" id="add-feedback-category-8" value="Speed"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-8" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><div><p class="lead" id="Siri"><a class="btn btn-success" id="total-thumbsUp-9">1</a><a class="btn btn-danger" id="total-thumbsDown-9" style="margin-right: 1em">1</a>Siri<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback9"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback9" class="collapse" style="height: 0px;"><ul class="unstyled feedback" id="unstyled-feedback-9"><li><p class="text-warning" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-570">1</strong> does not recognize me</p></li><li><p class="text-success" style="font-size: 1.2em"><a href="#signInModal" data-toggle="modal" ><i onclick="" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-571">1</strong> works for calling and texting contacts</p></li><div class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button" onclick="feedback.addType(9,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button" onclick="feedback.addType(9,1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-9" value=""></div><input type="hidden" id="add-feedback-category-9" value="Siri"><input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-9" placeholder="Feedback"><a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a></div></div></div><form class="form-inline"><div class="btn-group" data-toggle="buttons-radio"><button type="button"  onclick="feedback.addType(1365291310,0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button><button type="button"  onclick="feedback.addType(1365291310,1);return false;" style ="height: 30px;"class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button><input type="hidden" id="add-feedback-type-1365291310" value=""></div><input type="text" class="input-medium" placeholder="Category" id="add-feedback-category-1365291310" style="margin-left:3px;height: auto;"><input type="text" class="input-xlarge" style="width: 41%;margin-left:3px;height: auto;" id="add-feedback-comment-1365291310" placeholder="Feedback" ><a data-toggle="modal" href="#signInModal" class="btn btn-primary" onclick="return false;" style="margin-left:3px;"><i class="icon icon-white icon-plus-sign" ></i> Add Feedback</a></form>				</div>
+				<div class="tab-pane" id="graph"></div>
+				<div class="tab-pane" id="discuss">
+
+					<ol id = "questionArea"></ol>
+					<div class="input-append" style="margin-left: 18px;">
+						<input class="span7" id="questionText" type="text" placeholder="Ask a question!">
+						<a href="#" class="btn" onclick="return false;" type="button" id="addQuestionBtn" data-toggle="modal">+ Add</a>
+					</div>
+				</div>
+			</div>
+			</div>
+			<hr>
+			<h2>Highest Rated 
+				
+			</h2> 
+			<hr>
+			<ul class="thumbnails" id="highest-rated"></ul>
+
+		</div>
+		
+		<div class="compare-container span12" style="padding-top: 10px;position:fixed;margin-top: -10px;"><a href="#" class="back-button btn btn-info" onclick="hideCompareDisplay();">Back</a>
+	<div class="tabbable">
+		<ul class="nav nav-tabs" style="text-align: center;">
+			<li class="active">
+				<a href="#compare-items"  data-toggle="tab">Compare Items</a>
+			</li>
+			<li>
+				<a href="#tree-diagram" data-toggle="tab" >Tree Diagram (Coming Soon)</a>
+			</li>
+
+		</ul>
+		<div class="tab-content" id="compare-tab-content" style="height:400px;display:none;">
+			<div class="tab-pane active" id="compare-items">	
+				<div>
+
+				</div>
+			</div>
+			<div class="tab-pane" id="tree-diagram">
+			<div class="form-horizontal" id="register-text" style="text-align: center;background-color: white">
+					This feature will help you decide easier which product fits you the best based on history of product comparison, activity on site and personal interest.
+				</div>
+				<div id="tree-diagram-container" style="background-color: white">
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+  
+  		
+		<div class="span3">
+			<div class="span3 affix" data-spy="affix" data-offset-top="0">
+				<a href="#" onclick="facebookAPP.login(pageUrl,product_title);return false;" class="btn btn-facebook btn-half"><i class="icon icon-facebook">&nbsp;</i>  Share</a>
+				<a href="#" onclick="twitterAPP.post('http://www.summarizit.com/product/Apple-iPhone-5-16GB-(White)-Unlocked','Apple iPhone 5 16GB (White) Unlocked');" class="btn  btn-half"><i class="icon icon-twitter">&nbsp;</i>  Tweet</a>
+				<p id="social-loading" style="display:none;padding: 5px;text-align: center;">
+					<img src="http://www.summarizit.com/images/ajax-loader.gif">
+				</p>
+				<p id="social-msg" style="display:none;padding: 5px;text-align: center;">
+					Posted on your timeline!
+				</p>
+				<hr>
+							
+				<a href="#" class="btn btn-success btn-block" id="follow-product-btn" data-toggle="modal">Follow Product</a>
+				<a href="#addToCompare" role="button" class="btn btn-info btn-block" data-toggle="modal">Add to Compare List</a>
+				<a href="#signInModal" data-toggle="modal" class="btn btn-danger btn-block">Report This Product</a>
+				<div class="buy_links" style="float:none;margin-top:5px;margin-bottom: 5px;">
+					<a href="#" class="buy_link btn btn-amazon"><i class="icon icon-shopping-cart"></i> Amazon</a>
+					<a href="#" class="buy_link btn btn-generic-buy"><i class="icon icon-shopping-cart"></i> Buy This</a>
+				</div>
+				<hr style="margin:0px;">
+				<h3 style="text-align:center;margin:0px"><b>Similar Products</b></h3>
+				<div class="similar-products">
+				</div>
+				
+				
+				<!--
+				<ul class="unstyled well">
+				  <li><a href="#" class="btn btn-link ">Terms</a></li>
+				  <li><a href="#" class="btn btn-link ">Twitter</a></li>
+				  <li><a href="#" class="btn btn-link ">Contact</a></li>
+				  <li><a href="#" class="btn btn-link ">About</a></li>
+				  <li><a href="#" class="btn btn-link ">Support</a></li>
+				</ul>
+				-->
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<!--<div id="footer">
+      <div class="container">
+        <p class="muted credit">Copyright <a href="index.php">Summarize</a> 2012</p>
+      </div>
+    </div>
+<footer>-->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" ></script>
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+	<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>
+	<!--
+	<script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/application.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-affix.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-alert.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-button.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-carousel.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap-typeahead.js"></script>
+	-->
+	
+	<script type="text/javascript" src="//connect.facebook.net/en_US/all.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/facebook.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/twitter.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/jquery.fittext.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://www.summarizit.com/js/holder.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/render.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/chart.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/search.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/get.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/tag.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/register.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/login.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/jquery.tagify.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/message.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/compare.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/discuss.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/tree.diagram.functions.js"></script>
+	<script type="text/javascript" src="http://www.summarizit.com/js/application.functions.js"></script>
+
+</footer>
+<script>
+var toggleCompare = function() {
+	var compareContain = $('.compare-container');
+	compareContain.toggleClass('compared');
+
+}
+$('.compare-button').click(toggleCompare);
+$('.back-button').click(toggleCompare);
+if (!member_login) register.checkInput("#register-form");
+if (((facebook)||(twitter))&&(!member_login)) {
+	
+	$('#registerModal').modal('show');
+	$('#register-text').hide();
+	
+}
+$("#product-title").fitText({ minFontSize: '15px', maxFontSize: '50px' });
+
+render.homePage(3);
+compare.set('Apple iPhone 5 16GB (White) Unlocked');
+</script>
+</body>
+</html>

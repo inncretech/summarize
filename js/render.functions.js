@@ -58,11 +58,11 @@ var render = new function() {
 			});
 			category = category.unique();
 			colums[0]  = '';
-			colums[0] +='<p><b>Product</b></p>';
+			colums[0] +='<p style="border:none;"><b>Product</b></p>';
 			
 			$.each(category, function(index, value) {
 				colums[aux]  = '';
-				colums[aux] +='<p><span style="cursor:pointer;float:right;font-size:20px;color: rgb(170, 170, 170);margin-top:1px;margin-right:5px;" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);">&#215;</span><b style="margin-left:5px;">'+value+'</b></p>';
+				colums[aux] +='<p style="border:none;"><span style="cursor:pointer;float:right;font-size:20px;color: rgb(170, 170, 170);margin-top:1px;margin-right:5px;" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);">&#215;</span><b style="margin-left:5px;">'+value+'</b></p>';
 				aux++;
 			});
 			row = 0;
@@ -531,30 +531,30 @@ var render = new function() {
 		}
 		var obj = JSON.parse(data);
 			$.each(obj, function(key, val) {
-				if (val.dislikes==null) val.dislikes=0;
-				if (val.likes==null) val.likes=0;
-				//alert(val.image);
-				
-				code += "<li class='span3'>";
-				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
-				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
-                code += "</div>";
-                code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
-                code += "</a>";
-                code += "<div class='caption' style=''>";
-                code += "<h3 id='product-title'>"+val.title+"</h3>";
-                code += "<p>";
-                code += "<div class='btn-group'>";
-                code += "<button class='btn btn-small btn-success'>"+val.likes+"</button>";
-                code += "<button class='btn btn-small btn-danger'>"+val.dislikes+"</button>";
-                code += "</div>";
-                code += "<a class='btn btn-small pull-right' href='"+site_root+"/product/"+val.seo_title+"'>View Product</a>";
-                code += "</p>";
-                code += "</div>";
-				code += "</div>";
-				code += "</li>";
-				
+				if (typeof val.product_id !== 'undefined'){
+					if (val.dislikes==null) val.dislikes=0;
+					if (val.likes==null) val.likes=0;
+					//alert(val.image);
+					code += "<li class='span3'>";
+					code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
+					code += "<a href='#' class='thumb'>";
+					code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+					code += "</div>";
+					code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
+					code += "</a>";
+					code += "<div class='caption' style=''>";
+					code += "<h3 id='product-title'>"+val.title+"</h3>";
+					code += "<p>";
+					code += "<div class='btn-group'>";
+					code += "<button class='btn btn-small btn-success'>"+val.likes+"</button>";
+					code += "<button class='btn btn-small btn-danger'>"+val.dislikes+"</button>";
+					code += "</div>";
+					code += "<a class='btn btn-small pull-right' href='"+site_root+"/product/"+val.seo_title+"'>View Product</a>";
+					code += "</p>";
+					code += "</div>";
+					code += "</div>";
+					code += "</li>";
+				}
 			});
 			
 			if (highestRatedLimit==0){
@@ -562,7 +562,8 @@ var render = new function() {
 				$("#main").append(code);
 			}else{
 				code += "</ul></div></div>";
-				if (data!="[]") $("#infinite-scroll").prepend(code);
+				code += $("#infinite-scroll").clone().wrap('<div>').parent().html();
+				if (data!="[]") $("#infinite-scroll").replaceWith(code);
 			}
 			highestRatedLimit+=16;
 		});
@@ -596,6 +597,7 @@ var render = new function() {
 		
 		var obj = JSON.parse(data);
 			$.each(obj, function(key, val) {
+				if (typeof val.product_id !== 'undefined'){
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
 				//alert(val.image);
@@ -619,7 +621,7 @@ var render = new function() {
                 code += "</div>";
 				code += "</div>";
 				code += "</li>";
-				
+				}
 			});
 			
 			if (mostViewedLimit==0){
@@ -627,7 +629,8 @@ var render = new function() {
 				$("#main").append(code);
 			}else{
 				code += "</ul></div></div>";
-				if (data!="[]") $("#infinite-scroll").prepend(code);
+				code += $("#infinite-scroll").clone().wrap('<div>').parent().html();
+				if (data!="[]") $("#infinite-scroll").replaceWith(code);
 			}
 			mostViewedLimit+=16;
 		});
@@ -661,11 +664,12 @@ var render = new function() {
 		
 		
 		var obj = JSON.parse(data);
+			console.log(obj.length);
 			$.each(obj, function(key, val) {
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
 				//alert(val.image);
-				
+				if (typeof val.product_id !== 'undefined'){
 				code += "<li class='span3' style='margin:0 5px 10px 5px;'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
@@ -685,7 +689,7 @@ var render = new function() {
                 code += "</div>";
 				code += "</div>";
 				code += "</li>";
-				
+				}
 			});
 			
 			
@@ -694,8 +698,8 @@ var render = new function() {
 				$("#main").append(code);
 			}else{
 				code += "</ul></div></div>";
-				
-				if (data!="[]") $("#infinite-scroll").prepend(code);
+				code += $("#infinite-scroll").clone().wrap('<div>').parent().html();
+				if (data!="[]") $("#infinite-scroll").replaceWith(code);
 			}
 			recentlyAddedLimit+=16;
 		});
@@ -713,12 +717,16 @@ var render = new function() {
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
 				//alert(val.image);
-				
+				var category = val.top_feedback.category;
+				var comment  = val.top_feedback.comment;
+				if(typeof val.top_feedback.category === 'undefined') category = "Description";
+				if(typeof val.top_feedback.comment === 'undefined') comment = val.description;
+				if(val.description == '') comment = "N/A";
 				code = "";
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+val.top_feedback.category+"</strong> : "+val.top_feedback.comment+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
                 code += "</div>";
                 code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
@@ -749,11 +757,16 @@ var render = new function() {
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
 				//alert(val.image);
+				var category = val.top_feedback.category;
+				var comment  = val.top_feedback.comment;
+				if(typeof val.top_feedback.category === 'undefined') category = "Description";
+				if(typeof val.top_feedback.comment === 'undefined') comment = val.description;
+				if(val.description == '') comment = "N/A";
 				code = "";
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+val.top_feedback.category+"</strong> : "+val.top_feedback.comment+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
                 code += "</div>";
                 code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
@@ -785,11 +798,18 @@ var render = new function() {
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
 				//alert(val.image);
+				
+				var category = val.top_feedback.category;
+				var comment  = val.top_feedback.comment;
+				if(typeof val.top_feedback.category === 'undefined') category = "Description";
+				if(typeof val.top_feedback.comment === 'undefined') comment = val.description;
+				if(val.description == '') comment = "N/A";
+				
 				code = "";
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+val.top_feedback.category+"</strong> : "+val.top_feedback.comment+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
                 code += "</div>";
                 code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";

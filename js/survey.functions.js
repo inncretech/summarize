@@ -63,8 +63,7 @@ var survey = new function(){
 	
 	this.checkCompletedForm = function(){
 		var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		if (($("#survey-email").val()!="")&&(regex.test($("#survey-email").val()))&&(!member_login)) $("#taked-survey").submit();
-		if ((($("#survey-email").val()=="")||(!regex.test($("#survey-email").val())))&&(!member_login)) alert("Please fill up the email address.");
-		if (member_login) $("#taked-survey").submit();
+		if (($("#survey-email").val()!="") if (regex.test($("#survey-email").val())) $("#taked-survey").submit();
+		if (($("#survey-email").val()=="") $("#taked-survey").submit();
 	}
 }

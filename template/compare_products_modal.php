@@ -1,6 +1,6 @@
 <div class="compare-container span12" style="padding-top: 10px;position:fixed;margin-top: -10px;"><a href="#" class="back-button btn btn-info" onclick="hideCompareDisplay();">Back</a>
 	<div class="tabbable">
-		<ul class="nav nav-tabs" style="text-align: center;">
+		<ul class="nav nav-tabs" style="text-align: center;margin-bottom:0px;">
 			<li class="active">
 				<a href="#compare-items"  data-toggle="tab">Compare Items</a>
 			</li>

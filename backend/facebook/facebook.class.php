@@ -28,6 +28,7 @@ class Fb
    var $loginUrl;
    var $logoutUrl;
    var $social_network_id;
+   var $friends;
    
    /* Class constructor */
     function Fb(){
@@ -54,6 +55,9 @@ class Fb
 			
 			$this->check = true;
 			$this->social_network_id = $this->data["id"];
+			
+			$this->friends = $this->connection->api('/me/friends');
+
 			//$this->logoutUrl 	= $this->connection->getLogoutUrl($params);
 		  } catch (FacebookApiException $e) {
 			$this->user = null;
@@ -66,7 +70,7 @@ class Fb
 	}
 
 	function getLoginUrl(){
-		$params = array('scope' => 'email,publish_stream');
+		$params = array('scope' => 'email,publish_stream,status_update');
 		return $this->connection->getLoginUrl($params);
 	}
 }

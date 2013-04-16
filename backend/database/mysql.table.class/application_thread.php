@@ -9,16 +9,21 @@ class application_thread
 		$this->connection = $mysql_connection;
 	}
 	
-	function check($data)
+	function getProductId($app_id,$custom_thread_id)
 	{
-		$info = mysql_query("SELECT * FROM ".($this->table)." WHERE `thread_id` = '".$data['thread_id']."' AND `application_id` = '".$data['application_id']."'",$this->connection);
-		if (mysql_num_rows($info)==0){
-
-			mysql_query("INSERT INTO ".($this->table)." (`thread_id`,`application_id`,`created_at`) VALUES ('".$data['thread_id']."','".$data['application_id']."',now())",$this->connection);
-			
-		}
+		$data = mysql_query("SELECT `product_id` FROM ".($this->table)." WHERE `application_id` = '".$app_id."' AND `custom_thread_id` = '".$custom_thread_id."'",$this->connection);
+		$info = mysql_fetch_array($data);
+		return $info[0];
 	}
 	
+	function checkThread($app_id,$custom_thread_id)
+	{
+		$info = mysql_query("SELECT * FROM ".($this->table)." WHERE `application_id` = '".$app_id."' AND `custom_thread_id` = '".$custom_thread_id."'",$this->connection);
+		return (mysql_num_rows($info)>0);
+	}
+	function add($app_id,$custom_thread_id,$product_id,$created_by){
+		mysql_query("INSERT INTO ".($this->table)." (`application_id`,`custom_thread_id`,`product_id`,`created_by`) VALUES ('$app_id','$custom_thread_id','$product_id','$created_by'); ",$this->connection);
+	}
 
 }
 ?>

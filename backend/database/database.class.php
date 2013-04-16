@@ -40,12 +40,12 @@ include "mysql.table.class/member_answer.php";
 include "mysql.table.class/application_id.php";
 include "mysql.table.class/application_info.php";
 include "mysql.table.class/application_thread.php";
-include "mysql.table.class/application_thread_comment.php";
 include "mysql.table.class/survey.php";
 include "mysql.table.class/survey_question.php";
 include "mysql.table.class/survey_answer.php";
 include "mysql.table.class/survey_completed.php";
 include "mysql.table.class/survey_member_answer.php";
+include "mysql.table.class/facebook_friend.php";
 
 /** A PHP class to access MySQL database with convenient methods
 * in an object oriented way, and with a powerful debug system.
@@ -89,12 +89,13 @@ class Database
 	var $application_id;
 	var $application_info;
 	var $application_thread;
-	var $application_thread_comment;
 	var $survey;
 	var $survey_question;
 	var $survey_answer;	
 	var $survey_completed;
-	var $survey_member_answer;	
+	var $survey_member_answer;
+	var $facebook_friend;
+	
 	/** Put this variable to true if you want ALL queries to be debugged by default:
 	  */
 	var $defaultDebug = false;
@@ -158,12 +159,12 @@ class Database
 		$this->application_id 					= new application_id($this->connection);
 		$this->application_info 				= new application_info($this->connection);
 		$this->application_thread 				= new application_thread($this->connection);
-		$this->application_thread_comment 		= new application_thread_comment($this->connection);
 		$this->survey 							= new survey($this->connection);
 		$this->survey_question 					= new survey_question($this->connection);
 		$this->survey_answer 					= new survey_answer($this->connection);
 		$this->survey_completed 				= new survey_completed($this->connection);
 		$this->survey_member_answer 			= new survey_member_answer($this->connection);
+		$this->facebook_friend 					= new facebook_friend($this->connection);
 	}
 	
 	function escape($data)

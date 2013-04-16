@@ -41,7 +41,7 @@ var feedback = new function() {
 			});
 		}else{
 			$('#feedback-error-msg'+root_key).remove();
-			$("#unstyled-feedback-"+root_key).append("<div id='feedback-error-msg"+root_key+"' style='text-align:center;margin-top:5px;'>Please chose the type of feedback (Thumbs Up / Thumbs Down)</div>");
+			$("#unstyled-feedback-"+root_key).append("<div id='feedback-error-msg"+root_key+"' style='text-align:center;margin-top:5px;font-weight:bold;'>Please chose the type of feedback (Thumbs Up / Thumbs Down)</div>");
 		}			
 	}
 	

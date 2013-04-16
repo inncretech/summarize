@@ -21,6 +21,9 @@ ErrorDocument 404 http://www.summarizit.com/
 	RewriteRule ^member/([^/.]+)?$ member.php?seo=$1 [L]
 	RewriteRule ^product/([^/.]+)?$ product.php?seo=$1 [L]
 
+	RewriteCond %{REQUEST_FILENAME} !-d 
+	RewriteCond %{REQUEST_FILENAME}\.php -f 
+	RewriteRule ^(.*)$ $1.php
 </IfModule>
 
 

@@ -31,12 +31,16 @@
 		  </div>
 		</div>
 		<div class="control-group">
+
 		  <div class="controls">
-			<label class="checkbox" style="padding-bottom: 10px">
-			  <input type="checkbox"> Remember me
-			</label>
-			<button type="submit" class="btn" onclick="return false;" id="sign-in-btn">Sign in</button>
-			<button type="submit" href="#registerModal" role="button" class="btn" data-dismiss="modal" data-toggle="modal">Register</button>
+			<button type="submit" class="btn btn-primary" style="width: 220px;" onclick="return false;" id="sign-in-btn">Login to your account</button>
+		  </div>
+		</div>
+		<hr>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Not yet Registred</label>
+		  <div class="controls">
+			<button type="submit" href="#registerModal" role="button" class="btn btn-primary" style="width: 220px;" data-dismiss="modal" data-toggle="modal">Register Now</button>
 		  </div>
 		</div>
 	  </form>

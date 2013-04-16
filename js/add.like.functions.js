@@ -19,9 +19,9 @@ var like = new function() {
 						$("#total-thumbsDown-"+root_key).text(thumbsDown+1);
 					}
 				}
-				$("#like-"+feedback_id).text(like_count);
+				
 			});	
-			
+			$("#like-"+feedback_id).text(like_count);
 		});
 	}
 

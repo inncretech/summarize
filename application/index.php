@@ -6,6 +6,8 @@ $database 		= new Database();
 $facebook 		= new Fb();
 $twitter 		= new Tw();
 
+
+
 // ######################## Sign Out Check
 if (isset($_GET['sign_out']))
 {
@@ -30,14 +32,28 @@ if (!$session->check()){
 // ######################## Retrive Session Data
 $member_data = $session->get();
 
+
+$parent = parse_url($_GET['parent']);
+
+$app_id = $database->application_id->getAppId($_GET['app_token']);
+
+if (!$database->application_info->checkApp($app_id,$parent['host'])){die('Sorry but your app token is not for this doamin.');}
+if ($database->application_thread->checkThread($app_id,$_GET['thread_id'])) {
+	$product_id = $database->application_thread->getProductId($app_id,$_GET['thread_id']);
+}else{
+	$product_id = $database->product->addApp($member_data['created_by']);
+	$database->application_thread->add($app_id,$_GET['thread_id'],$product_id,$member_data['created_by']);
+}
+
+
 echo "<script> var member_login 	= ".($session->check() ? "true" : "false")."; </script>";
-echo "<script> var application_id 	= '".($_GET['app_id'])."'; </script>";
-echo "<script> var product_id 		= '".($_GET['thread_id'])."'; </script>";
+echo "<script> var application_id 	= '".($_GET['app_token'])."'; </script>";
+echo "<script> var product_id 		= '".($product_id)."'; </script>";
 echo "<script> var site_root 		= '".SITE_ROOT."'; </script>";
 ?>
 <html>
 <head>
-<script src="http://www.summarizit.com/application/js/porthole.js"></script>
+
 <meta charset="utf-8">
 
 <title>SummarizeIt Application</title>
@@ -82,20 +98,20 @@ echo "<script> var site_root 		= '".SITE_ROOT."'; </script>";
 <div id="feedback" style="margin-top:10px;">
 </div>
 <?php ($session->check() ? include "../template/logged_in/footer.php" : include "../template/logged_out/footer.php" );?>
-
+<script type="text/javascript" src="http://www.summarizit.com/application/js/porthole.js"></script>
 <script type="text/javascript" src="http://www.summarizit.com/application/js/internal.app.functions.js"></script>
 <script>
 var timer;
-var parentUrl = decodeURIComponent((window.location.href).substr((window.location.href).indexOf("#") + 1));
-console.log("iFrame Parent "+document.referrer.split('/')[2]);
+var parentUrl = "<?=$_GET['parent'];?>";
+
 function onMessage(messageEvent) {  
 	if (messageEvent.data["status"]=="ready") {
-		timer = setInterval(function(){sendHeight();},100);
+		timer = setInterval(function(){sendHeight();},1);
 	}
 }
 
 function sendHeight(){
-	windowProxy.post({'height': $(document).height()});
+	windowProxy.post({'height': $("body").height()});
 }
 window.onload=function(){ 
 	// Create a proxy window to send to and receive message from the guest iframe

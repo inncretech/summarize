@@ -8,8 +8,8 @@ $values 	= $database->view_details->getMostViewed($data['start'],$data['limit'])
 $data  		= Array();
 foreach ($values as $item){
 	$tmp = $database->product->get($item['viewed_product_id']);
+	if ($tmp['application']==0)	array_push($data,$tmp);
 	
-	array_push($data,$tmp);
 }
 $count = count($data);
 for ($i = 0; $i <$count; $i++) {

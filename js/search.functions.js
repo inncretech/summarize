@@ -90,3 +90,34 @@ $('#global-search').autocomplete({
 }
 
 
+$('#fb-friend-name').autocomplete({
+			source: function(request, response) {
+					
+						$.ajax({
+							
+							url: site_root+"/backend/ajax.get/get_fb_friend_list.php",
+							data: {query: request.term },
+							dataType: "json",
+							contentType: "application/json",
+							success: function(data) {
+								
+								response($.map(data, function(item) {
+									
+									
+									return {
+										label: item.friend_name,
+										value: item.friend_name,
+										id: item.friend_id
+									}
+								}));
+							}
+						});},
+			position: { of: $('#fb-friend-name') },
+			select: function(event, ui) {$('#fb-friend-id').val(ui.item.id); },
+			open: function(event, ui) {
+            $(this).autocomplete("widget").css({
+                "width": "auto"
+            })}, 
+		});
+
+

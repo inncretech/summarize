@@ -97,6 +97,7 @@ AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY",$this->connect
 	
 	function checkSocialNetwork($social_network_id)
 	{	
+		
 		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `social_network_id`='$social_network_id'",$this->connection);
 		$info = mysql_fetch_array($data);
 		return $info;

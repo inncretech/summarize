@@ -22,7 +22,7 @@ if ($search_by_link==false){
 		$database->point->add($member_data['member_id'],"Product",$product_id,PRODUCT_POINTS);
 		$database->product_image->add($image_id,$product_id);
 		$product_data = $database->product->get($product_id);
-
+		if (!empty($data['tags']))
 		foreach ($data['tags'] as $tag_name){
 			$tag_id = $database->tag->add($tag_name,$_POST['created_by']);
 			$database->product_tag->add($tag_id,$product_id);

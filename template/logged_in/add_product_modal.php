@@ -3,17 +3,18 @@
 
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
-		<h2 id="addProductLabel">Add a Product</h2>
+		<h2 id="addProductLabel">Add a Product or an Entity</h2>
 	</div>
 
 	<div class="modal-body grey">
-		<form class="form-inline" >
-			<input type="text" class="input-xlarge" id="link" placeholder="URL of Product">
-			<button type="submit" id="crawl-link" href="#addManualProduct"  role="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">Auto-fill Info</button>
-			<button type="submit" href="#addManualProduct" role="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" type="submit" class="btn" id="manual_product_add">Manually Add Info</button>
+		<form class="form-inline" style="text-align:center;font-family:'calibri';font-size:18px;">
+			<button type="submit" href="#addManualProduct" role="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" type="submit" class="btn" id="manual_product_add" style="margin-bottom:5px;">Add Manually</button>
+				<p style="text-align:center;">Or, Add automatically From Web URL</p>
+			<input type="text" class="span6" id="link" placeholder="http://">
+			<button type="submit" id="crawl-link" href="#addManualProduct"  role="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">Add</button>
+			<p style="text-align:center;margin-top:10px;">We allow adding products from popular sites like amazon.com, walmart.com, bestbuy.com, ... <br> If your favorite site is not here <a href="#propose-website" data-dismiss="modal" data-toggle="modal">Please let us now</a>.</p>
+			
 		</form>
-	</div>
-	<div class="modal-body grey">
 		<div class="alert alert-danger" id="crawler-error" style="display:none;margin-bottom: 0px;background-color:white;color:#ff0039;">
 			<strong>Heads Up!</strong>
 			The domanin is not supported. Thank you for letting us know. Please add manually the product.
@@ -23,6 +24,7 @@
 		This domain is supported please click on "Auto-fill Info"
 		</div>
 	</div>
+
 </div>
 
 <!-- Confirm Product Modal -->
@@ -68,9 +70,7 @@
 
 	</div>
 	<div class="modal-body grey">
-		<a class="btn btn-info" data-dismiss="modal">
-			<i class="icon icon-time icon-white"></i> Finish Later
-		</a>
+		
 		<a class="btn btn-success pull-right" id="save-form-btn">
 			<i class="icon icon-plus icon-white" ></i> Submit Product
 		</a>

@@ -238,7 +238,7 @@ tag_area.tagify('inputField').autocomplete({
                 });},
 	position: { of: tag_area.tagify('inputField') },
 	select: function(event, ui) {tag.save(ui.item.value,product_id);},
-	close: function(event, ui) {tag_area.tagify('add'); }
+	close: function(event, ui) {}
 });
 
 
@@ -262,6 +262,6 @@ add_product_tag_area.tagify('inputField').autocomplete({
                     }
                 });},
 	position: { of: add_product_tag_area.tagify('inputField') },
-	select: function(event, ui) {},
-	close: function(event, ui) {add_product_tag_area.tagify('add'); }
+	select: function(event, ui) {add_product_tag_area.tagify('add'); },
+	close: function(event, ui) {}
 });

@@ -72,7 +72,7 @@ if (isset($_GET['id'])) $survey_id = $_GET['id']; else $survey_id = 1;
 			echo "<input type='hidden' name='survey_id' value='".$survey_id."'>";
 			if(!$session->check()){
 
-				echo "<input type='text' name='email' id='survey-email' placeholder='Email'>";
+				echo "<input type='text' name='email' id='survey-email' placeholder='Email (Optional)'>";
 			}
 			foreach ($survey_question as $key=>$value){
 				echo "<div class='breadcrumb'><h3 style='color: #555;font-weight: bolder;line-height: 25px;'>".($key+1).". ".$value['text']."</h3>";

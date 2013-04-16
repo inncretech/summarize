@@ -29,6 +29,13 @@ class application_id
 		return $value;
 	}
 	
+	function getAppId($app_token)
+	{
+		$data 	= mysql_query("SELECT `application_id` FROM ".($this->table)." WHERE `application_request_id` = '$app_token'" ,$this->connection);
+		$info   = mysql_fetch_array($data);
+		return $info[0];
+	}
+	
 	function getLastId()
 	{
 		$data = mysql_query("SELECT MAX(application_id) FROM ".($this->table),$this->connection);

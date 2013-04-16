@@ -49,13 +49,13 @@
 		  <div class="controls">
 			
 
-			<button type="submit" class="btn" onclick="return false;" id="register-btn">Register</button>
+			<button type="submit" class="btn btn-primary" onclick="return false;" id="register-btn">Register</button>
 			<a href="index.php?sign_out=true" class="btn" <?php if ((!$session->getValue("social_network_name")=="facebook")||(!$session->getValue("social_network_name")=="twitter")) echo 'data-dismiss="modal"';?>  aria-hidden="true" style="margin-right:5px;">Close</a>
 		  </div>
 		</div>
 	  </form>
     <div class="form-horizontal" id="register-text" style="text-align: center;">
-		By creating an account, I accept Summarizit's Terms of Service and Privacy Policy.
+		By creating an account, I accept Summarizit's <a>Terms of Service</a> and <a>Privacy Policy</a>.
 	</div>
 	
   </div>
