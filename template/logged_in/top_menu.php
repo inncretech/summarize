@@ -1,7 +1,7 @@
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand" href="index.php">SummarizeIt</a>
+			<a class="brand" href="<?=SITE_ROOT."/"?>index.php">SummarizeIt</a>
 			<div class="navbar-search">
 				<div class="input-append">
 					<input type="text" class="span5" id="global-search" autocomplete="off" placeholder="Search products...">

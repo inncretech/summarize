@@ -7,10 +7,10 @@ $facebook 		= new Fb();
 $twitter 		= new Tw();
 
 if (!isset($_GET['seo'])){ 
-	Redirect("http://www.summarizit.com/index.php");
+	Redirect(SITE_ROOT);
 }else{
 	$product_data = $database->product->checkSeoTitle($_GET['seo']);
-	$product_data == false ? Redirect("index.php") : $_GET['id'] = $product_data['product_id'];
+	$product_data == false ? Redirect(SITE_ROOT) : $_GET['id'] = $product_data['product_id'];
 	$product_data['feedback_data'] = $database->product_feedback->getByProduct($product_data['product_id']);
 }
 
