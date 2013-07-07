@@ -1,0 +1,167 @@
+//Review
+367 of 377 people found the following review helpful                       5.0 out of 5 stars             From iPhone 4S to Galaxy S3, June 21, 2012                        By&nbsp;S. Williams  (Miami)  - See all my reviews
+ (REAL NAME)   &nbsp;&nbsp;                          Amazon Verified Purchase(What's this?)                         This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         Like many of you I have been reading all of these "reviews" from people who don't own the device and was unsure on what to do and what I'd be receiving.
+
+First of all I ordered from Global Mobiles, whom I contacted twice before ordering. Both questions were answered in minutes. Phone same sealed in OEM box. There was also another box that included an adapter to convert the EU plug to US, directions on how to change language to English and instructions on how to setup APN to get HPSA+ speeds. Those weren't quite correct. If you're only getting edge speeds make sure to apply the following settings:
+
+Name: AT&T
+APN: wap.cingular
+Proxy: leave blank
+Port: leave blank
+Username:WAP@CINGULARGPRS.COM
+Password:CINGULAR1
+Server: leave blank
+MMSC: [...]
+MMS Proxy: wireless.cingular.com
+MMS Port: 80
+MCC:310
+MNC:410
+APN Type: leave blank
+
+If you're a Mac user like me, make sure to download android.com/filetransfer. Otherwise the device won't show up on your computer.
+
+This phone simply put is amazing. I like iOS and I now have come to like Android. I don't see one phone as better. They both are great in their own ways. However, if like me you've been using iOS since 2007 or even the last year. The galaxy 3 definitely provides a breath of fresh air.
+
+I won't get into specs. There is no lag what so ever on the device and it is very fluid.
+
+As far as S-Voice. For the person that said it only comes in German. I can kind of see their complaint. When you first turn the device on you can set the language to English. However, when you launch S-Voice. It is still in German by default and you have to click the right arrow through several screens of German text before you can change the language. Typically the right arrow is ok/accept, so I was able to guess my way through it. Realistically though one would assume you only need to set the language once so I don't blame them. Again you can set S-Voice to English as well as other languages.
+
+The 4.8 inch screen is beautiful. Having an iPhone and iPad 3, I find this screen large enough to serve both purposes. I can comfortably browse, watch videos as well as read books.
+
+The browser is great as well. The larger screen again helps and it is nice that you can take advantage of flash.
+
+The rear camera uses the same parts as the iPhone 4S so expect similar quality. However, the camera has a ton of settings. Almost as many as stand alone cameras. The front camera on the S3 is higher quality and very crisp. One thing that I hadn't heard mention of was the LED flash. BE CAREFUL. In a completely dark room I literally temporarily blinded myself. In that respect it blows the iPhone 4S away in my opinion so I did get better night pictures.
+
+I didn't want to get too technical as for many they're just looking for a great screen, fluid OS and great browser / camera. If you have other questions let me know.                 Help other customers find the most helpful reviews&nbsp;            Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (73)
+
+
+//Review
+79 of 87 people found the following review helpful                       5.0 out of 5 stars             Dumbfounded, June 15, 2012                        By&nbsp;Larry "Wheels"  (Mesa, AZ United States)  - See all my reviews                       Amazon Verified Purchase(What's this?)                         This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         I didn't think there would be a faster or better android phone than the Note.  I got this this afternoon.  Cut down my Sim to a micro...stuck it in and zoom.  Quandrant was 5476.  ICS is so fluid and easy.  TouchWiz is amamzing also.  This is quad core and it is hard to keep up with.  The only thing I have noticed so far is when you push the home button it really seems to lag to get back to the home screen.  Maybe haven't tuned up all the settings though.  I played with the One X at ATT.  The real difference is the sound on the SIII is LOUD and clear.  Plus, the fact of having an SD card and replaceable battery was the no brainer decision for me.  The only other real problem with this and the One X is that in six months, or less, they will be outdated.  Oh Yes, S Voice takes longer than Siri, but the replies seem to in more detail.  Get it if you are an android fan and you will positively enjoy it.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (4)
+
+
+//Review
+96 of 115 people found the following review helpful                       5.0 out of 5 stars             So far super good, June 1, 2012                        By&nbsp;L. Rissmann "Lars north jersey"  (NJ / NYC)  - See all my reviews
+ (REAL NAME)   &nbsp;&nbsp;                          This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         I got my S3 in white yesterday, I had the iPhone 4s before but I played before with the s2 that I already liked. The phone feels great in hand, it's super fast. I like the fact to expand memory by micro sd and that you can change battery. Battery Life is great for me so far, looking forward to explore more features. In case you have the htc one x, I think you don't need to upgrade, otherwise I can highly recommend it, it's not feeling so huge than the Note.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (15)
+
+
+//Review
+74 of 89 people found the following review helpful                       2.0 out of 5 stars             Still buggy, August 19, 2012                        By&nbsp;Howard Gnome  (New York, NY)  - See all my reviews                       This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         I'm an Android advocate and was a happy user of the Samsung Infuse.  I was excited about upgrading to the S3.  The reviews convinced me to make the switch.  I've had the phone for about a week and although I think it has some wonderful features, there are just too many glitches.  Here are the two main issues I've encountered:
+1.  It seems impossible to connect the phone to a PC or a Mac.  I tried to connect the phone to several PCs, and I always received an error message about the computer being unable to install a driver.  This seems to be a widespread issue: googling this problem turns up many complaints in various forums.  I also tried to connect the phone via the Samsung Kies program that comes in a Mac version, and that also failed.  This is a pretty basic thing that you want to do with your phone.  It's unacceptable that it doesn't work.  I spent quite a few hours on the phone with Samsung tech support.  I discovered that if I revert the phone back to factory default, it can connect to my PC.  But once I've used it and installed a very few apps, connectivity is lost.
+2.  Less of an issue, I think it's resolved.  However, shortly after getting the phone, it was unable to connect to the internet.  I tried all solutions to the problem, but couldn't resolve it.  Then, mysteriously, several hours later connectivity resumed.
+I'm always nervous about being an early adopter, and I think in this case those who rush out to get this phone are going to suffer inconvenience as these bugs are resolved.
+
+PS I finally returned the phone, and this one is able to connect to my PC and my Mac.  I was careful to connect the phone and install the drivers right out of the box, before setting up any accounts or downloading any apps.  It's also a different sim card.  Who knows if it was a hardware issue or something involving the configuration of my phone.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (10)
+
+
+//Review
+48 of 57 people found the following review helpful                       5.0 out of 5 stars             One of the best phones this year., June 6, 2012                        By&nbsp;Furbylover   - See all my reviews                       This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         For me the top phones of the year (currently, June 2012) would go to the HTX One x, and this one right here. Featuring a 4 core processor it is extremely fast, and it also comes with Androids 4 series operating system which is very smooth and nice to use. Overall the phone is great, and every aspect so far has been great. Camera, speed, size, screen, feel, look, all super. Great job samsung!
+
+P.S. Love playing emulator games on this thing, currently playing final fantasy 7 with a bluetooth controller. Just goes to show the speed of this thing when it can emulate PS1 games without lag or delay.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (7)
+
+
+//Review
+18 of 20 people found the following review helpful                       5.0 out of 5 stars             Love this phone!!!, July 22, 2012                        By&nbsp;JT   - See all my reviews                       Amazon Verified Purchase(What's this?)                         This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         I am so happy with this phone. Just got this phone Friday (July 20th) so I haven't tested out all the features. But I still say that it's just amazing and worth every penny. Apple fan boys beware cause Samsung is here to stay. The phone is extremely light and the display is very big and beautiful. The phone does look big at first, however web browsing, reading books and playing games is very easy due to the screen size. In addition after a while you do warm up to the size and it's hard to go back to a smaller phone. In addition the user experience is great.
+
+I had read tons of reviews and articles about problems with the battery and mic etc with this phone. However I have not experienced any of these.
+
+CNET and other sites published an article about the top 5 problems of the Samsung S3 which some of you maybe aware of...so I'll use the rest of this review to speak on those as well as some of the cons I noticed:
+
+***Battery***
+Battery is great. After charging it for about 4 hours or so and browsing for about 3 hours, downloading games, making several phone calls (over 3 hours in total), taking pictures, playing music and using S Voice; I got over 36 hours and counting on the phone on a single charge. I should note that I did make some modifications however by occasionally turning off WIFI, turning off Bluetooth, syncing and a couple other battery draining options. In addition Samsung has a cool power saving option that helps to maximize battery life.
+
+***Microphone***
+Had no problem. I could hear the other person clearly and they could hear me clearly too. There is also a volume boost option for when you are on a call and what extra volume. Pretty cool if you ask me and it does make a significant difference.
+
+***No Overheating***
+I haven't had that problem at all. Even with a phone case on the phone did not overheat.
+
+***Charging***
+Phone charged perfectly fine. Didn't get stuck or anything. And it also charged very quickly. Probably charged less than 4 hours. Didn't really time it, but after 4 hours it was fully charged.
+
+***WIFI***
+The WIFI connection is great. Signal didn't drop or anything.
+
+SOME CONS:
+
+1. User Manual and set up - Had some problems at first because the phone came with a printed Spanish manual. But luckily they have the user manual in all languages online and the set up is also pretty easy to follow on the phone. Several programs like S voice also defaulted to Spanish even after setting up the phone with the default language being English.
+
+2. Back Cover - Some people did complain about the back cover which I agree could have been designed better as it does give it a somewhat cheap look. However it is easy to remove, clean and who doesn't love a removable battery. I have also seen at least one pic on the web where the back cover was cracking, however I have not experienced this for myself.
+
+3. Color Saturation - Another thing is that though the camera takes great pictures, the phone display makes the colors look very saturated when compared to other phones. Will see if there are any options I can select to improve this.
+
+4. S Voice - S voice unlike Siri can open up all the apps on the phone and has some other cool features. But S voice can be a little annoying as it doesn't get what you are asking or telling it to do at times (Siri does have similar problems but not as pronounced). It also at times didn't recognize my wake up voice command (Hi Galaxy). If you ask S voice if you need an umbrella it is smart enough to pull up the weather forecast for your area. However I had some difficulty setting an alarm as each time I would say 6:00 am, it would register it as 6:00pm. I eventually got this fixed by changing how I said the command. If you also speak too slowly it doesn't pick up on what you are saying. S voice also isn't as funny or intuitive as other voice recognition tools. If you ask "what sound does a cat make?", it will ask if you would like to Google it rather than just be proactive and google it. The only workaround is to tell it to "search for what sound does a cat make". Not a major game changer; but again if you are expecting S voice to be as perfect as you see those "Andrew" Android straight talk ads, then forget it. Be prepared to repeat yourself a couple times before S voice gets it right. But as annoying as it is, it does make hands free driving and cooking some what easier. Had no problems telling S voice to make calls or send a text.
+
+***Please Note***
+Though the phone has Gorilla glass 2, it doesn't mean the phone is indestructible. Other elements of the phone as with any other device can be damaged from a fall. Therefore I recommend getting a slim soft rubber or silicone gel case to absorb the shock of a fall. I bought an iGadgitz Black Silicone Skin Case Cover with Tire Tread Design. It gave me a great grip and didn't make the phone bulky. Some reviewers stated that their camera lens broke after a fall. The camera lens is not gorilla glass so that can and will break. If you are clumsy like me, get a case!
+
+Again don't let the Apple fan boys and haters discourage you from getting this phone. It is a great phone. Do your own research or see if you can go to an AT&T, Sprint, Radio Shack store etc and actually play with one.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comment
+
+
+//Review
+14 of 15 people found the following review helpful                       4.0 out of 5 stars             Like it... but...., August 6, 2012                        By&nbsp;L. Breda "L."  (USA)  - See all my reviews
+ (REAL NAME)   &nbsp;&nbsp;                          This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         My relationship with the Samsung Galaxy S3 has so far been a fairly good one. It runs circles around my iPhone 4 speed wise while browsing the web on the go, the screen is a really nice size for browsing and video chatting, and there is no lag when unlocking or swiping from screen to screen. The battery life is fairly decent getting a full days use with moderate email, web browsing, text messaging, and Pandora listening.
+
+There are a few gripes I have with this device. Let me start out by saying that I am extremely careful with my electronics, I hate cases because I feel like they cover up the true beauty of my new gadgets so I like to leave them bare. The Galaxy S3 is very easily chipped and scratched. While the screen stays scratch free my main gripe is with the backside and especially the bezel. Both get marred extremely easily. The back can be easily replaced with a new Samsung back to make it look like new, but once the bezel is marked your screwed.
+
+I also have to say that I have some call quality trouble. If I hold the phone flat to my ear the person on the other end of the line struggles to hear me. I have found that I have to hold the phone at an angle away from my mouth, this feels really unnatural and I can easily forget to do it, which results in me having to repeat things when I realize the person on the other end thinks they have lost me. It is VERY frustrating!
+
+As far as the android system goes if you have previously had an iPhone you will find yourself feeling like a kid in a candy shop when you get around to customizing the S3. But like a kid in a candy shop, you will also find yourself not caring after you have had the phone for a few weeks.
+
+Another HUGE issue is the key pad. I am a huge text-er and I have yet to find an onscreen keypad on a phone that rivals the iPhone keypad. The S3 is VERY responsive but it is still not up to par with the iPhone. I get pretty frustrated when typing long emails or texts, as they need allot of correcting after I am done. The auto correct is awful and I recommend that you turn it off if you don't want to throw your S3 in a frustrated rage.
+
+Overall if your wondering if you should get this phone I think you should decide what is most important to you. If web browsing is your thing, then the S3 is a good choice because of its bigger screen and lighting fast speed.
+
+I am happy using this phone until my contract is up in a few months, I don't think I love it so much I will want to use it beyond that. In my opinion I like the iPhone better, its OS might be stale and boring, its screen might be extremely tiny, and its 3g speeds lagging far behind the S3's 4G, but its smoother, simpler, and more reliable and in my opinion sturdier and better made to hold up to scratches and dings.
+
+Overall the S3 is one of the best phones available on the market, it is a phone that will do whatever you need it to do well. Picking a phone these days all comes down to personal needs and preferences.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (3)
+
+
+//Review
+20 of 24 people found the following review helpful                       5.0 out of 5 stars             Nice Size Screen, Snappy ICS 4.0, Great Phone - US Version, June 23, 2012                        By&nbsp;electronicnut   - See all my reviews                       This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         First, this is a review of the US version of the phone.  I tried to put a review up on the US version, but Amazon wouldn't let me.  So hopefully this helps out people deciding to get the US version of the phone.  In case people are wondering this is for the Sprint network.
+
+The US version of the phone differs as it has a Qualcomm Snapdragon S4 Processor with 1.5 GHz Dual-Core CPUs, while the the rest of the hardware specs are the same as the international version.
+
+I switched from an HTC EVO 4G to get this phone and so far it's been great!  Here are the things I like about the phone:
+
+* The phone is a nice size, it's lighter than my HTC EVO 4G.
+* The processor is one of the fastest US released Android phone, and it comes with 2 GB of RAM.
+* I played around with the camera and video camera and the quality is great in my opinion.  (I'll post some pics or a video later.)
+* The ICS 4.0 is really snappy and it opens up applications quickly.
+* It comes with Google Wallet.  I signed up and got a free $10 to use.  (I'm going to McDonald's to test it out!)
+* I've only use the S Voice application a few times, but it seems to be just like Siri on my wife's iPhone 4S.
+* It comes with a micro SD slot in case more space is needed to save pictures, videos, etc.
+* You can change out the battery if needed.
+* Battery life last twice as long compared to my HTC EVO 4G.
+
+Now for some cons:
+
+* This is carrier related and not the phone itself, but there is no 4G LTE on the Sprint Network.  Other networks such at AT&T and Verizon should be better, but I'm stuck with 3G speeds for now.
+* The phone is so nice, that I baby it all the time!
+
+I was on the fence about getting this phone or the HTC EVO 4G LTE aka HTC One X.  The main things that I like over the the Samsung Galaxy 3 over the HTC EVO 4G LTE is that it comes with the Micro SD slot and also the battery can be changed if it ever goes bad.
+
+I love this phone! :)                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (4)
+
+
+//Review
+13 of 16 people found the following review helpful                       5.0 out of 5 stars             Best phone in the world, June 25, 2012                        By&nbsp;Biggus Dickus "BD"  (Brisbane, Australia)  - See all my reviews                       Amazon Verified Purchase(What's this?)                         This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         My brother bought the sony xperia s, my mom the htc one x, and I am a long time galaxy s2 user. This phone is the best by far.
+
+Most notable changes since the galaxy s2:
+- look and feel is better
+- front facing camera phone unlock
+- intergrated task planning to the home screen
+- assistive light widget which allows you to use the flash as a torch
+- drag to use camera (the only thing the htc one x had on the s3 but turns out s3 has it too ha!)
+- best photo when you use burst shooting
+
+Have had a white iphone 3gs and black galaxy s2 and the white s3 is really nice and I like the feel of it :)                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comment
+
+
+//Review
+5 of 5 people found the following review helpful                       5.0 out of 5 stars             El mejor tel&eacute;fono que he tenido., December 6, 2012                        By&nbsp;Jorge   - See all my reviews                       Amazon Verified Purchase(What's this?)                         This review is from:  Samsung Galaxy S III / S3 Unlocked GSM Smart Phone (Marble White) (Wireless Phone Accessory)         Escribo la review en castellano para que las personas que est&aacute;n indecisas tengan una opini&oacute;n en nuestro idioma sobre el Galaxy S III.
+
+El tel&eacute;fono es muy r&aacute;pido, el funcionamiento del procesador es notable (corre un juego con alto nivel gr&aacute;fico como Need For Speed Most Wanted de forma perfecta) c&oacute;modo para llevar y la respuesta de la pantalla t&aacute;ctil es incre&iacute;ble. La navegaci&oacute;n es excelente, buen gestor de correos, con el Wi-Fi hasta ahora no he tenido problemas (nunca se ha desconectado) y el comportamiento en general es 5 estrellas. Ah y con la actualizaci&oacute;n a Jelly Bean 4.1.2 el tel&eacute;fono es m&aacute;s fluido a&uacute;n.
+
+Y por &uacute;ltimo, decir que este modelo funciona perfectamente con Movistar en Venezuela.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (3)
+
+

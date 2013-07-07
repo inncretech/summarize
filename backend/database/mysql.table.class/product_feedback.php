@@ -13,7 +13,7 @@ class product_feedback
 	{
 		$category 		= $post['category'];
 		$product_id 	= $post['product_id'];
-		$comment		= $post['comment'];
+		$comment		= htmlentities($post['comment']);
 		$type 			= $post['type'];
 		$created_by 	= $post['created_by'];
 		$data = mysql_query("INSERT INTO ".($this->table)." (`product_id`,`category`,`comment`,`type`,`created_by`,`created_at`) VALUES ('$product_id','$category','$comment','$type','$created_by',now()); ",$this->connection);
@@ -42,6 +42,26 @@ class product_feedback
 		
 		$data 	= mysql_query("SELECT * FROM ".$this->table."  WHERE (SELECT MAX(total_likes+total_unlikes) FROM ".$this->table." WHERE `product_id` = '".$product_id."' ) = (total_likes+total_unlikes) AND `product_id` = '".$product_id."' GROUP BY feedback_id",$this->connection);
 		return mysql_fetch_array($data);
+		
+	}
+	
+	function getOpinionCount($product_id)
+	{
+		
+		$data = mysql_query("SELECT COUNT(comment) FROM ".$this->table."  WHERE `comment` IS NOT NULL AND `product_id` = '".$product_id."'",$this->connection);
+		$data = mysql_fetch_array($data);
+		
+		return $data[0];
+		
+	}
+	
+	function getVoteCount($product_id)
+	{
+		
+		$data = mysql_query("SELECT COALESCE(SUM(total_likes),0) FROM ".$this->table."  WHERE `product_id` = '".$product_id."'",$this->connection);
+		$data = mysql_fetch_array($data);
+		
+		return $data[0];
 		
 	}
 	

@@ -1,0 +1,397 @@
+//Review
+897 of 964 people found the following review helpful                       5.0 out of 5 stars             Let's compare it with the iPhone, November 14, 2012                        By&nbsp;b. Weiss   - See all my reviews                       This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         _________________________________________
+
+A not-so-serious review first:
+
+Lumia 920 >>>>>>>>>>>>>>>>>>>>>>>>> iPHone 5
+32GB ---------------------------------------------32GB
+$99------------------------------------------------$299
+
+Master Maps-------------------------------------Mess-up Maps
+Offline GPS---------------------------------------iLost
+Public transit guide for global traveler ------iLonely and secretly flirt with Siri
+PureView Camera-------------------------------PurpleView Camera
+Clear lowlight photos---------------------------My party photos are drunker(fuzzier) than yours
+Anti-scratch--------------------------------------Full-Scratch
+Survives a fall-----------------------------------The poor pretty thing!
+Gets the job done-------------------------------What job?
+Good for normal people-----------------------Good for Apple worshipers
+Nokia: "Sorry, we will update"-----------------Apple: "You're holding it wrong!"
+Clear view under direct sunlight--------------Is my phone on?
+4.5" viewing asset-------------------------------Squint retinally
+Wireless charger--------------------------------Where is my this-year's-special cable?
+Touchscreen wearing gloves-----------------Cut a hole on glove
+
+A more serious review follows:
+
+Having used the phone for a while now, I'd like to provide a more objective assessment. I give ratings below first, followed by detailed explanations.  The rating numbers are on a scale of 10.  A score of "10" means it is not only the best but also has no apparent need to improve, and a score less than "10" just means there is room to improve but does not necessarily mean another product is better. The numbers in the parentheses are for iPhone 5 as a reference.
+
+RATINGS-------------  Lumia 920 (vs. iPhone 5)
+
+Call Quality --------------------10 (8)  Uncompromising call quality from Nokia, a true phone company
+Instant Messaging------------10 (10)  Big improvement over WP7; group messaging and MMS
+E-Mail-----------------------------9 (7) WP8 has the best enterprise-ready e-mail client
+Skype and VoIP calls----------9 (7)  International VoIP calls a reality with on WP8
+Contact Management---------9 (6)  WP8's multi-contact aggregator and integrator the best
+Entertainment-----------------10 (10)  Too much already, what more could you want
+Social Networking--------------9 (8)  Facebook integration is an edge
+Web browsing------------------9 (8)  IE10 is outstanding
+Shopping------------------------7 (9)  Comes from Apple's apps edge
+Navigation-----------------------8 (5)  Apple's first Maps is actually impressive, but see discussions
+Productivity---------------------6 (3)  Not there yet, but at least WP8 can do some work
+Screen--------------------------10 (8) Lumia 920 has the best looking screen consumers have ever seen
+Camera--------------------------9 (7)  In its own league
+Build quality-------------------10 (8) You might have trouble to say goodbye to Lumia 920 two years later
+Thermal performance---------8 (8)  Competitive
+Battery life----------------------5 (5)  All need improvement badly in this area
+OS reliability--------------------9.9 (9.5)  WP8 never even freezes, much less crashes
+OS fluency----------------------9.5 (9)  Ice-skating with WP8, and floor dancing with iOS, I much prefer the former
+OS flexibility/customization---8 (8)  Android is the king
+OS refinement------------------7.5 (9.5)  Microsoft is still no Apple on refined details
+OS apps ecosystem-----------6 (9.5)  iOS rules for now
+Current Fashion Index--------0 (11)
+
+To ease your reading, I'll put the conclusion first before the detailed sections.
+
+CONCLUSION:  Laying aside the nitpicking, I am in love with my Lumia. There are so many great phones today that it has become a problem to choose one. But the top WP8 phone is the choice by both my brain and my heart. If I were a bit geekier, I might have gone with Android; and if I didn't have to work I might have gone with iPhone. But this is my phone. It's for a practical man with a taste.  I hesitated when Lumia 800 came out, knowing that it would be incompatible with WP8. Now Lumia 920 is such an attractive package. I don't think I'll change my phone anytime soon, although I do hope that there would be some nice updates from both Microsoft and Nokia to make this phone even better.
+
+1. CALL QUALITY
+
+It is a phone after all. The call quality of Lumia 920 is absolutely top-notch. The voice is so clear it puts my landline cordless phone to shame. Nokia knows how to make phones. They are the true phone company. The HAAC microphones (Rich Recording Mic) are not your ordinary microphones on cell phones. A different league. The speakerphone is pretty good too, quite loud and clear. In fact I once had a conference call using the speakerphone with several people on my side, and it worked out fine.
+
+2. E-MAIL
+
+Overall, WP8 has the best mobile e-mail. Windows Phone has an inherent advantage in e-mail, especially work e-mails. Apple does not own a popular e-mail service, and can only support third-party e-mails. Android enjoys the excellent Gmail, but Gmail does not have a strong foothold in the workplace.
+
+WP8 has deep integration of Exchange, Office 365's Outlook e-mail, Hotmail and Live Mail on Windows Phone.  WP8 further has excellent integration with the popular Gmail and Yahoo Mail.  All this results in an e-mail client that is more capable and efficient than other platforms. To name a few, contact management, contact synchronization, message management, message synchronization, file management, attachment management, folder management, conversation thread management, and e-mail search, are significantly better on Windows Phone e-mail. The difference is far deeper than appearance.  If you handle e-mails with some degree of sophistication, you will appreciate the difference.
+
+I travel with both my iPad and Windows Phone. Unless I am using my computer, I usually reach out for the Windows Phone for e-mails instead of the iPad, despite the fact that the e-mails on iPad have so much better readability. This wasn't the case before when I used an iPhone. To just read a recent e-mail, the iPad is an obvious choice. But you don't just read a recent e-mail. Work e-mails have history and threads, and they need to be searchable, and fully synchronized with your computer, and that's where the Windows Phone shines.
+
+For example, if you just read or deleted an e-mail on you phone, you want the status to synchronize with the server and other devices, otherwise you end up paying attention to the same e-mail too many times or having to delete the same e-mail multiple times. For another example, if you need to search to find an older e-mail which is not stored on your phone (due to memory conservation, mobile devices do not download and keep a copy of every e-mail in the past), you want your mobile e-mail to give you an opportunity to search e-mails on the server. WP8 does these perfectly.
+
+I also like the fact that Windows Phone has a separate live tile with a customized icon for each e-mail account. I don't like the idea of mixing my work e-mail and personal e-mail in the same box, or even under the same icon. I need a clean definition of territories. Of course, if you intend to combine e-mails, you can do that as well on WP8. Flexibility.
+
+3. SKYPE AND NON-CELLULAR SERVICE DEPENDENT PHONE CALLS
+
+Skype, owned by Microsoft now, is an important function on WP. Microsoft also makes a Skype app for iOS, but the app is still not nearly as good as the integrated Skype on the Windows Phone.
+
+If you use Skype Pro and/or Skype Out, you can actually make phone calls anywhere in the world as long as you have Wi-Fi or cellular data connection. I'm not talking about Skype-to-Skype calls. I'm talking about calling real phone numbers. (This works only with Skype Pro; the free Skype account can only make online Skype calls). No cellular phone connection is required with Skype Pro on Windows Phone.
+
+Take an international trip you will understand what I'm saying. Being able to call home and work at international airports *without* a SIM card for the local service is a major convenience. Even if you already have got a local SIM card, using Skype Pro on Windows Phone to make calls on the 3G/4G data service is still a great convenience because it costs only two cents a minute, less than 1/20 of the cost for international calls made on a regular cell phone.  It also works other way around. You can make international calls from the US using Skype Pro on your Windows Phone for two cents a minute.
+
+Cheap international calls anywhere on your cell phone (and enjoying the integrated phone contacts) - I hope this concept registers with you.
+
+4. CONTACT MANAGEMENT
+
+The People Hub on the Windows Phone deserves a separate mentioning. This is by and large the best contact management on a cell phone (WebOS users might have an issue with the statement). It automatically integrates all the contacts from different sources (e-mails, Skype and Facebook) and provides the best accessibility and connectivity on a mobile device.
+
+This significantly betters iOS, which has a pretty address book and good editing capabilities, but very little beyond that. When it comes to multi-source contacts integration, accessibility and connectivity, the People Hub on WP is much superior to iOS's contact management.
+
+For example, iOS address book has links to internal phone numbers and e-mail addresses, but basically that's it. It does not have active links to external phone numbers (e.g.,contacts pulled from e-mail accounts), Skype contacts, and Facebook friends, etc.. In the People Hub, all these have active links, meaning that they provide a single click connection. In addition, People Hub pulls contacts from Skype, which iOS does not do at all.  If you use Skype, especially Skype Pro, you'd suffer a disconnection on iOS.
+
+Both address books link contact addresses to maps, but the Apple maps is essentially dysfunctional in this respect. Apple hasn't really spent time to make sure this function actually works (they have been focused on making the thing look pretty). It doesn't work most of the time.  Unless you have entered the contact address in a particular manner, clicking the address will result in a "not found" on the maps. The People Hub works perfectly with maps. Under the hood,  this is actually a search algorithm issue, not a user interface issue. Like Google,  Microsoft knows search. It shows.
+
+5. PRODUCTIVITY
+
+Windows Phone 8 wins this important area hands down, not because it is so good, but because others are so bad. The major thing is the Office App and OneNote App, and their integration with the excellent and generous (but underrated) SkyDrive. This allows Windows Phone to do the most essential things for productivity. WP8 further integrates Office 365 and SkyDrive perfectly. If you or your company subscribe to Office 365 and use the cloud versions of the OneNote, Office, Outlook, TeamSite and SharePoint, the productivity is boosted to a whole new level. The iPhone and Android simply cannot provide that kind of productivity. Even if you don't use Office 365, getting the Windows Live and Skydrive would already be the best productive user experience because of the integration with the Web version of Office.
+
+I hear people say that they can use an Office-emulating app to do some work on the iPhone (or Android). But no. For serious work, it simply doesn't work. You open a document (Word or PowerPoint, for example), do a slight editing, thinking that you have saved a bit time working on your smart phone, but only to later discover (or be told by an upset colleague) that you changed the subtle aspects of the formatting and styling of the document. That doesn't work for me, nor for anyone I work with. Work environment cannot allow this. The fundamental difference is that the Office App on WP8 and Office Web version have complete compatibility with the traditional Office, while other apps don't. They are built on different foundations. Microsoft's mobile renditions of Office may lack many features of the full Office, but they are completely compatible with it, and that's extremely important. When it comes to work documents, compatibility is more important than feature set.
+
+Overall, if documents and e-mails are just different ways of casual "instant messaging" to you, the iPhone is fine. But if documents and e-mails are a work tool to you, Windows Phone is the way to go.
+
+6. NAVIGATION
+
+First of all, for those who miss Bing Maps, your Windows Phone still has it. It's only two taps away: tap the Bing search button (hardware button on the right side at the bottom), and then tap the "Local Scout" button (on the left side of the three on the search page).
+
+In addition to Bing Maps, Nokia offers a set of navigation apps including Nokia Maps, Nokia Drive, Transit, and City Lens. They together offer excellent navigation, better than Bing Maps alone, and also better than what iOS has to offer.
+
+Apple's first map is actually impressive with good features and of course great looks. But as Google has said, doing maps is hard. It's years of exercise versus a morning makeup. Currently, Apple Maps does have a problem. The reports of Apple's terrible map performance are related to map data inaccuracy and map search algorithms. Those Apple fans who refute such reports by claiming that they haven't experienced any problems are missing the point. Unlike other software in which a test is usually universal, your map test results only have to do with the location you tried, and only proves that the map is OK in that one location. When there is a problem at another location, there is a problem. And Apple has a lot of such problems reported. The company acknowledges it. They're not fools.  I don't know how fast Apple can improve on that. Data and fundamental algorithms are far more than just doing some programming to add skins. They might need to shell out a billion dollars to buy up.
+
+Compared to the excellent Google Maps, Nokia's navigation solution is mixed. It's worse in some ways, but better in other ways. Google shines on map data, especially in the North America segment, no question about it. Google's superiority in search is also reflected in its maps. The app overall feels more mature and advanced, further boosted by is far greater user base (which they earned).
+
+But Nokia has several important things on its side. The segmented downloadable maps for off-line GPS is a unique and significant advantage for Nokia. The reliable integration with contact addresses (People Hub) is another. The multi-angle approach of Nokia's navigation app set suits user's particular need better. Nokia also has comparable map data (although arguably slightly inferior North America segment) and mature map algorithms.
+
+Nokia's navigation solution comes with several separate apps. In comparison, Google puts everything under Google Maps. I like Nokia's way of tasking.  The Nokia apps are meant to be connected (they need to work more on that). You start with one app, but may transit to another when you need it. If done right, Nokia's approach could directly put the user at the best leveraging angle depending on the actual situation, using a specific app with the most suited user interface to maximize the user experience. Some people complain about it either because of their unfamiliarity with this design or their dissatisfaction with the current execution. I hope Nokia doesn't change this good concept, but just keeps on perfecting the apps and improving the integration under this framework.
+
+An often overlooked but significant feature Nokia offers is downloadable maps segmented according to regions. Once downloaded to your phone's local storage, the maps are fully functional off-line even when you don't have any cellular network or WiFi access. That could be a matter of getting or not getting to the destination. If you don't think this is important, I don't know what is. Even when cellular network is present, the off-line GPS map means big savings on your data usage.
+
+With the downloaded maps, the navigation on Lumia 920 may replace standalone GPS units. It has vastly better user interface to start with.  Address search, which is probably the most frustrating thing on standalone GPS units, is far better on Nokia Drive. The overall user experience is superior despite its lack of a few features. But if you need a dedicated GPS unit constantly mounted in the car, that's a different story.
+
+If you happen to be at a place without a car (Americans, have you traveled to other places in the world? People don't always drive), try Nokia Transit, which provides detailed guide for public transportation of cities around the world.
+
+Nokia takes navigation seriously. They have had an excellent maps tradition and accumulated expertise with Symbian-based cell phones. Considering that they jumped on the WP ship only recently, I'm confident that they will make this whole thing even better in a quite fast pace.
+
+7. THE SCREEN
+
+Both Lumia 920 and iPhone 5 have gorgeous screens, but the Lumia is still better. The viewability under direct sunlight is noticeably better on Lumia 920. Both are extremely clear for text and webpage rendering, but Lumia 920 works much better in the portrait mode because of its greater viewing dimension.
+
+And Lumia 920 has touchscreen capability when you wear gloves. This may come handy in very cold winter outdoors. But for me, the usefulness is more than during the winter. To protect my hands from suffering  painful skin and split fingernails, I often need to wear a glove on my right hand while I'm doing air traveling. Lumia 920 is the only phone that I can use wearing a glove. It is not a gimmick at all.
+
+8. THE CAMERA
+
+Lumia 920 has the best cell phone camera on the market, leading by a significant margin, except for Nokia's own PureView 808 which is a different type of device.  I say this very objectively. Those who don't see the difference either didn't test it under right conditions, or simply can't tell the differences in photo quality. Lumia 920 is the only smartphone camera that can take decent concert (or party) photos and videos. Its lowlight performance is at least two ISO stops (that's 4 times) better than the iPhone 5.  This is primarily due to Nokia's unique pixel binning technology further combined with image stabilization. Neither Nokia nor Apple makes the camera sensors (Sony does), but the photo quality is not only about the sensor itself. Nokia has a tremendous technological and patent advantage in this area.
+
+By the way, stop comparing which camera has more megapixels. High MP is a trick used by camera makers to tax on consumer ignorance, and in most cases has very little correlation to picture quality. On cell phones in particular, there are several reasons why it's meaningless to pursue higher MP count. First, no tiny lens on a cell phone is capable of optically resolving pixel numbers beyond 5MP. I challenge you to find a scientific test to prove otherwise. Second, because of the very small sensor sizes, low light performance is a far bigger problem than the number of pixels. Third, you don't need more than 2MP on a cell phone. Generally, photos taken by smart phones are only used for screen viewing instead of making large prints. Even 2MP would be plenty. For web posting, a high-quality 1MP photo would look far better than a lousy 10MP photo.
+
+I'm not saying that a smaller pixel number is a good thing in itself. On the contrary, I'm just saying that for a given sensor technology, pixel density is the best sacrifice to make if the goal is to take better pictures with a cell phone camera sensor.  Most consumers don't realize that for any given sensor technology, an increase of pixel density comes at the expense of lowlight performance and dynamic range. (Many people intuitively reject this notion, reasoning that it does not make sense that lowlight performance and dynamic range would be affected by pixel density as you can always downsample. But to understand this, you must stop treating pixels as abstract geometrical concepts but actual engineered photosites with optically dead physical boundaries. That is a different topic though.)
+
+Every time when the sensor chip technology is improved, they usually have two options: (1) increase the lowlight performance and dynamic range by keeping the same pixel density, or (2) increase the pixel density (to get a greater MP count for a given sensor size) by holding back the real performance. Unfortunately they usually choose the latter because the MP count is a much more marketable gimmick.
+
+So instead of honest value, we now have the madness of smartphones reaching and going beyond 10MP with little meaningful result but unnecessarily bad lowlight performance, poor dynamic range, and a big waste of storage, data usage and processing time. Had they focused on real performances on 2-4MP sensors with a generous sensor size permissible on smartphones, we would have now had much more useful cameras on these gadgets.
+
+In this regard, Nokia is doing great in spite of (not because of) joining the megapixel race, again thanks to its pixel binning technology and image stabilization.
+
+9. BUILD QUALITY
+
+Nokia 920 is a marvelous piece of engineering and manufacturing. Both Nokia 920 and iPhone 5 have a premium appearance, only very different flavors. But the Nokia is without question tougher. I say this not because Nokia is heavier. They use different materials. In choosing materials, these two companies have very different philosophies. Apple always goes after materials that enable extremely slim and light products, while Nokia has always been concerned of durability.
+
+If you are already conditioned to update your phone every year, you are an ideal Apple-kind person already. But still, hold your iPhone dearly and don't drop it. I have an iPad 3 that was accidentally dropped from a sofa sidetable to a hard floor head-down. I was completely shocked by the amount of damage it caused. I was expecting a dent on the edge or at worst a crack on the screen, but the whole thing was smashed like glass. That's when I discovered that the iPod 3 uses a glasslike material even for the frame, which looks great, but, just don't drop it.
+
+So you might actually need a case for your iPhone.  Lumia 920 does not need one. In fact, I can't imagine a case for Lumia 920 without ruining its gorgeous appearance.
+
+10. THE DESIGN
+
+This is completely subjective. But I personally feel iPhone 5 is too youthful and delicate, and better in a hand of a teenager, while the Samsung Galaxy S3 too rounded and has no character. I love the overall masculine (but gentle and absolutely not rough) and squarely straight style of Lumia 920.  Go to YouTube to hear Marko Ahtisaari of Nokia articulating the design philosophy.
+
+11. THERMAL BEHAVIOR AND BATTERY LIFE
+
+The Nokia 920 does not run hot, thankfully. This is one thing I was particularly worried after the bad experience with the Dell Venue Pro which had disgusting thermal performance and power management.
+
+Battery life is good, although not excellent, comparable to other top performers such as iPhone 5.  If there would be an improvement that could persuade me to change my phone again, it would be a new phone that could last at least a couple of busy days without recharging. I am not a heavy mobile user, but I'm out on a trip quite often.  The battery life of my cell phone is among the biggest mental burdens while traveling. Unfortunately, it looks like battery life is not what these companies are focusing on at this time.
+
+12. APPS
+
+iPhone wins by a large margin in terms of app number. Although a vast majority of apps are junk on both systems, there are some great apps on both; iOS just has more due to its sheer larger base. So it seems that most people will need to sacrifice a few apps by choosing Windows Phone platform for now. I'm missing quite a few useful apps on the Windows Phone, and make up the deficiency by using the iPad. Windows Phone also has some very good apps that are missing on iOS (in addition to Nokia apps and Microsoft apps), although not as critical.
+
+The most important app I miss on the Windows Phone is a decent PDF reader. Microsoft rushed out its own PDF reader, which works for basic reading but has some serious limitations. I hope Adobe or a third-party releases a better PDF reader on WP8 soon. This is a big pain point.
+
+However, none of these missing apps has the kind of importance comparable to that of navigation and productivity. To me, the choice is clear. I think it's misleading to do "bean counting" the small things of each system. You've got to have priority. If you need one function that has a dominating priority, then one million less useful "apps" would no longer matter.
+
+Despite the relative minor changes in appearance from WP7 to WP8, Windows Phone 8 has got a much better foundation in the program architecture than WP7.  With the Windows NT kernel and 90% source code compatibility with Windows RT, the app future looks good.
+
+13. FLUENCY AND EFFICIENCY OF THE OPERATING SYSTEM
+
+Windows Phone 8 on Lumia 920 beats iOS on iPhone 5 in terms of fluency and efficiency. WP has a hardware "Back" button in addition to the Home button, while iPhone has just a Home button. This has a significant impact on the flow of operation.  I know this is rather subjective, but one thing that particularly bothers me on the iOS is that it requires you to always go back to the home button. You can't directly go back to another place you have just visited. You always have to go back home and start from there again. I remember Steve Jobs proudly making a big point out of it. Theoretically, going back home and then to the last app takes only two steps, but problem is that when you have multiple pages of apps, it causes a bit of hesitation to locate an app.
+
+Both iOS's "double-clicking Home" and WP's "long-pressing back button" give you a nice quick list of the opened apps to simplify the selection of apps, but still the additional "Back" button functionality WP is very much appreciated.
+
+Another thing that impacts the efficiency is the management of installed apps. The iOS manages installed apps in a simplistic way with much emphasis on the appearance not the functionality. Windows Phone has a much more sophisticated way. The installed apps are directly and separately searchable, and are also automatically organized under alphabetical categories that can be quickly accessed through a single page grid (which itself is accessible by a single swipe). If you have less than 20 installed apps, you will see no difference. If you have about 20-50, the difference would start to show. With 50-100, it becomes apparent, and beyond 100, the difference would be huge. The more apps you install, the greater the difference would be. So power users will find this an advantage on Windows Phone.
+
+When you come to think of it, the above may be the reasons why the iOS is so intuitive for beginners, but less efficient for more experienced users. On user interfaces, these two things often conflict. I can see why many like the flow design of iOS, but I prefer WP8's flow much better.
+
+14.  CUSTOMIZATION
+
+It almost sounds silly that one of the biggest improvements WP8 has over WP7 is adding some smaller sized tiles. Hardly innovative, but it makes a big difference, largely speaking against the old design. I don't like those big tiles. I simply don't think any app deserves that much attention, especially in such a uniquely precious small room. I customized my start page to have all tiles in quarter size except for the phone button. Thank you, Microsoft, for allowing such basic freedom. My start space is now much more efficiently used and no longer a victim of the almost tyrant "less is more" so-called clean design philosophy.
+
+The level of customization further down is mostly on par with the iOS.  Android would still have an edge over both, but I think this is got to a very reasonable level already.
+
+But I do have one big complaint against Windows Phone:  With WP8, you still can't turn off that stupid screen auto-rotation. You simply can't so far. No user settings has that. No app that does that. Even unlocked phone can't do that. Forgive me to call auto-rotation feature stupid. But it is one of those tech-things that make no sense on a mobile phone, precisely because a mobile phone is just so, mobile. The problem is that these device designers fail to understand that the proper (or desired) orientation of the screen simply cannot be determined by an orientation sensor. The sensor determines the orientation using gravity and the earth as the reference, not your body. As a result, the sensor can only detect the phone's orientation itself, not its relative orientation to the user's body posture, which is what actually matters.  So it works properly only when you are standing straight, not when you are inclined or lie down. In fact, it always turns to the wrong orientation when you are inclined or lie down, so you have to fight it.
+
+In practice, the non-switchable autorotation causes much more annoyance than any utility. It is OK if they just use it as a gimmick to attract feature counters, but it is not OK to have it permanently implemented and cannot be turned off. It's simply stupid.
+
+I think the best solution is iPad 3's combination of autorotation plus a hardware-based button for a mechanical lock. It combines the best of both worlds. The iPhone has autorotation plus user manual options in the settings and apps, which is not as good as the iPad, but still much better than Windows Phone's autorotation only, whenever and wherever.
+
+The reason why I make this auto-rotation issue such a big deal is just to make a point, not because the thing itself is so life-threatening. I can live with the annoyance. But the failure or overlook of such issues after all these years is very telling of Microsoft.
+
+15.  REFINEMENT OF THE OPERATING SYSTEM
+
+When it comes to very fine details, Apple wins. WP8 has improved over WP7, but still no match to the iOS in its refinement of details. Company wise, and culture wise, Microsoft has not fully learned this art yet. Let me name a few:
+
+  (1) The input mode is still a mess despite an excellent keyboard. Although typing new text is easy, accurately placing the cursor to edit text is virtually impossible. Also, you can't quickly do a "select all" to copy and paste a text.  It requires a painful maneuver to do so, many times more difficult than doing the same on iOS which gives you a selection in an automatically pop-up menu. Oh please, they struggled with this copy and paste thing from the very beginning and received a disproportionately great amount of criticisms, so you would think that they would have jumped all over it to not only improve it, but in fact over-improve it. Not at all. It's still a half cooked solution.
+
+  (2) The network status indicators on the top of the screen don't stay. They disappear transiently. You have to touch the screen in a particular manner to bring them back. You can't change that in the settings. This is useless frivolous design. The indicators don't occupy extra space at all when they are displayed, and their disappearance does not result in any benefit. It just makes the system fussy and less certain. My basic assertion is that cell phone's network status is a constant user concern, and being able to glance at these essential indicators any time gives you peace of mind, and is a good part of the harmonious "handset environment". Having to always struggle for such a simple thing is nonsense especially when the sacrifice is made for no purpose.
+
+I think what happened at Microsoft was like this: One day, someone from Microsoft management shouted in a meeting: "Less is more! Less is more! Look at Apple, we need to learn from them!" And shortly after that, a Microsoft engineer came up with this idea of hiding the network status indicators...
+
+Microsoft has done the hard part of building a very promising mobile OS, it shouldn't be so difficult for them to do these very basic and simple things right. It is obviously not an engineering issue. It is a product management issue.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (45)
+
+
+//Review
+204 of 222 people found the following review helpful                       5.0 out of 5 stars             Combined with Akruto Sync this is the Best Phone on the Market, November 15, 2012                        By&nbsp;Steve N   - See all my reviews                       This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         This is a fantastic phone!  It is very capable, easy to use, and stylish.  Here's why.
+
+Lumia 920's screen with its brilliant colors is simply gorgeous.  Clear Black technology uses dual polarizes to reduce reflections and increase contrast.  This makes the screen very easy to see outdoors, with no glare.  When indoors, it just makes the contrast that much better, resulting in a more vivid picture.  Display brightness is adjusted automatically for the bright-light and low-light conditions (but you can change display settings manually, too).  In this model, Nokia went with an IPS screen, which has excellent viewing angles.  This comes in very handy when you want to show photos on your phone to a group of people, or if you are taking a photo and need to move the phone high above your head or very low.  The screen works together with the body to make this a stylish, eye-catching phone.
+
+This phone is very well built with its polycarbonate body and scratch-resistant Gorilla Glass screen.  Buttons are ceramic, not plastic.  The back of the phone is curved, making it nice to hold.  The Gorilla Glass screen is also slightly curved, rather than flat.  This makes the finger slide more easily on the screen.  All in all, Lumia 920 feels very solid and gives off an impression of a high-end device.
+
+A unique feature among modern smartphones is the Super Sensitive Touch Display.  This technology allows you to use the touchscreen while wearing gloves.  No doubt, a great thing not just in Finland, but any place that has winter.
+
+The Windows Phone OS is new and refreshing in the sea of Apple and iOS phones.  The live tiles bring real-time data right to the main screen without having to start an app.  Live tiles are visually very appealing and can be resized and arranged on the screen to your liking.  I find this a far better interface than icons on the other OSs.  I can access anything I need with one or two taps.  I also like how all my data feeds are integrated into the people hub.  I can jump from a friend's text message to the emails I exchanged with them, to their recent facebook updates; their phone numbers and address are right there, too, so that I can quickly call them or even get driving directions.  Everything is integrated so seamlessly.  Compare this to other OSs, in which each of these actions would require you to start a separate app and navigate within the app.
+
+The 8.7 MP, PureView camera is made for taking high quality pictures.  Lumia 920 uses Carl Zeiss Tessar optics and has real optical picture stabilization (which works better than digital picture stabilization).  The low-light performance is phenomenal.  There is a dedicated hardware camera button.  Pressing the camera button brings you directly to the camera app.  Even from the lock screen!  You can half-press the button to autofocus, then press it fully to take a shot, just like with a regular digital camera.  Or you can tap on the screen, causing the phone to auto-focus on the object you tapped and immediately take the picture.  Fully automatic mode works great, but the phone also offers the full complement of manual settings.
+
+Expect to charge your battery every night.  This is normal for smart phones.  You can charge the phone by simply placing it on a charge pad.  No need to connect any wires; also the charge pad with no dangling wires looks neater then a regular charger.  If you do want to use a cable to charge, the cable is the standard micro-USB.  No need to buy proprietary cables and chargers, like you do with certain manufacturer whose names starts with "a" and is a fruit.  When travelling, I can pack just one charge and use it for my Lumia and for my wife's blackberry.
+
+There was one thing lacking in all Windows Phones that almost made me stay away from this great phone, but I found a third party program, called Akruto Sync, which fixes it.  Windows Phone does not allow synchronization between Outlook and the phone using a USB cable.  This means that if you want to edit your phonebook, calendar, or to-do list on your PC (and you do want that, or you'll have to enter your entire phonebook into your new phone by hand), Microsoft expects you to store them on Microsoft's servers in the cloud.  This is meant to be more convenient (no wires), but I have no desire to store my personal information on someone else's servers.  After much searching I found Akruto Sync, which offers the best of both worlds.  It syncs over Wi-Fi or Internet, but your data is stored on your own PC, not on their server.  With Akruto Sync, I can enjoy this outstanding phone.
+Lumia 920 is a top of the line phone with first-class hardware and software.  Well done, Nikia!                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (2)
+
+
+//Review
+129 of 143 people found the following review helpful                       5.0 out of 5 stars             Simply the best, November 14, 2012                        By&nbsp;Techcheque   - See all my reviews                       This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         I can honestly say no other phone reaches even near the quality, innovation level and design this phone has.
+
+The screen is just awesome with all the technological aspects such as super sensitivity (you can use the phone with fingernail, pen or even gloves on), sun light reading enhancements (clear black + auto brightness), high contrast, refresh rate, resolution, and ppi (which is even bigger than in Retina display). Everything just looks beautiful on this screen.
+
+With hardware enabled image stabilization the device takes amazing video (Full HD 30 fps!) like you were using a tripod while shooting in one hand! To make videos perfect, there are also 3(!) High Amplitude Audio Capture (HAAC) rich recording microphones, which allow capture sound up to 140DB. This means the sound does not distort when you record a video e.g. at concert or at nightclub. And the photos taken in low light just, phew.. blow your mind. What can I say, Lumia 920 makes point-and-shoot cameras useless - and in some cases even DSLRs.
+
+In the sound section, a surround boost is given to then videos and music. The latter one is by the way free via Nokia Music (on selected countries). Nokia has not saved its efforts or R&D budget in this area either; surround technology to the phone is brought to you by the one and only: Dolby. There is also an equalizer with almost 20 presets but you can create also your own if you wish.
+
+While some other rivals make the consumers use adapter when charging the phone with 3rd party peripherals, Nokia has enabled consumers to charge the phone wirelessly, and this works even on induction stove (do not try that one at home though). While you put the phone on charger, you can set a default app to run (this is enabled by NFC), e.g. Outlook when you charge it at work, and Nokia Music when you charge it on top off JBL speaker at home.
+
+The black matte unibody polycarbonate shell with scratch resistant ceramic zirconium buttons and back plate, scratch resistant Corning Gorilla Glass 2 and sculpted 2.5D glass gives the device an elegant and stylish look. These material combined with highlevel buildquality makes the Lumia 920 almost impossible to break by accident. The design is based on Lumia 900, which won International Design Excellence Award on July 2012. Somehow Nokia managed to make this device to look even better - No wonder Helsinki is the World Design Capital 2012.
+
+Nokia City Lens with augmented reality is awesome when traveling, but it gives an opportunity to get you to the places you didn't know even existed in your own hometown. With offline voice assisted turn-by-turn navigation you can easily find your way to destination. You can download the maps of whole country at once, which of course saves money, since there is no need to use the data-connection (especially abroad). Maps are a bit better quality than with some rival companies, since Nokia Maps (="Here"-maps) are used by Garmin, BMW, Mercedes, Ford, Facebook, and even this place where you are reading the review, Amazon.com. There are also public transport schedules with maps, so this device simply makes your life so much easier.
+
+I don't know anything particular what to tell about WP8, but the usability and design is on a very high level. Also the live tiles are awesome. You can choose 3 different sizes and depending on the size, the apps behind them will bring more detailed information. Also, you can create default settings to some app (such as set default destination in public transport schedules), and pin it as shortcut to the main menu (this means, that with only with a one click from home screen, you can see the transport schedules to your destination). It has the best social media features, you don't even have to open facebook app to know if someone has written to you. Also, if you own XBox, you can watch the video or browse the web with your phone and watch it same time from your TV via Smartglass app.
+
+For enterprise users the OS offers the highest security level possible (well, not counting RIM here). The device has features like bitlocker, secure-boot, security policy enforcement, remote locking, remote wipe, and lost device tracking. Via company hub, enterprises can publish internal apps not found on public marketplace. There's also Office 365 included so all the SharePoint lovers out there will also love this phone. With O365 & Information Rights Management, you can e.g. track, audit, and prevent users from reading, forwarding, printing, faxing or pasting confidential documents for unauthorized use.
+
+However, Lumia 920 has one downside to it: It's heavy. Just kidding, even baby can lift it and put it to mouth. There's nothing which I could possibly  complain at the moment.
+
+With above features and current price, the phone is quite a steal.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (9)
+
+
+//Review
+53 of 58 people found the following review helpful                       5.0 out of 5 stars             Solid smartphone, smooth OS *UPDATED 12/03/2012*, November 14, 2012                        By&nbsp;T. Tozawa  (San Francisco)  - See all my reviews
+ (REAL NAME)   &nbsp;&nbsp;                          This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         *UPDATES AT THE BOTTOM*
+
+I switched from the iPhone 4 to Lumia 920 so if you're in the same situation and deciding whether to try a different OS/phone hopefully this review aids you in making a decision.
+
+I've been an iPhone user for a few years now starting from the 3GS and upgrading to the iPhone 4. I skipped the 4S in anticipation of the iPhone 5 but for me, it didn't seem like too big of a change (played with my brother's iPhone 5 for a bit) so I ended up keeping the iP4. The iP4 did everything that I wanted in a smartphone; I am not a heavy user but used it for your basic text, email, web/media browsing, and used a handful of apps, along with a jailbreak to customize certain features. But I was itching to try something new and the Lumia 920 piqued my interest.
+
+Since I'm into DSLR photography the PureView camera and optical stabilization intrigued me. I've done a few test shots and overall, the quality is great, especially with low light capture, and the optical stabilization is a great feature. As of now (Nov. 14, 2012) there is some talk of soft photos but nothing extreme, and it seems that Nokia is working on a software update to fix this issue. The half-press of the camera button engages auto focus and the optical stabilization kicks in, just like a DSLR, so usability is excellent. You can also adjust certain settings such as ISO and EV for more creative control.
+
+The overall build quality is superb, but with Nokia, that's pretty standard. The screen is bright and beautiful and watching HD content is a pleasure. The matte finish of the black feels great and looks sophisticated, but of course for the more adventurous there are more color options to choose from. The main critique of the phone was it's weight and coming from the iP4, it basically feels the same. Of course, if you're comparing it the iP5 or some of the other smartphones it may feel a lot heavier. Personally, I like having the weight as it feels more comfortable to hold and use. Your mileage may vary, but honestly, the weight issue is completely overblown.
+
+I was a little worried about the feel of the user interface on Windows Phone 8 after using iOS all these years. But after trying it out, it was pretty much second nature since the general feel and UI is similar to iOS. The customizable live tiles are great for organizing your home screen and keeping you up to date with what you want (and removing things you don't want.) The overall Windows Phone 8 OS is super smooth and quick compared to what I was use to on my iP4, which I already thought was nice and quick. I'm sure that there may be a few nitpicks and features not yet included that may bother certain users and for me, that one feature is the lack of a notification center. It seems that Microsoft couldn't include it in time and hopefully they'll push out an update that'll add this feature.
+
+The one thing about switching to the Windows platform that may bother users is of course app selection. It really isn't as bad as others make it out to be though and I would say that 90% of the main apps found on iOS/Android are found on the Microsoft store. Some apps may not be as fully featured (yet) but hopefully with the push of the Windows 8 ecosystem developers will start concentrating more on this platform. As I've read, developers are liking how easy it is to work on the platform so I wouldn't be surprised if in the near future the Microsoft marketplace will become just as robust as it's competitors. If all you download are gaming apps, then I would say that the Apple store definitely has the edge right now. The Apple store does has a lot of junk apps, but if you're looking for variety, the Microsoft marketplace still falls behind in that category at the moment. Personally I don't do a whole of gaming so that doesn't bother me but it may bother others. For any other app, they'll most likely be found on the Windows platform or there'll be a similar app that performs the same functions (and may even be better.)
+
+I haven't used the Nokia Music player too much but one glaring feature missing is the ability to scan through a song; you can only fast forward. This can be a deal breaker for some who like to use their smartphone as their sole music player. But other than that, controls are intuitive and the user interface is very solid.
+
+Some final points about the phone; the wireless charging is a great feature. Since I always lay my phone down on my computer desk, I can now just plop it down on the charging plate on the desk and it'll charge without fiddling with any cables. Sure it would only takes a few quick seconds to plug a cable in but it's small features like this that add to the phone. Battery life is decent and a full day with normal text, email, web/video browsing, and gaming use I'll be at around 40%. In standby I don't notice the battery draining super quick. There does seem to be some complaints right now of battery drainage but I haven't noticed anything out of the ordinary. Since I'm still new to the phone and constantly playing with it, I'm sure the battery usage can be better if I just used it normally.
+
+If you are heavily into the Apple ecosystem it may be a bit tougher to change to a different platform. But the iPhone 4 was my only Apple product so the switch wasn't troublesome by any means. In the end, I have no regrets in changing from the iPhone 4 to the Lumia 920. Sure there may be a few things missing but nothing that I can't adjust to and nothing bad enough to not warrant a review less than five stars. It's a superb phone with an equally amazing OS and using it is a pleasure. Silky smooth, great handling, and easy usability. Microsoft has the resources to make this platform work so I'm not too worried about updates, etc. I also remember my first mobile phone being the Nokia 5110 which was pretty much the equivalent of the iPhone back in the day (in terms of popularity.) Nokia makes great products so I'm not worried about the reliability or quality. Hopefully more users step out of their comfort zones to try something different. I'm glad I did and do not regret my decision at all.
+
+*UPDATE (11/25/2012)*
+I've owned this phone since launch and after using it daily for 2 weeks I have to downgrade my review from 5 stars to 4 stars. The main problem as reported by others is the battery. The first day or two after launch I had no problem with battery drainage. But after a while, I noticed random significant battery drainage during idle. Sometimes I would lose up to 20% in one hour without any change in settings or apps. I tried turning off some features such as NFC, Wi-Fi, etc. but the random battery drainage would continue. Checking the battery setting, I would sometimes get around 15 hours of battery time remaining at 100% and sometimes at around 70% I'll get 11 days of remaining battery time. It seems all over the place.
+
+Also, sometimes while charging the battery, it would randomly stop charging. On one occasion I left the phone plugged into the USB charger overnight and when I woke up it was below 10% since it had stopped charging. Another time I used the wireless charger and it did the same thing. I also noticed that the back of the phone would sometimes get abnormally hot while using it and/or charging. I'm aware that using the phone and/or charging can put a load on the battery but it got uncomfortably warm, something I never encountered while using my iPhone 4.
+
+Another thing are the live tiles. They're great but seem to work randomly. I know that certain apps only update in certain intervals but the OEM loaded Weather Channel app doesn't seem to update anymore until I go into the app. I had no problems with the app for the first week or so and haven't changed any settings regarding that app so I have no idea what could be wrong with it.
+
+There seems to be some problems with the overall OS/firmware that needs to be addressed at this point. I would give it 3.5 stars if I could. Fortunately I have access to a battery charger during my day to day use so I can charge it when I need to, but if you rely on having long battery life without the option of being able to readily charge it, it could be a problem. I really hope Nokia/Microsoft push out an update that fixes this issue soon.
+
+*UPDATE (12/03/2012)*
+Just another update. It's been about a month since I've been using the phone and I still love it. After letting the battery discharge completely once, the battery performance seems to be better and more consistent. I did have one random reboot but generally speaking, in my day to day use, I haven't had any problems. I've gotten so use to the smoothness and speed of the OS that when I sometimes use my iPhone 4 it just doesn't feel like it reacts as quickly. I did originally dock a star after I noticed the battery problems but have bumped it back up since it seems to have stabilized. There are still a handful of apps that I'd love developers to put more effort into or create on the WP8 platform, but for most things I've find other apps or workarounds.
+
+I still don't have any regrets on this phone purchase and will update if I have anything else to add.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (5)
+
+
+//Review
+58 of 65 people found the following review helpful                       5.0 out of 5 stars             Great Phone, November 14, 2012                        By&nbsp;DBLA   - See all my reviews                       This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         I switched to this phone from being an iPhone user for 4 years. The phone is beautiful and I love the new Windows Phone 8 Operating System. My favorite thing about the hardware is the incredible high resolution screen, and call quality/reception is better than my old phone. I can use this phone in my garage as opposed to dropping calls the instant I pulled into the garage on my previous phone. With that said it definitely took a couple days to adjust to this Operating System and the larger phone size after using iOS and the smaller iPhone form factor for so long. It's a welcome change for me, and I'm very happy with the phone.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comment
+
+
+//Review
+26 of 27 people found the following review helpful                       5.0 out of 5 stars             Lumia 920saves you money, November 27, 2012                        By&nbsp;Neal   - See all my reviews                       This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         I love the Windows 8 OS and much has been said about it in previous reviews, but what I am struck with is just how much money you can save by owning the Lumia 920
+The camera is excellent so you can sell your shoot and snap camera. The video is really clear and very stable, so no need for a video camera anymore unless you are buying a high end one. The offline GPS does not use any data from your plan so you can get rid of your Sat Nav. I don't need my sports GPS watch anymore for jogging. Nokia music has loads of free music so you can ditch your Spotify subscription. I have the Xbox music subscription that syncs seamlessly with my laptop and Xbox, so I am saving loads of money on buying CD's. I'm using Kik Messenger for sending all my photos to friends rather than sending them via text.
+I don't have kids, but all my friends have stories of kids spending money in the apps stores on their phones, now with Kids Corner that will not be possible. Not to mention all the apps I can find deals locally on and have them show up straight to my home page live tiles.
+Nokia regularly have apps that are free only to their phones. You can use the phone wearing gloves so you don't need to spend money on special conductive gloves in the winter. There's probably more that I have forgotten too.
+
+I am a huge fan of the Nokia Lumia 920
+
+Edit note: I have corrected a couple of auto correction spelling errors                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (2)
+
+
+//Review
+55 of 63 people found the following review helpful                       5.0 out of 5 stars             Incredible Phone!, November 14, 2012                        By&nbsp;Bacchus  (Boston, MA USA)  - See all my reviews                       This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         Where to start? There are just so many good things about this phone and the Windows Phone 8 OS that it is tough to know where to start. I suppose I should start out by stating that I am somewhat of a Windows "fanboy" for lack of a better word. I am all in when it comes to Microsoft products owning the Xbox 360, Surface RT tablet, Windows 8 Pro laptop and of course Windows Phone. That being said I do try to rate products fairly but I wanted you the reader to know that there may be some bias in my review.
+
+I have owned several Windows Phones over the past few years. The Samsung Focus, Focus 2, HTC Titan, Lumia 900 and now the Lumia 920. I have thoroughly enjoyed each of the phones but the 920 certainly stands out as to what I feel is finally a true competitor to the Iphones and Samsungs of the world.
+
+This phone has some serious specs and can hold its own against its rivals when it comes to pure processing power. Everything is super smooth on this phone. Apps launch quickly, the internet is super speedy thanks to the LTE and the camera snaps pic after pic without a stutter. I finally feel that my phone isn't preventing me from doing anything that I want to do with it. I am very impressed with the power and speed of the 920.
+
+SCREEN: The screen is just gorgeous. It has a super high resolution which makes everything look soooo good. Text is easy to read and pictures just come to life (corny but true!) The screen also has a super sensitive mode where you can actually wear winter gloves and still control the phone as normal. It is pretty amazing the first time I tried this. You can also shut this off so you have complete control as to whether to use it or not.
+
+CAMERA: If you like to take pictures with your phone then this really is the phone for you. Nokia has done some amazing things with their camera technology here. The image stabilization for photos and videos is second to none. I have pretty shaky hands but all my pics and vids come out super smooth with this phone. The night time is where the camera tech really shines. Whether you are indoors or outdoors with poor to almost no light this camera still takes really bright and clear pics! It really is a must have feature if you like to take pics. The camera on this phone has replaced my need for a separate point and shoot camera. No joke. It is that good. If I were to critique the camera in any way it would be to say that the pics sometimes come out a little "soft" when taking pics during the day. Nokia has already stated that they plan a soon to be released update that allows for sharper pics so that negative could very well vanish in the near future.
+
+SOUND: I have never really been impressed with the sound quality of any phone I have ever had as far as playing music through the speakers without headphones. It is no different for me with the 920. The stereo speakers are ok but I wouldn't recommend listening to music without headphones. Once you do hook up your favorite pair of headphones the sound is much improved. Nokia uses Dolby Headphone technology and the sound the phone produces while using earbuds is impressive. The volume isn't the loudest but definitely loud enough to easily block out any outside noises. Also, no earbuds come with the phone.
+
+CALL QUALITY: So far I have no complaints with the call quality. When I ask people how I sound they say everything sounds good. I can also hear them easily and clearly through the earpiece. I am not a huge phone user on my phone (doh!) but so far I have had a very pleasant experience on calls.
+
+BATTERY LIFE: So far I am getting better than expected battery life. I thought with LTE I would be burning through a charge in 4 or 5 hours but so far I am easily making it through an entire work day with moderate use. I can take the phone off the charger at 5:30 AM and when I go to bed at around 10 or 11 at night I still have about 15-25 percent left. To me that is more than adequate. The battery does seem to get a bit warm when playing games or really pushing the LTE but I think that is pretty normal for these powerful phones.
+
+WIRELESS CHARGING: I purchased my 920 through an ATT store which was running a promotion for a free wireless charger. The 920 has that ability built right into the phone! It is pretty darn useful too. I keep the charging plate right on my nightstand and when I am done reading in bed I just place it on the pad and it starts to charge. No need to fumble with cords.
+
+BUILD QUALITY: This is one SOLID phone. I don't plan on dropping it but I would have to say that I would worry more about what I drop this on then the phone itself. This actually leads to what may be a downside for some people. The phone, compared to other phones, is a little heavier. I don't find it to be an issue and in fact like the strong feel of the phone but go to the store and check it out because some have noted that it bothered them.
+APPS: The Lumia 920 comes with Nokia Drive which is a really nice navigation app that easily compares to the paid version out there. I have used it a bunch of times and it has worked flawlessly every time. You also get a Microsoft Office suite which includes PowerPoint, Word, Excel and One Note. While I don't see myself creating complex spreadsheets on a phone it certainly is nice to be able to open and edit if I need to.
+
+OK, it looks like I rambled on way too long. I hope you found some useful info in my review. If you have any specific questions you want answers to just leave a comment and I will try to answer them all.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comment
+
+
+//Review
+36 of 41 people found the following review helpful                       5.0 out of 5 stars             My choice Lumia 920 or iPhone 5, November 20, 2012                        By&nbsp;Codeware D. Nance  (Atlanta, Ga USA)  - See all my reviews
+ (REAL NAME)   &nbsp;&nbsp;                          This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         So, I got on the iPhone bandwagon the day after Christmas 2009; I remember this so vividly because my mother upon seeing me pull an old ratty tiny (non-smart-phone) from my pocket was in shock. She asked if that was my cell-phone to which I boldly answered "YES"... Her next statement had me laughing so hard I had tears in my eyes; "don't you ever let a woman see you take that phone out of your' pocket, it does not fit your' life-style". My parents are the LEAST tech savvy people possibly on earth.., well close to it. So I figured if my mother thought that way about my phone I better do something about it, so off I went to the Apple store as I already owned a Mac Mini (now I own 2 Mac Minis).
+
+So here we are in 2012 and I am the owner of an iPhone 3GS an Apple Magic Mouse and Track-pad and 2 Mac Minis along with a Kindle Fire (2011 version) and a first gen iPad 32gb/wifi. I like Apple products if it is not apparent.
+
+My 3GS is a bit long in the tooth (I know), but honestly I didn't see anything in the 4 or 4S that would make me want to part with cash or own it. Facetime...don't care; Siri, Perhaps it would have been fun to play around with and  I may have even found it helpful. I decided to await the iPhone 5, surely it would be something to become excited about. So I go check it out and I am not the least bit impressed,  well, that is not entirely true I think the build quality is great but the interface simply looks like more of the same thing I have lived with since 2009. Faster yes, sharper image yes but I mean come on... to quote Al Pacino (movie: HEAT)... "GIVE ME ALL YA GOT"!!!!. My 3GS was never painfully slow anyway.
+
+So the choice was the Galaxy S3, the Lumia 920 or the iPhone 5.
+
+I chose the Lumia and boy was I nervous about that choice. As I stated my iPhone simply works and does a good job at that. But I was yearning for a newer GUI (graphical user interface) experience and the 920 with W8 delivers impressively. I love the live tiles and the way the latest information is delivered automatically and all I have to do is glance at the phone to see said information.
+
+I read a review where a pundit wrote about why the iPhone is better without NFC and wireless charging. I found it to be complete bunk... his and others thinking suggest that you're still tethered because the phone had to be placed on the charging pad so whats the point of wireless charging. Well guess what; I always use a Bluetooth for talking (Jawbone ERA or B&O EAR 2). I love the fact that when I arrive home I can just set the phone on my nightstand (on the charging pad) and walk away.., Bluetooth still in ear as always, only now I'm not fumbling with tiny connectors. Say what you will but between multiple Bluetooth units, Kindle Fires and an iPad one less device to plug in is welcome in my home and on my desk at work. I love how the author of that review tried to spin missing feature into a "+", please! Now as for NFC, true it is not ubiquitous but I have seen it popping up in my neck of the woods (Chicago) so why not?
+
+The battery on this unit is herculean and I have noted that by the time I arrive home from work (typically leave the house a 6:30am and return around 6:30pm) the phone is still at least half full and that is even if I don't charge it through the day.
+
+Bottom line: Apple makes great products and I own some of them and may even buy a Mac Book Pro (retina) but I see no real innovation with the iPhone 5 and so I passed it over. My former 3GS is now used as a remote control and for my music when at the gym and I can still use most of the apps I purchased where I have a WiFi connection (I have a Clear Hotspot). The Lumia 920 at this point is the best phone I have ever owned (eliciting excitement reminiscent of the iPhone when I first purchased it 3 years ago).
+
+And yes... I have used the 4S phone multiple times (friends own it) but again, save for a few things I saw nothing that made it desirable in fact I thought the restyling to a rectangular brick was lacking imagination and a step back from the original iPhone.
+
+Not saying I wouldn't go back to the iPhone but they need to step it up.
+
+I am a software consultant developing for Windows and iPhone.
+
+Either way you can not go wrong; I think they are both top products but for me the styling, NFC, wireless charging and Live Tiles sealed the deal.
+
+Thanks for reading!                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comment
+
+
+//Review
+35 of 40 people found the following review helpful                       5.0 out of 5 stars             Lumia 920 is an amazing device - Updated, November 14, 2012                        By&nbsp;Aaron   - See all my reviews                       This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         I love the Windows Phone 8 interface, but I'll try to keep the review focused on this hardware.  Simply put, this phone is amazing.  You get the high end specs of Android phones, with a style that I think beats even the iPhone.  Instead of enumerating all of the technologies in the phone, I'll just try to give some personal anecdotes.
+
+Space: I didn't think the 32GB of space would matter to me since I could easily live with 8GB phones before, but now that WP8 devices can be recognized as USB storage, it has become incredibly useful since I frequently forget my flash drives.  Also, you will want an extra few GB's to download maps for offline use, which is a killer feature.  I use their offline maps all the time.  They are accurate, offer points of interest, and don't waste my paltry data plan.  Also they integrate with Nokia Drive to give you the best navigation of any smartphone.
+
+Camera: I'm not a camera buff, I just want something that can take a few snapshots. That said, the camera on this phone is amazing, especially in low light situations.  I took a panorama shot of the Seattle city scape right after sunset and it looked amazing.  This camera is so good that it almost makes me want to become a photographer.  With the option to auto-upload full res photos to Skydrive (thankfully only over WiFi, again my data plan is SMALL), I never have to worry about loosing my photos if I loose my phone.
+
+Style:  Not to sound vain or shallow, but several people have actually commented on my phones looks.  I wasn't even trying to show it in this cases, I was just checking my text messages.  If that is important to you, then you can't get a more attractive device than the 920.  The curved glass is a huge improvement over the 900, and sometimes I just like to touch it.  I was worried about the weight of the phone, but honestly it feels fine in my hand and pocket.  In fact, compared to my lighter weight plastic Focus, it feels substantial and premium.
+
+Cons:  My one complaint is that WiFi automatically turns off when your not using the phone.  This is a WP "feature" that I hope MS changes in a future update.
+
+I would have more to say, but I have only had the device for a week.  I'm sure when winter comes, I'll appreciate the screen that can be used with gloves on.  I'm sure I'll also love the wireless charging pads, but I have to wait since my wife needed something to get me for Christmas.  If you already know you want WP8, then I think this is clearly the best deal at $100.  That incredibly low price must be how AT&T scored an exclusive deal.  If you are not sure about WP8, then please check it out in person.  The start screen has been drastically improved by the ability to resize live tiles.  And the app marketplace is getting better, fast.  In fact, we actually got Angry Birds Star Wars on the same day as iPhone.  You can probably chalk that up to the inclusion of native code.
+
+Updated - 12/5/2012:  Since I don't want to be a blind fanboy, I have to deduct a star for some lingering annoyances that I have noticed.  I'll write them in the order that they annoy me the most.
+
+1)  Half of my text messages do not get sent the first time and I have to click to resend them, sometimes twice.  I cannot tell you if this is the device or the network's fault.  I got my 920 from Build so it may not be configured correctly for AT&T.  But none the less, this is an incredibly annoying issue.
+2)  Crashes / Freezes.  An app I bought when I had WP7.5, Risk, crashes every time I try to launch it.  Furthermore, another app, Texas Hold Em, actually crashes my entire phone.  Perhaps you can blame this on the developers, but the fact remains that this never happened under WP7/7.5.  Also the phone has seemed to freeze a few times for unknown reasons.  This happened once or twice with my Focus and Lumia 900, but I think it feel a bit more frequent with my 920.
+3)  Possible power drain.  When I first saw reports of this, I figured it must be isolated cases because I hadn't notice it.  But now there have been at least two incidents where I feel I have noticed a rapid drain of power for unknown reasons.  In fact, I missed my alarm this morning because my phone had died and I don't remember ever even seeing the "low battery" warning last night.  So far its rare, and perhaps this is all in my head, but I never ran out of juice like this on my WP7 devices.
+
+In conclusion, I still love my 920 and wouldn't trade it for any other phone.  Perhaps this is just testament to how solid and bug free WP7/7.5 was, but WP8 feels a little bit buggy to me, at least in comparison to WP7.  I expect this is due to the new WinRT kernel and I have hopes that MS pushes out updates quickly to resolve these issues.  When these issues are resolved, I will gladly update my review back to 5 stars.
+
+Updated - 4/10/2013:  I figured I would come back and update my review to address the issues I mentioned in the last update.  In summary, they are all mostly gone.  I'm very glad that text messages are now sent reliably.  And I can't remember the last time an app crashed my phone or I had a seemingly rapid power drain like I experienced before.  So I'm bumping this back up to 5 stars.  This phone has been phenomenal.  My wife recently got one as well.  Its a little big for her, but she is adjusting to it.  She likes the new Pandora app which is commercial free for one year.  If I had to make one complaint, it would be size.  The phone is certainly big and if Nokia can shave off 30-50 grams in future versions, that would help a lot.                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comments (2)
+
+
+//Review
+51 of 60 people found the following review helpful                       5.0 out of 5 stars             Best phone I have ever used., November 13, 2012                        By&nbsp;Sup Karma   - See all my reviews                       This review is from:  Nokia Lumia 920 4G Windows Phone, Black (AT&T) (Wireless Phone)         This phone is beautiful, fast, and FUN to use.
+
+I switched from and iPhone.  I was worried I wouldnt find all my used apps... but you dont even need them with this phone!  The phone already does everything all my favorite apps did...But don't get me wrong, there are still TONS of apps in the market.. I just don't NEED them. :)
+
+It's so simple to use, but so advanced.  It practically does everything for you.  Brings information to your home screen.
+
+Facebook and twitter integration is seamless!
+
+The camera is PHENOMENAL.  Especially in low light conditions.
+
+Battery lasts me more than a day.
+
+-Couldnt be happier with my Lumia 920!                 Help other customers find the most helpful reviews&nbsp;           Was this review helpful to you?&nbsp; Yes   No                 Report abuse    |  Permalink Comment  &nbsp;Comment (1)
+
+

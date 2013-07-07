@@ -5,7 +5,7 @@ $session 		= new Session();
 $database 		= new Database();
 $facebook 		= new Fb();
 $twitter 		= new Tw();
-
+$_GET			= $database->escape($_GET);
 if (!isset($_GET['seo'])){ 
 	Redirect(SITE_ROOT);
 }else{
@@ -48,6 +48,9 @@ $product_data['info']				= $database->product_info->getByProduct($product_data['
 $database->view_details->add($product_data['product_id'],$member_data['member_id']);
 
 
+$template['title'] 			= $product_data['title'];
+$template['description'] 	= $product_data['description'];
+
 // ######################## Load CSS And Header Data
 include "template/header.php";
 
@@ -84,36 +87,37 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 <div class="container" id="main">
 	<div class="row">
 		<div class="span9 product-container">
-			<ul class="breadcrumb">
-
-				<li>
-					<a href="#" onclick="render.HighestRated(0);">Highest Rated</a>
-					<span class="divider">|</span>
-				</li>
-				<li>
-					<a href="#" onclick="render.MostViewed(0);">Most Viewed</a>
-					<span class="divider">|</span>
-				</li>
-				<li>
-					<a href="#" onclick="render.RecentlyAdded(0);">Recently Added</a>
-					
-				</li>
-				
-			</ul>
+			
 			<h1 id="product-title"> <?=$product_data['title'];?> </h1>
+			<a href="#voted-modal" data-toggle="modal"><h3>Voted <?=$database->point->getVotedCountByProduct($product_data['product_id']);?> / Opinions <?=$database->product_feedback->getOpinionCount($product_data['product_id'] );?> </h3></a>
 			<?=($product_data['info']['external']=="1" ? '<div style="float: right;"><a href="'.$product_data['info']['product_url'].'" target="_blank"><img src="'.SITE_ROOT.'/images/earth-icon.png" style="width:40px;"></a></div>' : '');?>
 			<hr>
-			<div id="myCarousel" class="carousel slide pull-left" style="margin-right: 1em; width: 220px; ">
+			<table class="pull-left"  style="margin-right:10px;margin-bottom:10px;">
+			<tr>
+			<td>
+			<div id="myCarousel" class="carousel slide pull-left" style="margin: 0px; width: 220px; ">
 				<!-- Carousel items -->
-				<div class="carousel-inner breadcrumb" style="padding:0px;">
+				<div class="carousel-inner breadcrumb" style="padding:0px;margin:0px">
 					<div class="active item">
-						<img src="<?='http://'.(S3_BUCKET).'.s3.amazonaws.com/p_'.$product_data['public_id'].'_normal.jpg';?>" alt="<?=$product_data['title'];?>">
+						<img title='<?=$product_data['title']?>' alt='<?=$product_data['title']?>' src="<?='http://'.(S3_BUCKET).'.s3.amazonaws.com/p_'.$product_data['public_id'].'_normal.jpg';?>" alt="<?=$product_data['title'];?>">
 					</div>
 				</div>
 				<!-- Carousel nav -->
 				<a class="carousel-control left" style="top: 47%; font-family: Arial; line-height: 0.8em; font-size: 3em;" href="#myCarousel" data-slide="prev">&lsaquo;</a>
 				<a class="carousel-control right" style="top: 47%; font-family: Arial; line-height: 0.8em; font-size: 3em" href="#myCarousel" data-slide="next">&rsaquo;</a>
 			</div>
+			</td></tr><tr><td style="padding:2px;margin-bottom:10px;margin-left: 1.5px;"><a href="#" class="btn btn-primary btn-block" id="follow-product-btn" data-toggle="modal">Follow Product</a></td></tr>
+			<tr><td><a href="#" onclick="facebookAPP.login(pageUrl,product_title);return false;" class="btn btn-facebook btn-half"><i class="icon icon-facebook">&nbsp;</i>  Share</a>
+				<a href="#" onclick="twitterAPP.post(<?='\''.curPageURL().'\',\''.$product_data['title'].'\'';?>);" class="btn <?=($session->getValue("social_network_name")=="twitter" ? "btn-twitter" : "");?> btn-half"><i class="icon icon-twitter">&nbsp;</i>  Tweet</a>
+				<p id="social-loading" style="display:none;padding: 5px;text-align: center;">
+					<img src="<?=SITE_ROOT;?>/images/ajax-loader.gif">
+				</p>
+				<p id="social-msg" style="display:none;padding: 5px;text-align: center;">
+					Posted on your timeline!
+				</p>
+				<hr></td></tr>
+			</table>
+			
 			<p><?=$product_data['description'];?></p>
 			<div style="padding-left: 222px;">
 				<textarea class="tagArea"><?=implode(',', $product_data['tag']);?></textarea>
@@ -124,7 +128,7 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 			<div class="tabbable">
 			<ul class="nav nav-tabs" style="text-align: center;margin: 0px;">
 				<li class="active">
-					<a href="#feedback" data-toggle="tab">Feedback</a>
+					<a href="#feedback" data-toggle="tab">Feature</a>
 				</li>
 				<li>
 					<a href="#graph" data-toggle="tab" onclick="refresh_chart();">Summary Graph</a>
@@ -134,7 +138,21 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 				</li>
 			</ul>
 			<div class="tab-content" style="padding:10px;background:white;border-bottom: 1px solid #ddd;border-left: 1px solid #ddd;border-right: 1px solid #ddd;">
+			
+				<div class="alert alert-success" id="add-new-category-msg" style="display:none;">
+				<strong>Heads Up!</strong>
+				Thank you for adding a new category.
+				</div>
+				
 				<div class="tab-pane  active" id="feedback" >
+					<button class="btn btn-primary">Add Features To Review</button>
+					<div style="display:none;">
+					<br><p><input type="text" class="input-xlarge" style="width: 41%;height: auto;margin-bottom:0px" id="add-new-category" placeholder="Category" >
+					<button id="add-new-category-btn" class="btn btn-primary">Add</button></p>
+					</div>
+					<br>
+					<hr>
+					
 					<?php  
 					foreach ($product_data['feedback_data'] as $root_key => $root_value )
 					{
@@ -147,25 +165,26 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 							if ($root_value['thumbs_up']==null) $root_value['thumbs_up']=0;
 							if ($root_value['thumbs_down']==null) $root_value['thumbs_down']=0;
 							echo '<div>';
-							echo '<p class="lead" id="'.(str_replace(' ', '',$root_value['category'])).'"><a class="btn btn-success" id="total-thumbsUp-'.$root_key.'">'.$root_value['thumbs_up'].'</a><a class="btn btn-danger" id="total-thumbsDown-'.$root_key.'" style="margin-right: 1em">'.$root_value['thumbs_down'].'</a>'.$root_value['category'].'<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback'.$root_key.'"><i class="icon icon-white icon-chevron-down"></i></a></p>';
+							echo '<p class="lead" id="'.(str_replace(' ', '',$root_value['category'])).'"><a class="btn btn-success pull-left" id="total-thumbsUp-'.$root_key.'">'.$root_value['thumbs_up'].'</a><a class="btn btn-danger pull-left" id="total-thumbsDown-'.$root_key.'" style="margin-right: 1em">'.$root_value['thumbs_down'].'</a>'.$root_value['category'].'<a href="#" onclick="CollapseEvent(this);return false;" class="" data-toggle="collapse" data-target="#feedback'.$root_key.'" style="margin-left:5px;"><i class="icon icon-white icon-chevron-down"></i></a></p>';
 							echo '<div id="feedback'.$root_key.'" class="collapse" style="height: 0px;">';
 							echo '<ul class="unstyled feedback" id="unstyled-feedback-'.$root_key.'">';
-							foreach ($root_value['feedback'] as $key => $value)
+							foreach ($root_value['feedback'] as $key => $value) 
 							{
 								$href = '';
 								$action = '';
 								if ($session->check()){$action = "like.add(".$value['feedback_id'].",".$root_key.");";} else { $href= "#signInModal";}
 								if ($value['type']=="0"){ $style = 'class="text-success"'; } else { $style = 'class="text-warning"'; }
-								echo '<li><p '.$style.' style="font-size: 1.2em"><a href="'.$href.'" data-toggle="modal" ><i onclick="'.$action.'" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-'.$value['feedback_id'].'">'.$value['total_likes'].'</strong> '.$value['comment'].'</p></li>';
+								echo '<li><p  style="font-size: 1.2em;font-weight: 500;"><a href="'.$href.'" data-toggle="modal" ><i title="I agree" onclick="'.$action.'" class="icon icon-plus" style="opacity: 0.8;color:black;"></i></a><strong id="like-'.$value['feedback_id'].'" '.$style.'>'.$value['total_likes'].'</strong> '.$value['comment'].'</p></li>';
 							}
 							echo '<div class="form-inline">';
+							
+							echo '<input type="hidden" id="add-feedback-category-'.$root_key.'" value="'.$root_value['category'].'">';
+							echo '<input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-'.$root_key.'" placeholder="Feedback">';
 							echo '<div class="btn-group" data-toggle="buttons-radio">';
 							echo '<button type="button" onclick="feedback.addType('.$root_key.',0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button>';
 							echo '<button type="button" onclick="feedback.addType('.$root_key.',1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button>';
 							echo '<input type="hidden" id="add-feedback-type-'.$root_key.'" value="">';
 							echo '</div>';
-							echo '<input type="hidden" id="add-feedback-category-'.$root_key.'" value="'.$root_value['category'].'">';
-							echo '<input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-'.$root_key.'" placeholder="Feedback">';
 							if ($session->check()){
 								echo '<a type="submit" onclick="feedback.save('.$root_key.');return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a>';
 							}else{
@@ -217,21 +236,13 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 		
 		<div class="span3">
 			<div class="span3 affix" data-spy="affix" data-offset-top="0">
-				<a href="#" onclick="facebookAPP.login(pageUrl,product_title);return false;" class="btn btn-facebook btn-half"><i class="icon icon-facebook">&nbsp;</i>  Share</a>
-				<a href="#" onclick="twitterAPP.post(<?='\''.curPageURL().'\',\''.$product_data['title'].'\'';?>);" class="btn <?=($session->getValue("social_network_name")=="twitter" ? "btn-twitter" : "");?> btn-half"><i class="icon icon-twitter">&nbsp;</i>  Tweet</a>
-				<p id="social-loading" style="display:none;padding: 5px;text-align: center;">
-					<img src="<?=SITE_ROOT;?>/images/ajax-loader.gif">
-				</p>
-				<p id="social-msg" style="display:none;padding: 5px;text-align: center;">
-					Posted on your timeline!
-				</p>
-				<hr>
+				
 				<a href="#summarizeFriend" class="btn btn-primary btn-block" data-toggle="modal">Summarize With Friends</a>
 				<hr>
 							
-				<a href="#" class="btn btn-success btn-block" id="follow-product-btn" data-toggle="modal">Follow Product</a>
-				<a href="#addToCompare" role="button" class="btn btn-info btn-block" data-toggle="modal">Add to Compare List</a>
-				<a <?=($session->check() ? 'href="#" onclick="report.add();window.location.href=\'index.php\';"' : 'href="#signInModal" data-toggle="modal"' );?> class="btn btn-danger btn-block">Report This Product</a>
+				
+				<a href="#addToCompare" role="button" class="btn btn-primary btn-block" data-toggle="modal">Add to Compare List</a>
+				<a <?=($session->check() ? 'href="#" onclick="report.add();window.location.href=\'index.php\';"' : 'href="#signInModal" data-toggle="modal"' );?> class="btn btn-primary btn-block">Report This Product</a>
 				<div class="buy_links" style="float:none;margin-top:5px;margin-bottom: 5px;">
 					<a href="#" class="buy_link btn btn-amazon"><i class="icon icon-shopping-cart"></i> Amazon</a>
 					<a href="#" class="buy_link btn btn-generic-buy"><i class="icon icon-shopping-cart"></i> Buy This</a>
@@ -257,9 +268,42 @@ echo "<script> var product_title 		= '".$product_data['title']."';</script>";
 	
 </div>
 
+<div id="voted-modal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;">
+   <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h2 id="addProductLabel">Voting Members
+  
+      </h2>
+    </div>
+  
+	<div class="modal-body grey">
+		<?php
+			$users = $database->point->getVotedByProduct($product_data['product_id'] );
+			foreach($users as $item){
+				$user = $database->member->get($item['member_id'] );
+				$user_image_id		= $database->member_image->get($item['member_id']);
+				$user_image 	=  $database->image_table->get($user_image_id);
+				if ($user['login']!=''){
+				echo "<h3><a href='".SITE_ROOT."/member/".$user['seo_title']."'> ";
+				echo "<img src='http://".(S3_BUCKET).".s3.amazonaws.com/m_".$user['public_id']."_small.jpg'> ".$user['login']."</a></h3>";
+				}
+			}
+		?>
+	</div>
+</div>
+
+
 <?php ($session->check() ? include "template/logged_in/footer.php" : include "template/logged_out/footer.php" );?>
 
 <script>
+
+$("#add-category-trigger").click(function(){
+	$("#add-category").show();
+});
+$("#add-new-category-btn").click(function(){
+
+});
+
 var toggleCompare = function() {
 	var compareContain = $('.compare-container');
 	compareContain.toggleClass('compared');
@@ -279,5 +323,5 @@ $("#product-title").fitText({ minFontSize: '15px', maxFontSize: '50px' });
 render.homePage(3);
 compare.set('<?=addslashes ($product_data['title']);?>');
 </script>
-</body>
+<?php include "template/footer.php" ;?></body>
 </html>

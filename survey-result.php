@@ -176,5 +176,5 @@ if (((facebook)||(twitter))&&(!member_login)) {
 }
 if (member_login) render.homePage(3); else render.homePage(4);
 </script>
-</body>
+<?php include "template/footer.php" ;?></body>
 </html>

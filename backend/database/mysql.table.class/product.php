@@ -27,6 +27,17 @@ class product
 		return $this->getLastId();
 	}
 	
+	function getAllSeoTitles(){
+		$value = Array();
+	
+		$data = mysql_query("SELECT seo_title FROM ".($this->table)." WHERE `seo_title` IS NOT NULL",$this->connection);
+		while($info=mysql_fetch_array($data)){
+			array_push($value,$info);
+		}
+		return $value;
+	
+	}
+	
 	function getWeeklyCount()
 	{	
 		$data = mysql_query("SELECT COUNT(product_id) FROM ".($this->table)." WHERE created_at >= curdate() - INTERVAL DAYOFWEEK(curdate())+6 DAY
@@ -116,7 +127,7 @@ AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY AND `applicatio
 	
 	function getByTitle($title)
 	{
-		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `title`='$title' AND `application`=0",$this->connection);
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `title` LIKE '%".$title."%' AND `application`=0",$this->connection);
 		if (mysql_num_rows($data)>0){
 			$info = mysql_fetch_array($data);
 			return $info['seo_title'];

@@ -5,7 +5,7 @@ $session 		= new Session();
 $database 		= new Database();
 $facebook 		= new Fb();
 $twitter 		= new Tw();
-
+$_GET			= $database->escape($_GET);
 $session->check() ? "" :  Redirect("index.php");
 
 // ######################## Sign Out Check
@@ -65,47 +65,55 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 	<div class="span9">
 		<?php include "template/logged_in/member/profile_image.php"; ?>
 	
-		<h1 style="margin-top: 1em;"><?=$member_data['info']["first_name"]." ".$member_data['info']["last_name"];?></h1>
-		<h2><?=$member_data['points']['total'];?> points / <?=$member_data['points']['products_count'];?> products</h2>
+		<h2 ><?=$member_data['info']["first_name"]." ".$member_data['info']["last_name"];?></h2>
+		<h3 ><?=$member_data['info']["short_bio"];?></h3>
+		<!--<h2><?=$member_data['points']['total'];?> points / <?=$member_data['points']['products_count'];?> products</h2>-->
 		<div class="clearfix"></div>
+		<hr>
+		<ul class="nav nav-tabs" style=" margin-bottom: 0px; ">
+		  <li class="active"><a href="#settings_wrap" data-toggle="tab">Settings</a></li>
+		  <li><a id="activity" href="#activity_wrap" data-toggle="tab">Recent Activity</a></li>
+		  <li><a id="notifications" href="#notifications_wrap" data-toggle="tab">Notifications</a></li>
+		 
+		</ul>
 
-
-		<section class="settings_wrap" >
-			<h2>Account Settings <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
+		<div class="tab-content thumbnail" style=" background-color: white; padding: 20px; ">
+		<div  class="tab-pane active" id="settings_wrap">
+			<h2>Account Settings <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_data.php"; ?>
-		</section>
+		</div>
 
-		<section class="activity_wrap" >
-			<h2>Activity <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
+		<div class="tab-pane" id="activity_wrap">
+			<h2>Activity <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_activity.php"; ?>
-		</section>
+		</div>
 						
-		<section class="notifications_wrap" >
-			<h2>Notifications <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
+		<div class="tab-pane" id="notifications_wrap">
+			<h2>Notifications <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_notification.php"; ?>
-		</section>
-
-		<section  class="points_wrap" >
-			<h2>Total points <?=$member_data['points']['total'];?><!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
+		</div>
+		<!--
+		<div  class="points_wrap" style="display:none;">
+			<h2>Total points <?=$member_data['points']['total'];?><!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_points.php"; ?>
-		</section>
-		
-		<section class="survey_wrap" >
-			<h2>Survey <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
+		</div>
+		-->
+		<div class="tab-pane" id="survey_wrap">
+			<h2>Survey <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_survey.php";?>
-		</section>
+		</div>
 		
-		<section class="messages_wrap" style="display:none;">
-			<h2>Messages <!--<a href="#" class="section_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
+		<div class="tab-pane" id="messages_wrap">
+			<h2>Messages <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
 			<hr>
 			<?php include "template/logged_in/member/profile_message_system.php";?>
-		</section>
-
+		</div>
+		</div>
 		<h2>Products You've Added 
 			
 		</h2>
@@ -114,6 +122,7 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 	</div>
 
 	<div class="span3">
+		<!--
 		<div class="span3" id="afix" data-spy="affix" >
 			<a href="#addProduct"  role="button" class="btn btn-primary btn-block" data-toggle="modal">Add Product <i class="icon-plus icon-white"></i></a>
 			<a href="#" onclick="goTo('.setting_wrap');return false;"  class="btn btn-block settings_btn">Account Settings</a>
@@ -122,8 +131,9 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 			<a href="#" onclick="goTo('.points_wrap');return false;" class="btn btn-block points_btn">Points</a>
 			<a href="#" onclick="goTo('.survey_wrap');return false;" class="btn btn-block points_btn">Survey List</a>
 			<a href="<?=SITE_ROOT."/create-survey.php";?>" onclick="" class="btn btn-block points_btn">Create Survey</a>
-			<!--<a href="#"  class="btn btn-block messages_btn">Messages</a>-->
+			<a href="#"  class="btn btn-block messages_btn">Messages</a>
 			<hr>
+		-->
 			<ul class="unstyled well">
 			  <li><a href="#" class="btn btn-link ">Terms</a></li>
 			  <li><a href="#" class="btn btn-link ">Twitter</a></li>
@@ -140,11 +150,9 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 <?php include "template/logged_in/footer.php"; ?>
 <script type="text/javascript" src="<?=SITE_ROOT;?>/js/survey.functions.js"></script>
 <script>
-goTo(".<?=$_GET['action']?>_wrap")
+goTo("<?=$_GET['action']?>")
 function goTo(value){
-
-	var pos = $(value).offset();
-	$('body').animate({ scrollTop: pos.top-75 });
+	  $('#'+value).tab('show');
 }
 
 
@@ -176,5 +184,5 @@ $('.section_hide').click(function(){
 	$(this).closest('section').slideToggle();
 });
 </script>
-</body>
+<?php include "template/footer.php" ;?></body>
 </html>

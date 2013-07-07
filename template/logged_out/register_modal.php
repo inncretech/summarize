@@ -14,7 +14,7 @@
   <div class="modal-body grey">
 	
 	
-	<form class="form-horizontal" id="register-form"  method="POST" action="<?=SITE_ROOT;?>/backend/ajax.post/add_member.php">
+	<form class="form-horizontal" id="register-form"  method="POST" action="<?=SITE_ROOT;?>/backend/ajax.post/add_member.php" autocomplete="off">
 		<input type="hidden" name="image" value="<?=(($session->getValue("social_network_name")!="facebook") && ($session->getValue("social_network_name")!="twitter")) ? SITE_ROOT."/images/default.png" : ""?><?=($session->getValue("social_network_name")=="facebook" ? 'https://graph.facebook.com/'.$member_data['social_network_data']['id'].'/picture?type=large' : $member_data['social_network_data']['profile_image_url']);?>">
 		 <input class="input-xlarge" type="hidden" style="width:272px" name="first_name" id="first_name" placeholder="First Name" autocomplete="off" value="<?=(($session->getValue("social_network_name")!="facebook") && ($session->getValue("social_network_name")!="twitter")) ? "First Name" : ""?><?=($session->getValue("social_network_name")=="facebook" ? $member_data['social_network_data']['first_name'] : array_shift(explode(" ",$member_data['social_network_data']["name"])));?>">
 		 <input class="input-xlarge" type="hidden" style="width:272px" name="last_name" id="last_name" placeholder="First Name" autocomplete="off" value="<?=(($session->getValue("social_network_name")!="facebook") && ($session->getValue("social_network_name")!="twitter")) ? "Last Name" : ""?><?=($session->getValue("social_network_name")=="facebook" ? $member_data['social_network_data']['last_name'] : array_pop(explode(" ",$member_data['social_network_data']["name"])));?>">

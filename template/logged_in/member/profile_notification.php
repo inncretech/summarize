@@ -1,5 +1,6 @@
 <ul class="unstyled">     
 <?php 
+if (count($member_data['notifications'])==0) echo "<div class='alert alert-warning'>No notifications at this time.</div>";
 for ($i = 0; $i < count($member_data['notifications']); $i++) {
 	$value 				= $member_data['notifications'][$i];
 	$tmp_member 		= $database->member->get($value['created_by']);

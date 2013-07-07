@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 
-<title><?=($product_data['title']!='' ? $product_data['title'] : 'SummarizeIt');?></title>
+<title>SummarizIt - <?=$template['title']?></title>
 
 <meta charset="utf-8">
-<meta name="description" content="We are SummarizIt.com. We specialize in helping you find and decide upon your desired items fast and easy using user friendly features." />
+<meta name="description" content="<?=$template['description']?>" />
 <meta name="keywords" content="features,product category,advance search,compare items" />
 <meta name="author" content="Pietroiu Alexandru">
 <meta name="robots" content="index, follow" />

@@ -58,7 +58,7 @@ function renderJson($data){
 	}	
 	$data['url'] = $_POST['url'];
 	$data = parseData($data);
-
+	$session = new Session();
 	$session->setValue('external','1');
 	echo json_encode($data);
 }

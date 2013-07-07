@@ -38,7 +38,7 @@
 		</div>
 		<hr>
 		<div class="control-group">
-			<label class="control-label" for="inputPassword">Not yet Registred</label>
+			<label class="control-label" for="inputPassword">Not Yet Registered</label>
 		  <div class="controls">
 			<button type="submit" href="#registerModal" role="button" class="btn btn-primary" style="width: 220px;" data-dismiss="modal" data-toggle="modal">Register Now</button>
 		  </div>

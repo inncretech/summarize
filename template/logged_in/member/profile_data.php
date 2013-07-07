@@ -49,7 +49,8 @@
 	</div>
   </div>
 </form>
-
+<h2>Reset Password</h2>
+<hr>
 <div class="alert alert-info" id="change_password_success" style="display:none;">
             <strong>Heads up!</strong>
             Your changes have been saved to the databse.

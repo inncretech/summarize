@@ -7,6 +7,7 @@ $database  		= new Database();
 $session    	= new Session();
 $member_data 	= $session->get();
 $data 			= $database->escape($_POST);
+
 $database->member_info->update($data,$member_data['member_id']);
 $database->member->update($data,$member_data["member_id"]);
 

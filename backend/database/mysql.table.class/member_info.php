@@ -25,13 +25,13 @@ class member_info
 	
 	function update($post,$member_id)
 	{	
-		$login 			= $post["login"];
+
 		$email 			= $post["email"];
 		$short_bio 		= $post["short_bio"];
 		$first_name 	= $post["first_name"];
 		$last_name 		= $post["last_name"];
-		
-		$data = mysql_query("UPDATE ".($this->table)." SET `short_bio` = '$short_bio' ,`first_name` = '$first_name' ,`last_name` = '$last_name' ,`login` = '$login' , `email`= '$email' WHERE `member_id`='$member_id'",$this->connection);
+
+		$data = mysql_query("UPDATE ".($this->table)." SET `short_bio` = '$short_bio' ,`first_name` = '$first_name' ,`last_name` = '$last_name' , `email`= '$email' WHERE `member_id`='$member_id'",$this->connection);
 		
 	}
 	

@@ -24,6 +24,9 @@ ErrorDocument 404 http://www.summarizit.com/
 	RewriteCond %{REQUEST_FILENAME} !-d 
 	RewriteCond %{REQUEST_FILENAME}\.php -f 
 	RewriteRule ^(.*)$ $1.php
+	
+	RewriteRule ^colleges/ search.php?query=college [L]
+
 </IfModule>
 
 

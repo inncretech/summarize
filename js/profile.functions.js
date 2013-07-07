@@ -154,7 +154,7 @@ var profile = new function() {
 			if (parent.check(form)){
 				
 				$.post(site_root+"/backend/ajax.post/member_update.php",$(form).serialize(),function(data){
-					
+					console.log(data);
 					$("#update-user-success").show();
 					$("#update-user-error").hide();
 				});

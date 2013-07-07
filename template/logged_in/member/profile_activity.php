@@ -1,6 +1,7 @@
 
 <div class="prettyprint" style="background-color: transparent;border: none">
 <?php 
+if (count($member_data['activity'])==0) echo "<div class='alert alert-warning'>No activity at this time.</div>";
 for ($i = 0; $i < count($member_data['activity']); $i++) {
 	$value 	= $member_data['activity'][$i];
 	$seo_title 	= $database->product->getSeoTitle($value['product_id']);

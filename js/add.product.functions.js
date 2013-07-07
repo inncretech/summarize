@@ -13,6 +13,7 @@
 		this.externalLink = ".product-url";
 		this.cost = ".product-cost";
 		this.imageHolder = "#image_data";
+		this.progress = false;
 		
 		this.reset = function () {
 			$(parent.description).val('');
@@ -28,7 +29,7 @@
 			var ok =true;
 			var tags = new Array();
 			$("#product-details .tagify-container span").each(function(){ 
-				console.log("test");
+				
 				if ($(this).attr("id")=="tag-name"){
 					var aux = $(this).clone();
 					tags.push(aux.find('a').remove().end().text());
@@ -43,16 +44,23 @@
 			var externalLink 	= $(parent.externalLink).val();
 			var image_data 		= $(parent.imageHolder).val();
 			
-			if (tags.length==0) ok=false; console.log(tags.length);
+			//if (tags.length==0) ok=false; console.log(tags.length);
 			if (title=='') ok=false; 
-			if (description=='') ok=false; 
+			//if (description=='') ok=false; 
 			if (full_image_url=="images/default.png") ok=false; 
 			if (image_data=="default.png") ok=false; 
 			
 			if (ok){
-				$.post(site_root+"/backend/ajax.post/add_product.php",{tags: tags,title:title,description:description,full_image_url:full_image_url,width:height,height:height,cost:cost,externalLink:externalLink},function(data){
-					window.location.href= site_root+"/product/"+data;
-				});
+				console.log("Add...");
+				if (!this.progress){
+					this.progress = true;
+					$.post(site_root+"/backend/ajax.post/add_product.php",{tags: tags,title:title,description:description,full_image_url:full_image_url,width:height,height:height,cost:cost,externalLink:externalLink},function(data){
+						console.log(data);
+						this.progress = false;
+						window.location.href= site_root+"/product/"+data;
+						
+					});
+				}
 			}else{
 				$("#product-error").html("<strong>Ups!</strong>Please fill all the forms and then press submit product.");
 				$("#product-error").show();

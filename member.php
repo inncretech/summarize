@@ -5,7 +5,7 @@ $session 		= new Session();
 $database 		= new Database();
 $facebook 		= new Fb();
 $twitter 		= new Tw();
-
+$_GET			= $database->escape($_GET);
 
 if (!isset($_GET['seo'])){ 
 	Redirect("http://www.summarizit.com/index.php");
@@ -63,9 +63,10 @@ if ($session->check()){
 }
 
 // ######################## Initialize JS Variables
-echo "<script> var member_login = ".($session->check() 									   ? "true" : "false" )."; </script>";
-echo "<script> var facebook     = ".($session->getValue("social_network_name")=="facebook" ? "true" : "false" )."; </script>";
-echo "<script> var twitter      = ".($session->getValue("social_network_name")=="twitter"  ? "true" : "false" )."; </script>";
+echo "<script> var member_login 		= ".($session->check() 									   ? "true" : "false" )."; </script>";
+echo "<script> var visited_member_id 	= ".($visited_member_data['info']['member_id'])."; </script>";
+echo "<script> var facebook     		= ".($session->getValue("social_network_name")=="facebook" ? "true" : "false" )."; </script>";
+echo "<script> var twitter      		= ".($session->getValue("social_network_name")=="twitter"  ? "true" : "false" )."; </script>";
 
 echo "<script>var site_root 	= '".SITE_ROOT."'; </script>";
 echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
@@ -77,8 +78,9 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 		<div class="span9">
 			<section >
 				<?php include "template/logged_out/member/visited_profile_image.php";?>
-				<h1 style="margin-top: 1em;"><?=$visited_member_data['info']["first_name"]." ".$visited_member_data['info']["last_name"];?></h1>
-				<h2><?=$visited_member_data['points']['total'];?> points / <?=$visited_member_data['points']['products_count'];?> products</h2>
+				<h1><?=$visited_member_data['info']["first_name"]." ".$visited_member_data['info']["last_name"];?></h1>
+				<h3><?=$visited_member_data['info']["short_bio"];?></h3>
+				<!--<h2><?=$visited_member_data['points']['total'];?> points / <?=$visited_member_data['points']['products_count'];?> products</h2>-->
 				<div class="clearfix"></div>
 				
 			</section>
@@ -87,20 +89,20 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 			<hr>
 			<?php include "template/logged_out/member/visited_profile_activity.php"; ?>
 		</section>
-
+		<!--
 		<section  class="points_wrap" >
 			<h2>Total points <?=$visited_member_data['points']['total'];?></h2>
 			<hr>
 			<?php include "template/logged_out/member/visited_profile_points.php"; ?>
 		</section>
-
+		-->
 		<!--<section class="messages_wrap" >
 			<h2>Messages</h2>
 			<hr>
 			<?php include "template/logged_out/member/visited_profile_message_system.php";?>
 		</section>-->
 			<hr>
-			<h2>Products You've Added 
+			<h2>Products Added 
 				
 			</h2>
 			<hr/></h2>
@@ -147,5 +149,5 @@ $('.section_hide').click(function(){
 	$(this).closest('section').slideToggle();
 });
 </script>
-</body>
+<?php include "template/footer.php" ;?></body>
 </html>

@@ -27,21 +27,25 @@ var feedback = new function() {
 				if (typeof state !== "undefined" && state!==null){
 					get.feedbackByProduct(product_id);
 					like.add(data,root_key);
+					console.log("like");
 					$('#feedback-error-msg'+root_key).remove();
 				}else{
-					like.add(data,root_key);
+					
 					var href = "";
 					var action = "";
 					if (member_login){action = "like.add("+data+","+root_key+");";} else { href= "#signInModal";}
 					if (type=="0"){ style = 'class="text-success"'; } else { style = 'class="text-warning"'; }
-					var code ='<li><p '+style+' style="font-size: 1.2em"><a href="'+href+'" data-toggle="modal" ><i onclick="'+action+'" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-'+data+'">0</strong> '+comment+'</p></li>';
+					var code ='<li><p style="font-size: 1.2em;font-weight:500;"><a href="'+href+'" data-toggle="modal" ><i onclick="'+action+'" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a> <strong '+style+'  id="like-'+data+'">0</strong> '+comment+'</p></li>';
 					$("#unstyled-feedback-"+root_key+" .form-inline").before(code);
 					$('#feedback-error-msg'+root_key).remove();
+					like.add(data,root_key);
+					console.log("like");
 				}
 			});
 		}else{
 			$('#feedback-error-msg'+root_key).remove();
-			$("#unstyled-feedback-"+root_key).append("<div id='feedback-error-msg"+root_key+"' style='text-align:center;margin-top:5px;font-weight:bold;'>Please chose the type of feedback (Thumbs Up / Thumbs Down)</div>");
+			
+			$("#unstyled-feedback-"+root_key).append("<div class='alert alert-danger' id='feedback-error-msg"+root_key+"' style='text-align:center;margin-top:5px;font-weight:bold;'>Please chose the type of feedback (Thumbs Up / Thumbs Down)</div>");
 		}			
 	}
 	

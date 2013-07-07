@@ -32,7 +32,7 @@ class Toysrus
 		}
 	
 		
-		foreach($html->find('div[id=priceReviewAge]') as $element) //for music
+		foreach($html->find('div[id=priceReviewAge] h1') as $element) //for music
 		$title = trim(strip_tags($element->plaintext));
 		
 		if (empty($title)) {

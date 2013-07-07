@@ -1,4 +1,6 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: content-type");
 require_once "constants.php";
 include "database/database.class.php";
 include "memcached/memcached.class.php";

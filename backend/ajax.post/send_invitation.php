@@ -10,26 +10,21 @@ $member_info    = $database->member_info->get($member_data['member_id']);
 
 $ses 		= new  AmazonEmail();
 $to			= explode(',',$_POST['email']);
-$subject 	= "SummarizIt.com";
+$subject 	= "Summarize about ".$_POST['title'];
 $message 	= file_get_contents(SITE_ROOT.'/template/invitation.html');
+$message 	= str_replace("{#message#}",$_POST['msg'],$message);
+foreach ($to as $email) $result		= $ses->send($email,$subject,"&nbsp;&nbsp;&nbsp;&nbsp;".$message);
 
-foreach ($to as $email) $result		= $ses->send($email,$subject,$message);
-
-/*
-$to = $_POST['fb_id'];
-echo $to;
-$params = array(
-                'message'       =>  "Hurray! This works :)",
-                'name'          =>  "This is my title",
-                'caption'       =>  "My Caption",
-                'description'   =>  "Some Description...",
-                'link'          =>  "http://stackoverflow.com",
-                'picture'       =>  "http://i.imgur.com/VUBz8.png",
-            );
-
-            $post = $facebook->connection->api("/100001671820227/feed","POST",$params);
-*/
-
+if ($_POST['fb_post']=='true'){
+	$photo 		= $facebook->connection->api('/me/feed/', 'POST',
+											array(
+											'link' => $_POST['url'],
+											'name' => 'SummarizIt',
+											'description'=>'Check the best review site on the web.',
+											//'message'       => 'SummarizIt'
+											)
+	);
+}
 ?>
 
 

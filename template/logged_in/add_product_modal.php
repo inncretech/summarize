@@ -12,7 +12,7 @@
 				<p style="text-align:center;">Or, Add automatically From Web URL</p>
 			<input type="text" class="span6" id="link" placeholder="http://">
 			<button type="submit" id="crawl-link" href="#addManualProduct"  role="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal">Add</button>
-			<p style="text-align:center;margin-top:10px;">We allow adding products from popular sites like amazon.com, walmart.com, bestbuy.com, ... <br> If your favorite site is not here <a href="#propose-website" data-dismiss="modal" data-toggle="modal">Please let us now</a>.</p>
+			<p style="text-align:center;margin-top:10px;">We allow adding products from popular sites like amazon.com, walmart.com, bestbuy.com, ... <br> If your favorite site is not here <a id="propose-modal-btn" href="#propose-website" data-dismiss="modal" data-toggle="modal">Please let us now</a>.</p>
 			
 		</form>
 		<div class="alert alert-danger" id="crawler-error" style="display:none;margin-bottom: 0px;background-color:white;color:#ff0039;">
@@ -21,7 +21,30 @@
 		</div>
 		<div class="alert alert-success" id="crawler-success" style="display:none;margin-bottom: 0px;background-color:white;color:#3fb618;">
 		<strong>Heads Up!</strong>
-		This domain is supported please click on "Auto-fill Info"
+		This domain is supported please click on "Add"
+		</div>
+	</div>
+
+</div>
+
+<!-- Add Product Modal -->
+<div id="propose-website" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
+
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
+		<h2 id="addProductLabel">Propose a website for crawling</h2>
+	</div>
+
+	<div class="modal-body grey">
+		<form class="form-inline" style="text-align:center;font-family:'calibri';font-size:18px;">
+			<input type="text" class="span6" id="propose-url" placeholder="http://">
+			<button type="submit" id="propose-btn"  role="button" onclick="return false;" class="btn btn-primary">Add</button>
+			
+			
+		</form>
+		<div class="alert alert-success" id="propose-success" style="display:none;margin-bottom: 0px;background-color:white;color:#3fb618;">
+		<strong>Heads Up!</strong>
+		Thank you for helping us!
 		</div>
 	</div>
 
@@ -50,17 +73,17 @@
 			</label>
 			<div id='preview'></div>
 
-			<button class="btn" id="upload-btn" >
-				<input type="file" style="opacity:0;padding: 10px;margin-left: -12px;margin-top: -10px;position:relative;z-index:10;cursor:pointer;" name="photo" id="product-photo">
+			<span class="btn" id="upload-btn" >
+				<input type="file" style="opacity:0;padding: 10px;margin-left: -12px;position:relative;z-index:10;cursor:pointer;width:100%;height:100%;" name="photo" id="product-photo">
 				<input type="hidden" name="product" value="true">
 				<span class="upload-btn-text">Upload Image<span>
-			</button>
+			</span>
 		</div>
 	</form>
 		<div class="caption" id="product-details" style="padding-bottom:0px;margin-bottom:5px;text-align:right;">
 			<p><input class="product-title" type="text" placeholder="Title" style="margin:0px;width:55%;"></p>
 			<p><textarea class="addProductTagArea">example</textarea></p>
-			<textarea placeholder="Short description" class="description-area"  style="width:55%"></textarea>
+			<textarea placeholder="Short description" class="description-area"  style="width:55%;height:100px;"></textarea>
 		</div>
 		<div>
 			<p><input class="product-cost" type="text" placeholder="Cost" style="margin:0px;width:97.4%;"></p>

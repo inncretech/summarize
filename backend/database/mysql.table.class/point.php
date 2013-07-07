@@ -22,7 +22,25 @@ class point
 		return $info;
 	}
 	
+	function getVotedByProduct($product_id)
+	{
+		$value 	= Array();
+		$data 	= mysql_query("SELECT * FROM ".($this->table)." WHERE `product_id` = '$product_id' GROUP BY `member_id`",$this->connection);
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info);
+		}
+		return $value;
+	}	
 	
+	function getVotedCountByProduct($product_id)
+	{
+		$value 	= Array();
+		$data 	= mysql_query("SELECT * FROM ".($this->table)." WHERE `product_id` = '$product_id' GROUP BY `member_id`",$this->connection);
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info);
+		}
+		return count($value);
+	}	
 	
 	function getByReason($member_id)
 	{

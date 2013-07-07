@@ -150,5 +150,5 @@ if (((facebook)||(twitter))&&(!member_login)) {
 }
 render.homePage();
 </script>
-</body>
+<?php include "template/footer.php" ;?></body>
 </html>

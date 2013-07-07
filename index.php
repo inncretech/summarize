@@ -6,6 +6,7 @@ $database 		= new Database();
 $facebook 		= new Fb();
 $twitter 		= new Tw();
 
+
 // ######################## Sign Out Check
 if (isset($_GET['sign_out']))
 {
@@ -29,6 +30,9 @@ if (!$session->check()){
 
 // ######################## Retrive Session Data
 $member_data = $session->get();
+
+$template['title'] 		 = 'Home';
+$template['description'] = 'We are SummarizIt.com. We specialize in helping you find and decide upon your desired items fast and easy using user friendly features.';
 
 // ######################## Load CSS And Header Data
 include "template/header.php";
@@ -69,63 +73,109 @@ echo "<script> var product_id; </script>";
 	</div>
 	-->
 	<?php if (!$session->check()){ ?>
-		<div class="hero-unit" style="padding: 20px;font-family: 'calibri';">
-			<table>
-				<tr>
-					<td style="width:60%;color:black;">
-					<h1 style="font-size:32px;">Share your knowledge, Help making better decisions!</h1>
-					<br>
-					<p style="">Earn points when someone is benefited by your opinions.</p>
-					<p style="text-align:center;"><a href="#registerModal" data-toggle="modal" class="btn btn-large btn-primary" style="border-radius:5px;background-color:rgb(32, 32, 211);">Try It Now</a></p>
-					<p style="">Have SummarizIt on your site using our application. <a href="<?=SITE_ROOT."/business"?>">Check It Out</a>.</p>
-					</td>
-					<td>
-						<!--<div id="myCarousel" class="carousel slide" >
-						  <ol class="carousel-indicators" style="list-style: none;text-align:center;">
-							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-							<li data-target="#myCarousel" data-slide-to="1"></li>
-							<li data-target="#myCarousel" data-slide-to="2"></li>
-						  </ol>
-						 
-						  <div class="carousel-inner">
-							<div class="active item"><img src="img/cloud.png" style="margin-left: auto; margin-right: auto;height: 255px;"></div>
-							<div class="item"><img src="img/user.png" style="margin-left: auto; margin-right: auto;height: 255px;"></div>
-							<div class="item"><img src="img/task.png" style="margin-left: auto; margin-right: auto;height: 255px;"></div>
-						  </div>
-						 
-							<a class="carousel-control left" href="#myCarousel" data-slide="prev" style="font-size: 50px;">&lsaquo;</a>
-							<a class="carousel-control right" href="#myCarousel" data-slide="next" style="font-size: 50px;">&rsaquo;</a>
-						</div>
-						-->
-						<iframe style="margin:10px;border:2px solid grey;" width="350" height="255" src="http://www.youtube.com/embed/UGvJQKv51lw" frameborder="0" allowfullscreen></iframe>
-					</td>
-				</tr>
-			</table>
-        </div>
+	
+		<div class="row" >
+		<div class="span3">
+
+		</div>
+		<div class="span6" style=" height: 650px;margin-top: -50px; ">
+			<h2 style="font-weight:bold;color:white;position:relative;top:150px;text-align: center;">We Summ-It-Up!</h2>
+			<div class="big-circle lead" style="padding:0px;width: 460px;height: 450px;">
+			<p style=" padding-top: 200px; ">We make reading and sharing opinions<br> one of your easiest online hobbies.</p>
+			</div>
+			<div class="small-circle grey-circle lead" style="top:-270px;left:-100px;">Products</div>
+			<div class="small-circle purple-circle lead" style="top:-140px;left:-165px;">Restaurants</div>
+			<div class="small-circle green-circle lead" style="top:-50px;left:-155px;">Colleges</div>
+			<div class="small-circle yellow-circle lead" style="top:-190px;left:255px;">Books</div>
+			<div class="small-circle blue-circle lead" style="top:-270px;left:260px;">Movies</div>
+			<div class="small-circle violet-circle lead" style="top:-405px;left:200px;">Hotels</div>
+		</div>
+	<div class="span3">
+
+		</div>
 		
-		<div class="hero-unit" style="padding: 20px;font-family: 'calibri';">
-			<table>
-				<tr>
-					<td style="width:70%">
-					<a href="<?=SITE_ROOT."/survey.php?id=26";?>" class="btn  btn-success" style="float:left;margin-top: 15px;border-radius:5px;font-size: 18px;rgb(65, 172, 30);">Take a Small Survey</a><span style="float:left;padding:5px;margin-left:5px;margin-top:10px;">(To help us improve summarizit)</span>
-					</td>
-				</tr>
-				<tr>
-				<td>
-					<div>
-					<p style="color:black;line-height: 1.28em;">At Summarizit, We are striving to help you in making better decisions, in less time and based on experiences of real people around you.</p>
-					<p style="color:black;line-height: 1.28em;">We need your help in achieving a better world for each one of us, by helping us organize the information on the internet.</p>
-					<p style="color:black;line-height: 1.28em;">All of us have experienced, that searching online to making decisions like buying a product or choosing a doctor, lawyer or downloading an app can be very time consuming.</p>
-					</div>
-					<p style="text-align:center;"><a href="#registerModal" data-toggle="modal" class="btn btn-large btn-primary" style="border-radius:5px;background-color:rgb(32, 32, 211);">Sign Up Now</a></p>
-				</td>
-				</tr>
-			</table>
+	</div>
+	
+	<div class="row" style="margin-bottom:40px;">
+		
+		<div class="thumbnails" style="margin-left:0px;">
+		<div class="span4" style="margin-left:10px;">
+			<p class="lead" style="color:#6071f3;text-align:center;margin: 5px;height: 70px;line-height: 70px;"><strong>Opinions Matter</strong></p>
+			<div class="thumbnail" style="background-color:white;height:250px;">
+				
+					<img src="images/collage.jpg" style="margin-top:10px;width: 80%;padding-top: 28px;">
+			</div>
+		</div>
+		<div class="span4" id="hwi-container">
+		<p class="lead" style="color:#6071f3;text-align:center;margin: 10px;"><strong>Summarized Into <br>Easy-to-Read Reviews</strong></p>
+		<div class="thumbnail" style="background-color:white;height:250px;">
+			
+			<div style="padding:7px;padding-top:15px;width: 200px;margin-left: auto;margin-right: auto;"><p class="lead" id="Design"><a class="btn btn-success pull-left" id="total-thumbsUp-0">21</a><a class="btn btn-danger pull-left" id="total-thumbsDown-0" style="margin-right: 1em">3</a>Design<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-info pull-left collapsed" style="margin-right:5px;"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback0"><ul class="unstyled feedback" id="unstyled-feedback-0"><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-success" id="like-24">3</strong> Fancy Design.</p></li><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-warning" id="like-33">3</strong> It's a bit wide.</p></li><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-success" id="like-477">3</strong> Attractive design</p></li><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-success" id="like-477">5</strong> Futuristic</p></li><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-success" id="like-477">11</strong> Very nice looking</p></li></ul></div></div>
+			</div>
+		</div>
+		<div class="span4">
+		<p class="lead" style="color:#6071f3;text-align:center;margin: 10px;"><strong>Quickly Delivered Information</strong></p>
+		<div class="thumbnail" style="background-color:white;height:250px;">
+			
+			<div style="text-align:center;">
+				
+				<img src="images/idea.png" style="height:200px;padding-top: 20px;">
+			</div>
+		</div>
+		</div>
+		
+		</div>
+		</div>
+		
+		<div class="row" style="background-color:white;padding:20px;border:1px solid rgb(206, 206, 206);margin-bottom:40px;">
+			
+				<p class="lead1">@ Summariz<i>it</i>, we strive to help you make better decisions...</p>
+			<div class="span7">
+				<ul style="font-size:25px;list-style-type: square;">
+					<li class="par" style="line-height:30px;">In less time
+					</li>
+					<li class="par" style="line-height:30px;"> With the experience of real people
+					</li>
+					<li class="par" style="line-height:30px;">Through collective input
+					</li>
+					<li class="par" style="line-height:30px;">In an organized fashion
+					</li>
+					<li class="par" style="line-height:30px;">To aid others
+					</li>
+					<li class="par" style="line-height:30px;">Using simple steps
+					</li>
+				</ul>
+				</div>
+				<div class="span4">
+
+				<button class="btn btn-facebook btn-block" style=" padding: 10px; "><i class="icon icon-facebook"></i>Login With Facebook</button>
+				<button class="btn btn-twitter btn-block" style=" padding: 10px; "><i class="icon icon-twitter"></i>Login With Twitter</button>
+				<button class="btn btn-success btn-block" style=" padding: 10px; "><i class="icon icon-ok"></i>Take A Small Survey</button>
+				<button class="btn btn-warning btn-block" style=" padding: 10px; "><i class="icon icon-certificate"></i> Summariz<i>It</i> Points</button>
+				</div>
+			</div>
+			
+			<div class="row" style="background-color:white;padding:20px;border:1px solid rgb(206, 206, 206);margin-bottom:40px;">
+			<p class="lead1">Which experience do you prefer?</p>
+			<div class="row well" style=" margin: 10px; margin-top: 20px; ">
+			<div class="span3"><p class="lead2">At Other Websites</p>
+			<p class="normal1">In my opinion this phone has a fancy design.Its weight is very light,but, unfortunately, the lightness of the phone makes it quite difficult to hold sometimes. It is also a very expensive phone to purchase without saving up a lot of hard-earned salary money. Moreover, I believe the price is far too high for the limited features that the phone offers. I would give this phone a thumbs up for design and weight, but a thumbs down for cost.</p>
+			</div>
+			<div class="span2"><img src="images/ClearParchmentSkeptical2.png" style="width:110px;"><img style="float:right;height:330px;margin-right:-20px;" src="images/line.png"></div>
+			
+			<div class="span5" style="float:right;">
+			<p class="lead2">On Summariz<i>It</i></p>
+			<img src="images/ClearSummitSnap2.png" style="width:150px;">
+			<div style="background-color:white;padding:7px;width: 200px;float: right;"><p class="lead" id="Design"><a class="btn btn-success pull-left" id="total-thumbsUp-0">21</a><a class="btn btn-danger pull-left" id="total-thumbsDown-0" style="margin-right: 1em">3</a>Design<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-info pull-left collapsed" style="margin-right:5px;"><i class="icon icon-white icon-chevron-down"></i></a></p><div id="feedback0"><ul class="unstyled feedback" id="unstyled-feedback-0"><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-success" id="like-24">3</strong> Fancy Design.</p></li><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-warning" id="like-33">3</strong> It's a bit wide.</p></li><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-success" id="like-477">3</strong> Attractive design</p></li><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-success" id="like-477">5</strong> Futuristic</p></li><li><p style="font-size: 1.2em;font-weight: 500;"><a href="#signInModal" data-toggle="modal"><i onclick="" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong class="text-success" id="like-477">11</strong> Very nice looking</p></li></ul></div></div>
+			</div>
+			</div>
+		</div>
+			
         </div>
 		
 	<?php } ?>
 			
-			<h2><a href="#" onclick="render.HighestRated();return false;">Highest Rated </a>
+			<h2><a href="<?=SITE_ROOT."/highest-rated.php"?>" >Highest Rated </a>
 				
 			</h2>
 			<hr>
@@ -153,9 +203,9 @@ echo "<script> var product_id; </script>";
 					echo "<li class='span3'>";
 					echo  "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='".SITE_ROOT."/product/".$item['seo_title']."'\" onmouseover='render.showDesc(this);' >";
 					echo  "<a href='#' class='thumb'>";
-					echo  "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>".$item['top_feedback']['category']."</strong>".$item['top_feedback']['comment']."";
+					echo  "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>".$item['top_feedback']['category']."</strong>".$item['top_feedback']['comment']."";
 					echo  "</div>";
-					echo  "<label class='thumbnail-image-holder' ><img alt='210x140' src='http://".S3_BUCKET.".s3.amazonaws.com/p_".$item['image']['full_image_url']."_normal.jpg' ></label>";
+					echo  "<label class='thumbnail-image-holder' ><img title='".$item['title']."' alt='".$item['title']."' src='http://".S3_BUCKET.".s3.amazonaws.com/p_".$item['image']['full_image_url']."_normal.jpg' ></label>";
 					echo  "</a>";
 					echo  "<div class='caption' style=''>";
 					echo  "<hr style='margin-top: 10px;margin-bottom: 15px;'><p>";
@@ -172,7 +222,7 @@ echo "<script> var product_id; </script>";
 				}
 				?>
 			</ul>
-			<h2><a href="#" onclick="render.MostViewed();return false;">Most Viewed</a> 
+			<h2><a href="<?=SITE_ROOT."/most-viewed.php"?>" >Most Viewed</a> 
 				
 			</h2>
 			<hr>
@@ -201,9 +251,9 @@ echo "<script> var product_id; </script>";
 					echo "<li class='span3'>";
 					echo  "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='".SITE_ROOT."/product/".$item['seo_title']."'\" onmouseover='render.showDesc(this);' >";
 					echo  "<a href='#' class='thumb'>";
-					echo  "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>".$item['top_feedback']['category']."</strong>".$item['top_feedback']['comment']."";
+					echo  "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>".$item['top_feedback']['category']."</strong>".$item['top_feedback']['comment']."";
 					echo  "</div>";
-					echo  "<label class='thumbnail-image-holder' ><img alt='210x140' src='http://".S3_BUCKET.".s3.amazonaws.com/p_".$item['image']['full_image_url']."_normal.jpg' ></label>";
+					echo  "<label class='thumbnail-image-holder' ><img title='".$item['title']."' alt='".$item['title']."' src='http://".S3_BUCKET.".s3.amazonaws.com/p_".$item['image']['full_image_url']."_normal.jpg' ></label>";
 					echo  "</a>";
 					echo  "<div class='caption' style=''>";
 					echo  "<hr style='margin-top: 10px;margin-bottom: 15px;'><p>";
@@ -220,7 +270,7 @@ echo "<script> var product_id; </script>";
 				}
 				?>
 			</ul>
-			<h2><a href="#" onclick="render.RecentlyAdded();return false;">Recently Added </a>
+			<h2><a href="<?=SITE_ROOT."/recently-added.php"?>" >Recently Added </a>
 				
 			</h2>
 			<hr>
@@ -243,9 +293,9 @@ echo "<script> var product_id; </script>";
 					echo "<li class='span3'>";
 					echo  "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='".SITE_ROOT."/product/".$item['seo_title']."'\" onmouseover='render.showDesc(this);' >";
 					echo  "<a href='#' class='thumb'>";
-					echo  "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>".$item['top_feedback']['category']."</strong>".$item['top_feedback']['comment']."";
+					echo  "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>".$item['top_feedback']['category']."</strong>".$item['top_feedback']['comment']."";
 					echo  "</div>";
-					echo  "<label class='thumbnail-image-holder' ><img alt='210x140' src='http://".S3_BUCKET.".s3.amazonaws.com/p_".$item['image']['full_image_url']."_normal.jpg' ></label>";
+					echo  "<label class='thumbnail-image-holder' ><img title='".$item['title']."' alt='".$item['title']."' src='http://".S3_BUCKET.".s3.amazonaws.com/p_".$item['image']['full_image_url']."_normal.jpg' ></label>";
 					echo  "</a>";
 					echo  "<div class='caption' style=''>";
 					echo  "<hr style='margin-top: 10px;margin-bottom: 15px;'><p>";
@@ -318,6 +368,11 @@ echo "<script> var product_id; </script>";
 <?php ($session->check() ? include "template/logged_in/footer.php" : include "template/logged_out/footer.php" );?>
 
 <script>
+$("#how-it-works-btn").click(function() {
+     $('html, body').animate({
+         scrollTop: $("#how-it-works-frame").offset().top-125
+     }, 2000);
+ });
 var toggleCompare = function() {
 	var compareContain = $('.compare-container');
 	compareContain.toggleClass('compared');
@@ -345,5 +400,5 @@ if (member_login) {
 }else render.homePage(4);
 render.latestFeedback();
 </script>
-</body>
+<?php include "template/footer.php" ;?></body>
 </html>

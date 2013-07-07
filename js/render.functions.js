@@ -3,6 +3,7 @@ var compareMap   = [];
 var base_compare_product;
 var render = new function() {
 	//this.type = "class";
+	var parent = this;
 	var highestRatedLimit  = 0;
 	var mostViewedLimit	   = 0;
 	var recentlyAddedLimit = 0;
@@ -239,7 +240,7 @@ var render = new function() {
 					code += "<li class='span3' style='list-style: none;margin-bottom: 10px;'>";
 					code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 					code += "<a href='#' class='thumb'>";
-					code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+					code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
 					code += "</div>";
 					code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
 					code += "</a>";
@@ -411,7 +412,7 @@ var render = new function() {
 		
 	};
 	
-	this.search = function (query) {
+	this.colleges = function (query) {
 		$.post(site_root+"/backend/ajax.get/search.php",{query:query},function(data){
 		
 			$("#main").html("");
@@ -419,20 +420,20 @@ var render = new function() {
 			var code = "<div class='row'><div class='span12'>";
 				code += "<ul class='breadcrumb'>";
 				code += "<li>";
-				code += "<a href='#' onclick='render.HighestRated();'>Highest Rated</a>";
+				code += "<a href='"+site_root+"/highest-rated.php'>Highest Rated</a>";
 				code += "<span class='divider'>|</span>";
 				code += "</li>";
 				code += "<li>";
-				code += "<a href='#' onclick='render.MostViewed();'>Most Viewed</a>";
+				code += "<a href='"+site_root+"/most-viewed.php'>Most Viewed</a>";
 				code += "<span class='divider'>|</span>";
 				code += "</li>";
 				code += "<li>";
-				code += "<a href='#' onclick='render.RecentlyAdded();'>Recently Added</a>";
+				code += "<a href='"+site_root+"/recently-added.php'>Recently Added</a>";
 				code += "</li>";
 				code += "</ul>";
-				code += "<h2>Searched items</h2><hr  style='margin-top: -5px'><ul class='thumbnails'>";
+				
 			 obj = JSON.parse(data);
-			 
+				if (data!="[]") code += "<ul class='thumbnails'>";
 				$.each(obj, function(key, val) {
 					console.log(val.seo_title);
 					if (val.dislikes==null) val.dislikes=0;
@@ -441,7 +442,7 @@ var render = new function() {
 					code += "<li class='span3' style='list-style: none;margin-bottom: 10px;'>";
 					code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 					code += "<a href='#' class='thumb'>";
-					code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+					code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
 					code += "</div>";
 					code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
 					code += "</a>";
@@ -459,8 +460,64 @@ var render = new function() {
 					code += "</li>";
 				});
 				
-				if (data=="[]"){code += "<h2>Sorry, No matching results found for \""+query+"\"</h2>";}
-				code += "</div></div>";
+				if (data=="[]"){code += "<div class='alert alert-warning'>Sorry, No matching results found for \""+query+"\"</div>";}
+				if (data!="[]")  code += "</div>";
+				 code += "</div>";
+				$("#main").append(code);
+			});
+	};
+	
+	this.search = function (query) {
+		$.post(site_root+"/backend/ajax.get/search.php",{query:query},function(data){
+		
+			$("#main").html("");
+			
+			var code = "<div class='row'><div class='span12'>";
+				code += "<ul class='breadcrumb'>";
+				code += "<li>";
+				code += "<a href='"+site_root+"/highest-rated.php'>Highest Rated</a>";
+				code += "<span class='divider'>|</span>";
+				code += "</li>";
+				code += "<li>";
+				code += "<a href='"+site_root+"/most-viewed.php'>Most Viewed</a>";
+				code += "<span class='divider'>|</span>";
+				code += "</li>";
+				code += "<li>";
+				code += "<a href='"+site_root+"/recently-added.php'>Recently Added</a>";
+				code += "</li>";
+				code += "</ul>";
+				code += "<h2>Searched items</h2><hr  style='margin-top: -5px'>";
+			 obj = JSON.parse(data);
+				if (data!="[]") code += "<ul class='thumbnails'>";
+				$.each(obj, function(key, val) {
+					console.log(val.seo_title);
+					if (val.dislikes==null) val.dislikes=0;
+					if (val.likes==null) val.likes=0;
+					//alert(val.image);
+					code += "<li class='span3' style='list-style: none;margin-bottom: 10px;'>";
+					code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
+					code += "<a href='#' class='thumb'>";
+					code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+					code += "</div>";
+					code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
+					code += "</a>";
+					code += "<div class='caption' style=''>";
+					code += "<h3>"+val.title+"</h3>";
+					code += "<p>";
+					code += "<div class='btn-group'>";
+					code += "<button class='btn btn-small btn-success'>"+val.likes+"</button>";
+					code += "<button class='btn btn-small btn-danger'>"+val.dislikes+"</button>";
+					code += "</div>";
+					code += "<a class='btn btn-small pull-right' href='"+site_root+"/product/"+val.seo_title+"'>View Product</a>";
+					code += "</p>";
+					code += "</div>";
+					code += "</div>";
+					code += "</li>";
+				});
+				
+				if (data=="[]"){code += "<div class='alert alert-warning'>Sorry, No matching results found for \""+query+"\"</div>";}
+				if (data!="[]")  code += "</div>";
+				 code += "</div>";
 				$("#main").append(code);
 			});
 	};
@@ -473,6 +530,8 @@ var render = new function() {
 		$.post(site_root+"/backend/ajax.get/products_added.php",{member_id:member_id,limit:limit}, function(data) {
 		
 		obj = JSON.parse(data);
+			if (obj.length==0){$("#products-added").append("<div class='alert alert-warning'>No products added at this time.</div>");}
+			else{
 			$.each(obj, function(key, val) {
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
@@ -480,7 +539,7 @@ var render = new function() {
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
                 code += "</div>";
                 code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
@@ -498,7 +557,7 @@ var render = new function() {
 				code += "</li>";
 				$("#products-added").append(code);
 			});
-			
+			}
 		
 		});
 	}
@@ -512,19 +571,7 @@ var render = new function() {
 		
 		if (highestRatedLimit==0){
 			var code  = "<div class='row'><div class='span12'>";
-				code += "<ul class='breadcrumb'>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.HighestRated(0);'>Highest Rated</a>";
-				code += "<span class='divider'>|</span>";
-				code += "</li>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.MostViewed(0);'>Most Viewed</a>";
-				code += "<span class='divider'>|</span>";
-				code += "</li>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.RecentlyAdded(0);'>Recently Added</a>";
-				code += "</li>";
-				code += "</ul>";
+				code += "<ul class='breadcrumb'><li><a href='"+site_root+"/highest-rated.php'>Highest Rated</a> <span class='divider'>/</span></li>  <li><a href='"+site_root+"/most-viewed.php'>Most Viewed</a> <span class='divider'>/</span></li><li><a href='"+site_root+"/recently-added.php'>Recently Added</a></li></ul>";
 				code += "<h2>Highest Rated </h2><hr  style='margin-top: -5px'><ul class='thumbnails'>";
 		}else{
 			var code = "<div class='row'><div class='span12'><ul class='thumbnails'>"; 
@@ -535,12 +582,17 @@ var render = new function() {
 					if (val.dislikes==null) val.dislikes=0;
 					if (val.likes==null) val.likes=0;
 					//alert(val.image);
+					var category = val.top_feedback.category;
+					var comment  = val.top_feedback.comment;
+					if(typeof val.top_feedback.category === 'undefined') category = "Description";
+					if(typeof val.top_feedback.comment === 'undefined') comment = val.description;
+					if(val.description == '') comment = "N/A";
 					code += "<li class='span3'>";
 					code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 					code += "<a href='#' class='thumb'>";
-					code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+					code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
 					code += "</div>";
-					code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
+					code += "<label class='thumbnail-image-holder' ><img alt='"+val.title+"' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
 					code += "</a>";
 					code += "<div class='caption' style=''>";
 					code += "<h3 id='product-title'>"+val.title+"</h3>";
@@ -577,19 +629,7 @@ var render = new function() {
 		
 		if (mostViewedLimit==0){
 			var code  = "<div class='row'><div class='span12'>";
-				code += "<ul class='breadcrumb'>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.HighestRated(0);'>Highest Rated</a>";
-				code += "<span class='divider'>|</span>";
-				code += "</li>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.MostViewed(0);'>Most Viewed</a>";
-				code += "<span class='divider'>|</span>";
-				code += "</li>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.RecentlyAdded(0);'>Recently Added</a>";
-				code += "</li>";
-				code += "</ul>";
+				code += "<ul class='breadcrumb'><li><a href='"+site_root+"/highest-rated.php'>Highest Rated</a> <span class='divider'>/</span></li>  <li><a href='"+site_root+"/most-viewed.php'>Most Viewed</a> <span class='divider'>/</span></li><li><a href='"+site_root+"/recently-added.php'>Recently Added</a></li></ul>";
 				code += "<h2>Most Viewed </h2><hr  style='margin-top: -5px'><ul class='thumbnails'>";
 		}else{
 			var code = "<div class='row'><div class='span12'><ul class='thumbnails'>"; 
@@ -601,13 +641,17 @@ var render = new function() {
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
 				//alert(val.image);
-				
-				code += "<li class='span3' style='margin:0 5px 10px 5px;'>";
+				var category = val.top_feedback.category;
+				var comment  = val.top_feedback.comment;
+				if(typeof val.top_feedback.category === 'undefined') category = "Description";
+				if(typeof val.top_feedback.comment === 'undefined') comment = val.description;
+				if(val.description == '') comment = "N/A";
+				code += "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
                 code += "</div>";
-                code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
+                code += "<label class='thumbnail-image-holder' ><img alt='"+val.title+"' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
                 code += "<div class='caption' style=''>";
                 code += "<h3 id='product-title'>"+val.title+"</h3>";
@@ -644,19 +688,7 @@ var render = new function() {
 		
 		if (recentlyAddedLimit==0){
 			var code  = "<div class='row'><div class='span12'>";
-				code += "<ul class='breadcrumb'>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.HighestRated(0);'>Highest Rated</a>";
-				code += "<span class='divider'>|</span>";
-				code += "</li>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.MostViewed(0);'>Most Viewed</a>";
-				code += "<span class='divider'>|</span>";
-				code += "</li>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.RecentlyAdded(0);'>Recently Added</a>";
-				code += "</li>";
-				code += "</ul>";
+			code += "<ul class='breadcrumb'><li><a href='"+site_root+"/highest-rated.php'>Highest Rated</a> <span class='divider'>/</span></li>  <li><a href='"+site_root+"/most-viewed.php'>Most Viewed</a> <span class='divider'>/</span></li><li><a href='"+site_root+"/recently-added.php'>Recently Added</a></li></ul>";
 				code += "<h2>Recently Added</h2><hr  style='margin-top: -5px'><ul class='thumbnails'>";
 		}else{
 			var code = "<div class='row'><div class='span12'><ul class='thumbnails'>"; 
@@ -669,13 +701,18 @@ var render = new function() {
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
 				//alert(val.image);
+				var category = val.top_feedback.category;
+				var comment  = val.top_feedback.comment;
+				if(typeof val.top_feedback.category === 'undefined') category = "Description";
+				if(typeof val.top_feedback.comment === 'undefined') comment = val.description;
+				if(val.description == '') comment = "N/A";
 				if (typeof val.product_id !== 'undefined'){
-				code += "<li class='span3' style='margin:0 5px 10px 5px;'>";
+				code += "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
                 code += "</div>";
-                code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
+                code += "<label class='thumbnail-image-holder' ><img alt='"+val.title+"' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
                 code += "<div class='caption' style=''>";
                 code += "<h3 id='product-title'>"+val.title+"</h3>";
@@ -726,9 +763,9 @@ var render = new function() {
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;top:0px'><strong>"+category+"</strong> : "+comment+"";
                 code += "</div>";
-                code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
+                code += "<label class='thumbnail-image-holder' ><img alt='"+val.title+"' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
                 code += "<div class='caption' style=''>";
                 code += "<hr style='margin-top: 10px;margin-bottom: 15px;'><p>";
@@ -766,9 +803,9 @@ var render = new function() {
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
                 code += "</div>";
-                code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
+                code += "<label class='thumbnail-image-holder' ><img alt='"+val.title+"' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
                 code += "<div class='caption' style=''>";
                 code += "<hr style='margin-top: 10px;margin-bottom: 15px;'><p>";
@@ -809,9 +846,9 @@ var render = new function() {
 				code = "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
-                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:210px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
+                code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'><strong>"+category+"</strong> : "+comment+"";
                 code += "</div>";
-                code += "<label class='thumbnail-image-holder' ><img alt='210x140' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
+                code += "<label class='thumbnail-image-holder' ><img alt='"+val.title+"' src='"+s3_base_link+".s3.amazonaws.com/p_"+val.image.full_image_url+"_normal.jpg' ></label>";
                 code += "</a>";
                 code += "<div class='caption' style=''>";
                 code += "<hr style='margin-top: 10px;margin-bottom: 15px;'><p>";
@@ -855,36 +892,56 @@ var render = new function() {
 	this.refreshFeedback = function (data) {
 		
 		var obj	 = jQuery.parseJSON(data);
-		var code ='';
+		if (member_login){
+			var code ='<button class="btn btn-primary" id="add-category-trigger">Add New Feature</button><div id="add-category" style="display:none;"><br><p><input type="text" class="input-xlarge" style="width: 41%;height: auto;margin-bottom:0px" id="add-new-category" placeholder="Feature" ><button id="add-new-category-btn" class="btn btn-primary">Add</button></p></div><hr>';
+		} else {
+			var code ='<a href="#signInModal" class="btn btn-primary" id="add-category-trigger" data-toggle="modal">Add New Featyre</a><hr>';
+		}
 		$.each(obj, function(root_key, root_value) {
+				code +='';
 				var href = "";
 				var action = "";
 				if (member_login){ href="#changeCategoryModal"; action = "category.change_name(\'"+root_value.category+"\');";} else { href= "#signInModal";}
 				if (root_value.thumbs_up==null) root_value.thumbs_up=0;
 				if (root_value.thumbs_down==null) root_value.thumbs_down=0;
 				code += '<div>';
-				code +='<p class="lead" id="'+(root_value.category.replace(/\s/g,''))+'"><a class="btn btn-success" id="total-thumbsUp-'+root_key+'">'+root_value.thumbs_up+'</a><a class="btn btn-danger" id="total-thumbsDown-'+root_key+'" style="margin-right: 1em">'+root_value.thumbs_down+'</a>'+root_value.category+'<a href="#" onclick="CollapseEvent(this);return false;" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#feedback'+root_key+'"><i class="icon icon-white icon-chevron-down"></i></a></p>';
+				code +='<p class="lead" id="'+(root_value.category.replace(/\s/g,''))+'"><a class="btn btn-success pull-left" id="total-thumbsUp-'+root_key+'">'+root_value.thumbs_up+'</a><a class="btn btn-danger pull-left" id="total-thumbsDown-'+root_key+'" style="margin-right: 1em">'+root_value.thumbs_down+'</a>'+root_value.category+'<a href="#" onclick="CollapseEvent(this);return false;" class="" style="margin-left:5px;" data-toggle="collapse" data-target="#feedback'+root_key+'"><i title="Expand" class="icon icon-white  icon-chevron-down"></i></a></p>';
 				code +='<div id="feedback'+root_key+'" class="collapse" style="height: 0px;">';
-				code +='<ul class="unstyled feedback" id="unstyled-feedback-'+root_key+'">';
+				code +='<ul class="unstyled feedback" id="unstyled-feedback-'+root_key+'" style="margin:0px;">';
 				$.each(root_value.feedback, function(key, value) {
 					href = "";
 					action = "";
 					if (member_login){action = "like.add("+value.feedback_id+","+root_key+");";} else { href= "#signInModal";}
-					if (value.type=="0"){ style = 'class="text-success"'; } else { style = 'class="text-warning"'; }
-					code +='<li><p '+style+' style="font-size: 1.2em"><a href="'+href+'" data-toggle="modal" ><i onclick="'+action+'" class="icon icon-chevron-up" style="opacity: 0.5"></i></a> <strong id="like-'+value.feedback_id+'">'+value.total_likes+'</strong> '+value.comment+'</p></li>';
+					if (value.type=="0"){ style = 'class="text-success"'; 
+						if (value.comment!=''){
+							code +='<li><p style="font-size: 1.2em;font-weight: 500;"><a href="'+href+'" data-toggle="modal" ><i title="I agree" onclick="'+action+'" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong  '+style+'  id="like-'+value.feedback_id+'">'+value.total_likes+'</strong> '+value.comment+'</p></li>';
+						}
+					}
 				});
+				$.each(root_value.feedback, function(key, value) {
+					href = "";
+					action = "";
+					if (member_login){action = "like.add("+value.feedback_id+","+root_key+");";} else { href= "#signInModal";}
+					if (value.type=="1"){ style = 'class="text-warning"'; 
+						if (value.comment!=''){
+							code +='<li><p style="font-size: 1.2em;font-weight: 500;"><a href="'+href+'" data-toggle="modal" ><i title="I agree" onclick="'+action+'" class="icon icon-thumbs-up" style="opacity: 0.8;color:black;"></i></a><strong  '+style+'  id="like-'+value.feedback_id+'">'+value.total_likes+'</strong> '+value.comment+'</p></li>';
+						}
+					}
+				});
+				code +='<div id="scrollTo"></div>';
 				code +='<div class="form-inline">';
+				
+				code +='<input type="hidden" id="add-feedback-category-'+root_key+'" value="'+root_value.category+'">';
+				code +='<input type="text" class="input-xlarge" style="width: 60%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-'+root_key+'" placeholder="Feature">';
 				code +='<div class="btn-group" data-toggle="buttons-radio">';
 				code +='<button type="button" onclick="feedback.addType('+root_key+',0);return false;" style ="height: 30px;" class="btn thumbsUp"><i class="icon icon-thumbs-up"></i></button>';
 				code +='<button type="button" onclick="feedback.addType('+root_key+',1);return false;" style ="height: 30px;" class="btn thumbsDown"><i class="icon icon-thumbs-down"></i></button>';
 				code +='<input type="hidden" id="add-feedback-type-'+root_key+'" value="">';
 				code +='</div>';
-				code +='<input type="hidden" id="add-feedback-category-'+root_key+'" value="'+root_value.category+'">';
-				code +='<input type="text" class="input-xlarge" style="width: 63%;margin: 0 4px 0 4px;height: auto;" id="add-feedback-comment-'+root_key+'" placeholder="Feedback">';
 				if (member_login){
-					code +='<a type="submit" onclick="feedback.save('+root_key+');return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a>';
+					code +='<a type="submit" onclick="feedback.save('+root_key+');return false;" class="btn btn-primary" style="margin-left:5px;"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a>';
 				}else{
-					code +='<a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a>';
+					code +='<a data-toggle="modal" href="#signInModal" type="submit" onclick="return false;" class="btn btn-primary" style="margin-left:5px;"><i class="icon icon-white icon-plus-sign"></i> Add Feedback</a>';
 				}
 				code +='</div>';
 				code +='</div>';
@@ -900,7 +957,7 @@ var render = new function() {
 			code +='<input type="hidden" id="add-feedback-type-'+n+'" value="">';
             code +='</div>';
             code +='<input type="text" class="input-medium" placeholder="Category" id="add-feedback-category-'+n+'" style="margin-left:3px;height: auto;">';
-            code +='<input type="text" class="input-xlarge" style="width: 41%;margin-left:3px;height: auto;" id="add-feedback-comment-'+n+'" placeholder="Feedback" >';
+            code +='<input type="text" class="input-xlarge" style="margin-left:3px;height: auto;" id="add-feedback-comment-'+n+'" placeholder="Feedback" >';
 			if (member_login){
 				code +='<a data-toggle="modal" href="#" class="btn btn-primary" onclick="feedback.save('+n+',1);return false;" style="margin-left:3px;"><i class="icon icon-white icon-plus-sign" ></i> Add Feedback</a>';
 			}else{
@@ -909,6 +966,20 @@ var render = new function() {
             code +='</form>';
 		
 		$("#feedback").html(code);
+		$("#add-category-trigger").click(function(){
+			$("#add-category").show();
+		});
+		$("#add-new-category-btn").click(function(){
+			$.post(site_root+"/backend/ajax.post/add_feedback.php",{category: $('#add-new-category').val(),product_id:product_id},function(data){
+				get.feedbackByProduct(product_id);
+				$("#add-new-category-msg").show();
+				
+				 $('html, body').animate({
+					 scrollTop: $("#scrollTo").offset().top-50
+					 }, 2000);
+				
+			});
+		});
 		
 		$("#add-feedback-category-"+n).autocomplete({
 			source: function(request, response) {
@@ -939,9 +1010,9 @@ var render = new function() {
 
 
 function CollapseEvent(el){
-	
-	if ($(el).find("i").attr("class")=="icon icon-white icon-chevron-down") $(el).find("i").attr("class","icon icon-white icon-chevron-up");
-	else if ($(el).find("i").attr("class")=="icon icon-white icon-chevron-up") $(el).find("i").attr("class","icon icon-white icon-chevron-down");
+	 
+	if ($(el).find("i").attr("class")=="icon icon-white  icon-chevron-down") $(el).find("i").attr("class","icon icon-white  icon-chevron-up");
+	else if ($(el).find("i").attr("class")=="icon icon-white  icon-chevron-up") $(el).find("i").attr("class","icon icon-white  icon-chevron-down");
 	
 }
 

@@ -14,11 +14,20 @@ $twitter  = new Tw();
 $s3 			= new S3(S3_ACCESS, S3_SECRET);
 $s3->putBucket(S3_BUCKET, S3::ACL_PUBLIC_READ);
 
-$data 						= $database->escape($_POST);
+if ($session->getValue("social_network_name")=="facebook"){
+	$data = $session->getValue('social_network_data');
+	$data['login'] = $data['username'];
+	$data['password'] = time();
+	$data['image'] = "https://graph.facebook.com/".$data['id']."/picture?type=large";
+}else{
+	$data = $database->escape($_POST);
+}
 
 $data["social_network_id"] 	= $session->getValue("social_network_id");
 $data["public_id"]			= time().rand();
 $data['member_id'] 			= $database->member->add($data);
+$member_id = $data['member_id'];
+
 $database->member_info->add($data);
 $database->member_image->add(0,$data['member_id']);
 
@@ -98,5 +107,14 @@ $subject = "SummarizIt.com Registration";
 $message = "Welcome to SummarizIt.com here are you credentials:\n Username: ".$data['login']."\n Password: ".$data['password'] ;
 $ses->send($data["email"],$subject,$message);
 
-Redirect("../../index.php?sign_out=true");
+if ($session->getValue("social_network_name")=="facebook"){
+	$session->refresh();
+	$session->setValue("social_network_name","facebook");
+	$session->setValue("social_network_data",$facebook->data);
+	$session->setValue("social_network_id",$facebook->social_network_id);
+	
+	Redirect(SITE_ROOT."/index.php");
+}else{
+	Redirect(SITE_ROOT."/index.php?sign_out=true");
+}
 ?>

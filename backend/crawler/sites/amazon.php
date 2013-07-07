@@ -30,7 +30,7 @@ class Amazon
 			$title = trim(strip_tags($element->plaintext));
 		}
 		$title = str_replace('[Download]','', $title);
-		if(strlen($title)>40) $data['title'] = substr($title, 0, 40); else $data['title'] = $title;
+		$data['title'] = $title;
 	
 	
 	

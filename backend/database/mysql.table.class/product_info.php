@@ -27,7 +27,7 @@ class product_info
 	
 	function getByExternalLink($link)
 	{
-		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `product_url`='$link' ",$this->connection);
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `product_url`='$link' AND `product_url` IS NOT NULL AND `external`=1",$this->connection);
 		if (mysql_num_rows($data)>0){
 			$info = mysql_fetch_array($data);
 			return $info['product_id'];

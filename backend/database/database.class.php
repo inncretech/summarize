@@ -1,4 +1,6 @@
 <?
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: content-type");
 /** Include site constants
 */
 //include "../constants.php";
@@ -46,6 +48,7 @@ include "mysql.table.class/survey_answer.php";
 include "mysql.table.class/survey_completed.php";
 include "mysql.table.class/survey_member_answer.php";
 include "mysql.table.class/facebook_friend.php";
+include "mysql.table.class/crawl_site.php";
 
 /** A PHP class to access MySQL database with convenient methods
 * in an object oriented way, and with a powerful debug system.
@@ -95,6 +98,7 @@ class Database
 	var $survey_completed;
 	var $survey_member_answer;
 	var $facebook_friend;
+	var $crawl_site;
 	
 	/** Put this variable to true if you want ALL queries to be debugged by default:
 	  */
@@ -165,6 +169,7 @@ class Database
 		$this->survey_completed 				= new survey_completed($this->connection);
 		$this->survey_member_answer 			= new survey_member_answer($this->connection);
 		$this->facebook_friend 					= new facebook_friend($this->connection);
+		$this->crawl_site 						= new crawl_site($this->connection); 
 	}
 	
 	function escape($data)

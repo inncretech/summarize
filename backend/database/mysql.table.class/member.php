@@ -94,6 +94,18 @@ AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY",$this->connect
 		}
 		return $value;
 	}
+	function checkMemberFb($social_network_id)
+	{	
+		
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `social_network_id`='$social_network_id'",$this->connection);
+		$count = mysql_num_rows($data);
+		if ($count>0){
+			$data = mysql_fetch_array($data);
+			return $data[0];
+		}else{
+		return "false";
+		}
+	}
 	
 	function checkSocialNetwork($social_network_id)
 	{	
@@ -120,7 +132,7 @@ AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY",$this->connect
 		$password 			= $post['password'];
 		$social_network_id 	= $post['social_network_id'];
 		$public_id			= $post['public_id'];
-		$seo_title 			= $post['login'];
+		$seo_title 			= str_replace(' ','-',preg_replace('/[\s]+/',' ',str_replace('-',' ', $post['login'])));
 		
 		$data = mysql_query("INSERT INTO ".($this->table)." (`public_id`,`login`,`seo_title`,`email`,`social_network_id`,`crypted_password`,`created_at`) VALUES ('$public_id','$login','$seo_title','$email','$social_network_id','".md5($password)."',now()); ",$this->connection);
 		
