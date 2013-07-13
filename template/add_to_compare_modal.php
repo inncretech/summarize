@@ -4,7 +4,7 @@
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
       <h2 id="addProductLabel">Add products to compares</h2>
     </div>
-    <div class="modal-body grey" style="height:380px;">
+    <div class="modal-body grey" >
       <form class="form-inline" style="margin: 5px">
         <input type="text" class="input-xlarge" id="addCompareValue" style="width: 78%;" placeholder="Enter Product" autocomplete = "off">
         <button type="submit" id="addCompareBtn" onclick="compare.set(document.getElementById('addCompareValue').value);return false;" role="button" class="btn btn-primary" >Add to compare</button>

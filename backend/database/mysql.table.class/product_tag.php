@@ -8,7 +8,15 @@ class product_tag
 	{
 		$this->connection = $mysql_connection;
 	}
-	
+	function getMostUsedTags($limit){
+		
+		$tag_id = Array();
+		$data = mysql_query("SELECT COUNT(id),tag_id FROM ".($this->table)." WHERE tag_id IN (SELECT tag_id FROM tag) GROUP BY tag_id ORDER BY COUNT(id) DESC LIMIT 0,".$limit,$this->connection);
+		While ($info = mysql_fetch_array($data)){
+			array_push($tag_id,$info["tag_id"]);
+		}
+		return $tag_id;
+	}
 	function add($tag_id,$product_id)
 	{
 		$data = mysql_query("INSERT INTO ".($this->table)." (`tag_id`,`product_id`,`created_at`) VALUES ('$tag_id','$product_id',now()); ",$this->connection);

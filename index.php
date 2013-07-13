@@ -82,6 +82,10 @@ echo "<script> var product_id; </script>";
 			<h2 style="font-weight:bold;color:white;position:relative;top:150px;text-align: center;">We Summ-It-Up!</h2>
 			<div class="big-circle lead" style="padding:0px;width: 460px;height: 450px;">
 			<p style=" padding-top: 200px; ">We make reading and sharing opinions<br> one of your easiest online hobbies.</p>
+			<p style=" padding-top:0px; ">
+			<a href="https://www.facebook.com/pages/Summarizit/579998852010425" style="color:#3b5998;"><strong>Facebook</strong></a> 
+			<a href="https://twitter.com/Summarizit" style="color:#007fff"><strong>Twitter</strong></a>
+			
 			</div>
 			<div class="small-circle grey-circle lead" style="top:-270px;left:-100px;">Products</div>
 			<div class="small-circle purple-circle lead" style="top:-140px;left:-165px;">Restaurants</div>
@@ -127,33 +131,48 @@ echo "<script> var product_id; </script>";
 		</div>
 		</div>
 		
-		<div class="row" style="background-color:white;padding:20px;border:1px solid rgb(206, 206, 206);margin-bottom:40px;">
-			
-				<p class="lead1">@ Summariz<i>it</i>, we strive to help you make better decisions...</p>
-			<div class="span7">
-				<ul style="font-size:25px;list-style-type: square;">
-					<li class="par" style="line-height:30px;">In less time
-					</li>
-					<li class="par" style="line-height:30px;"> With the experience of real people
-					</li>
-					<li class="par" style="line-height:30px;">Through collective input
-					</li>
-					<li class="par" style="line-height:30px;">In an organized fashion
-					</li>
-					<li class="par" style="line-height:30px;">To aid others
-					</li>
-					<li class="par" style="line-height:30px;">Using simple steps
-					</li>
-				</ul>
-				</div>
-				<div class="span4">
+		<div class="row" style="margin-bottom:40px;">
+		
+		<div class="thumbnails" style="margin-left:0px;">
+		<div class="span4" style="margin-left:10px;">
+			<p class="lead" style="color:#6071f3;text-align:center;margin: 5px;height: 70px;line-height: 70px;"><strong>Top Trending</strong></p>
+			<div class="thumbnail" style="background-color:white;height:233px;overflow:hidden">
+				<?php
+					$tags = $database->product_tag->getMostUsedTags(20);
+					$data = $database->tag->getMultiple($tags);
 
-				<button class="btn btn-facebook btn-block" style=" padding: 10px; "><i class="icon icon-facebook"></i>Login With Facebook</button>
-				<button class="btn btn-twitter btn-block" style=" padding: 10px; "><i class="icon icon-twitter"></i>Login With Twitter</button>
-				<button class="btn btn-success btn-block" style=" padding: 10px; "><i class="icon icon-ok"></i>Take A Small Survey</button>
-				<button class="btn btn-warning btn-block" style=" padding: 10px; "><i class="icon icon-certificate"></i> Summariz<i>It</i> Points</button>
-				</div>
+					foreach ($data as $item){
+						if ($item != ''){
+						echo '<a href="search.php?query='.urlencode($item).'"><span id="custom-tag" style="white-space: nowrap;overflow: hidden;max-width: 80px;text-overflow: ellipsis;">'.$item.'</span></a>';
+						}
+					}
+				?>
 			</div>
+		</div>
+		<div class="span4" id="hwi-container">
+		<p class="lead" style="color:#6071f3;text-align:center;margin: 5px;height: 70px;line-height: 70px;"><strong>Top Reviewers</strong></p>
+		<div class="thumbnail" style="background-color:white;height:233px;overflow:hidden">
+				<?php
+					$members = $database->product_feedback->getTopReviewers(20);
+					$data = $database->member->getMultiple($members);
+					
+					foreach ($data as $item){
+						if ($item != ''){
+						echo '<a href="'.SITE_ROOT.'/member/'.$item['seo_title'].'"><span style="margin:5px;background-color: #468847;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;display: inline-block;padding: 4px 4px;font-size: 11.844px;font-weight: bold;line-height: 14px;color: #ffffff;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);white-space: nowrap;vertical-align: baseline;">'.$item['login'].'</span></a>';
+						}
+					}
+				?>
+			</div>
+		</div>
+		<div class="span4">
+		<p class="lead" style="color:#6071f3;text-align:center;margin: 5px;height: 70px;line-height: 70px;"><strong>Top</strong></p>
+		<div class="thumbnail" style="background-color:white;height:233px;">
+			
+		</div>
+		</div>
+		
+		</div>
+		</div>
 			
 			<div class="row" style="background-color:white;padding:20px;border:1px solid rgb(206, 206, 206);margin-bottom:40px;">
 			<p class="lead1">Which experience do you prefer?</p>
@@ -317,11 +336,45 @@ echo "<script> var product_id; </script>";
 		<?php if ($session->check()){ ?>
 		
 		<div class="span3">
-			<div data-spy="affix" data-offset-top="0" class="affix">
+			
 				
 					
 				<a href="#addToCompare" role="button" class="btn btn-info btn-block" data-toggle="modal">Compare Products</a>
-				<h3><strong>Created Products</strong></h3>
+				
+			  <br>
+		
+  <div class="thumbnail" style="background-color:white;overflow:hidden;margin-bottom:20px;">
+ <span class="lead" style=""><strong>Top Trending</strong></span><br>
+				<?php
+					$tags = $database->product_tag->getMostUsedTags(20);
+					$data = $database->tag->getMultiple($tags);
+
+					foreach ($data as $item){
+						if ($item != ''){
+						echo '<a href="search.php?query='.urlencode($item).'"><span id="custom-tag" style="white-space: nowrap;overflow: hidden;max-width: 100px;text-overflow: ellipsis;">'.$item.'</span></a>';
+						}
+					}
+				?>
+			</div>
+			
+			<div class="thumbnail" style="background-color:white;overflow:hidden">
+			<span class="lead" style=""><strong>Top Reviewers</strong></span><br>
+				<?php
+					$members = $database->product_feedback->getTopReviewers(15);
+					$data = $database->member->getMultiple($members);
+					
+					foreach ($data as $item){
+						if ($item != ''){
+						echo '<a href="'.SITE_ROOT.'/member/'.$item['seo_title'].'"><span id="custom-tag-green"  style="white-space: nowrap;overflow: hidden;max-width: 100px;text-overflow: ellipsis;">'.$item['login'].'</span></a>';
+						}
+					}
+				?>
+			</div>
+  
+				
+				
+				
+				<!--<h3><strong>Created Products</strong></h3>
 				<ul class="unstyled">
 					<?php
 					$member_products = $database->product->getRandomCreatedBy($member_data['member_id'],3);
@@ -358,9 +411,9 @@ echo "<script> var product_id; </script>";
 				  <li><a href="#" class="btn btn-link ">Contact</a></li>
 				  <li><a href="#" class="btn btn-link ">About</a></li>
 				  <li><a href="#" class="btn btn-link ">Support</a></li>
-				</ul>
+				</ul>-->
 			</div>
-		</div>
+		
 		<?php } ?>
 	</div>
 </div>

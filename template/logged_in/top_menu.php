@@ -30,6 +30,9 @@
 						<li>
 							<a href="<?=SITE_ROOT?>/profile.php?action=notifications">Notifications</a>
 						</li>
+						<li>
+							<a href="<?=SITE_ROOT?>/profile.php?action=follow">Products Followed</a>
+						</li>
 						
 						<!--<li>
 							<a href="profile.php?action=messages">Messages</a>

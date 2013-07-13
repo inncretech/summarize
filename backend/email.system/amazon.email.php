@@ -14,7 +14,8 @@ class AmazonEmail
 	function send($to,$subject,$message){
 		$m	= new SimpleEmailServiceMessage();
 		$m->addTo($to);
-		$m->setFrom(AWS_SAS_EMAIL);
+		//$m->setFrom(AWS_SAS_EMAIL);
+		$m->setFrom("summarizit@gmail.com");
 		$m->setSubject($subject);
 		$m->setMessageFromString(null,$message);
 		$result = $this->connection->sendEmail($m);

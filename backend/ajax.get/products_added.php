@@ -4,7 +4,7 @@ include "../session.class.php";
 $database 		= new Database();
 $session 		= new Session();
 $data			= $database->escape($_POST);
-$info 			= $database->product->getRandomCreated($data['member_id'],$data['limit']);
+$info 			= $database->product->getCreatedBy($data['member_id'],$data['limit']);
 
 for ($i = 0; $i <count($info); $i++) {
 	$info[$i]['seo_title']	=  $database->product->getSeoTitle($info[$i]['product_id']);

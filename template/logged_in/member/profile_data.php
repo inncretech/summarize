@@ -45,11 +45,11 @@
   </div>
   <div class="control-group">
 	<div class="controls">
-	  <button type="submit" class="btn" id="update-member-btn" onclick="return false;">Save</button>
+	  <button type="submit" class="btn btn-success" id="update-member-btn" onclick="return false;">Save</button>
 	</div>
   </div>
 </form>
-<h2>Reset Password</h2>
+
 <hr>
 <div class="alert alert-info" id="change_password_success" style="display:none;">
             <strong>Heads up!</strong>
@@ -84,7 +84,7 @@
   </div>
 	<div class="control-group">
 	<div class="controls">
-	  <a class="btn" id="new_password_btn" onclick="profile.check_password();return false;" style="background-color:#eeeeee;">Save</a>
+	  <button type="submit" class="btn btn-success" id="new_password_btn" onclick="profile.check_password();return false;" >Save</button>
 	</div>
   </div>
 </form>

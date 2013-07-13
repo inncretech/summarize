@@ -43,10 +43,7 @@ $_GET['id'] == $member_data['member_id'] ? Redirect(SITE_ROOT."/profile.php?acti
 
 $visited_member_data['info'] 						= $database->member_info->get($visited_member_data['member_id']);
 $visited_member_data['activity'] 					= $database->member_activity->get($visited_member_data['member_id'],10);
-$visited_member_data['notifications'] 				= $database->notifications->get($visited_member_data['member_id'],10);
-$visited_member_data['points']['total'] 			= $database->point->getTotal($visited_member_data['member_id']);
-$visited_member_data['points']['products_count'] 	= $database->point->getTotalProducts($visited_member_data['member_id']);
-$visited_member_data['points']['data'] 				= $database->point->getByReason($visited_member_data['member_id']);
+$visited_member_data['follow']  					= $database->product_follow->getProducts($visited_member_data['member_id']);
 
 // ######################## Load CSS And Header Data
 include "template/header.php";
@@ -73,48 +70,80 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 
 	
 ?>
-<div class="container" style="width:705px" id="main">
+<div class="container" id="main">
 	<div class="row">
 		<div class="span9">
-			<section >
+			
 				<?php include "template/logged_out/member/visited_profile_image.php";?>
 				<h1><?=$visited_member_data['info']["first_name"]." ".$visited_member_data['info']["last_name"];?></h1>
 				<h3><?=$visited_member_data['info']["short_bio"];?></h3>
 				<!--<h2><?=$visited_member_data['points']['total'];?> points / <?=$visited_member_data['points']['products_count'];?> products</h2>-->
 				<div class="clearfix"></div>
-				
-			</section>
-		<section class="activity_wrap" >
-			<h2>Activity</h2>
-			<hr>
+			
+			<br>
+			<ul class="nav nav-tabs" style=" margin-bottom: 0px; ">
+		  <li class="active"><a href="#activity_wrap" data-toggle="tab">Recent Activity</a></li>
+		 <li ><a href="#follow_wrap" data-toggle="tab">Products Followed</a></li>
+		</ul>
+		<div class="tab-content thumbnail" style=" background-color: white; padding: 20px; ">
+		<div class="tab-pane active " style="background-color:white;" id="activity_wrap">
 			<?php include "template/logged_out/member/visited_profile_activity.php"; ?>
-		</section>
-		<!--
-		<section  class="points_wrap" >
-			<h2>Total points <?=$visited_member_data['points']['total'];?></h2>
-			<hr>
-			<?php include "template/logged_out/member/visited_profile_points.php"; ?>
-		</section>
-		-->
-		<!--<section class="messages_wrap" >
-			<h2>Messages</h2>
-			<hr>
-			<?php include "template/logged_out/member/visited_profile_message_system.php";?>
-		</section>-->
-			<hr>
+		</div>
+		<div class="tab-pane  " style="background-color:white;" id="follow_wrap">
+			<?php include "template/logged_out/member/visited_profile_follow.php"; ?>
+		</div>
+		</div>
+		
+		
+		
 			<h2>Products Added 
 				
 			</h2>
-			<hr/></h2>
+			
 			<ul class="thumbnails" id="products-added">
 			</ul>
+			<div id="products-added-info"></div>
+			
 		</div>
-	</div>
+		<div class="span3">
+		<div class=" afix-div">
+  <div class="thumbnail" style="background-color:white;overflow:hidden;margin-bottom:20px;width:220px;">
+  
+ <span class="lead" style=""><strong>Top Trending</strong></span><br>
+				<?php
+					$tags = $database->product_tag->getMostUsedTags(20);
+					$data = $database->tag->getMultiple($tags);
+
+					foreach ($data as $item){
+						if ($item != ''){
+						echo '<a href="search.php?query='.urlencode($item).'"><span id="custom-tag" style="white-space: nowrap;overflow: hidden;max-width: 100px;text-overflow: ellipsis;">'.$item.'</span></a>';
+						}
+					}
+				?>
+			</div>
+			
+			<div class="thumbnail" style="background-color:white;overflow:hidden;width:220px;">
+			<span class="lead" style=""><strong>Top Reviewers</strong></span><br>
+				<?php
+					$members = $database->product_feedback->getTopReviewers(15);
+					$data = $database->member->getMultiple($members);
+					
+					foreach ($data as $item){
+						if ($item != ''){
+						echo '<a href="'.SITE_ROOT.'/member/'.$item['seo_title'].'"><span id="custom-tag-green"  style="white-space: nowrap;overflow: hidden;max-width: 100px;text-overflow: ellipsis;">'.$item['login'].'</span></a>';
+						}
+					}
+				?>
+			</div>
+			</div>
+  </div></div>
+	
 </div>
 
 <?php ($session->check() ? include "template/logged_in/footer.php" : include "template/logged_out/footer.php" );?>
 
 <script>
+$('.afix-div').affix()
 if (!member_login) register.checkInput("#register-form");
 if (((facebook)||(twitter))&&(!member_login)) {
 	
@@ -122,7 +151,12 @@ if (((facebook)||(twitter))&&(!member_login)) {
 	$('#register-text').hide();
 	
 }
-render.productsAdded(visited_member_id,3);
+var pa_limit = 3;
+function morePa(){
+	pa_limit += 9;
+	render.productsAdded(visited_member_id,pa_limit);
+}
+render.productsAdded(visited_member_id,pa_limit);
 
 var toggleSection = function(section) {
 	

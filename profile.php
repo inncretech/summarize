@@ -36,9 +36,7 @@ $member_data['info'] 						= $database->member_info->get($member_data['member_id
 $member_data['survey'] 						= $database->survey->getByMember($member_data['member_id']);
 $member_data['activity'] 					= $database->member_activity->get($member_data['member_id'],10);
 $member_data['notifications'] 				= $database->notifications->get($member_data['member_id'],10);
-$member_data['points']['total'] 			= $database->point->getTotal($member_data['member_id']);
-$member_data['points']['products_count'] 	= $database->point->getTotalProducts($member_data['member_id']);
-$member_data['points']['data'] 				= $database->point->getByReason($member_data['member_id']);
+$member_data['follow']  					= $database->product_follow->getProducts($member_data['member_id']);
 
 
 // ######################## Load CSS And Header Data
@@ -62,6 +60,7 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 ?>
 <div class="container" id="main">
   <div class="row">
+
 	<div class="span9">
 		<?php include "template/logged_in/member/profile_image.php"; ?>
 	
@@ -71,80 +70,76 @@ echo "<script>var s3_base_link 	= 'http://".S3_BUCKET."'; </script>";
 		<div class="clearfix"></div>
 		<hr>
 		<ul class="nav nav-tabs" style=" margin-bottom: 0px; ">
-		  <li class="active"><a href="#settings_wrap" data-toggle="tab">Settings</a></li>
-		  <li><a id="activity" href="#activity_wrap" data-toggle="tab">Recent Activity</a></li>
-		  <li><a id="notifications" href="#notifications_wrap" data-toggle="tab">Notifications</a></li>
 		 
+		  <li class="active"><a id="activity" href="#activity_wrap" data-toggle="tab">Recent Activity</a></li>
+		  <li><a id="notifications" href="#notifications_wrap" data-toggle="tab">Notifications</a></li>
+		 <li><a id="follow" href="#follow_wrap" data-toggle="tab">Products Followed</a></li>
+		  <li><a href="#settings_wrap" data-toggle="tab">Settings</a></li>
 		</ul>
 
 		<div class="tab-content thumbnail" style=" background-color: white; padding: 20px; ">
-		<div  class="tab-pane active" id="settings_wrap">
-			<h2>Account Settings <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
-			<hr>
+		<div  class="tab-pane " id="settings_wrap">
+			
 			<?php include "template/logged_in/member/profile_data.php"; ?>
 		</div>
 
-		<div class="tab-pane" id="activity_wrap">
-			<h2>Activity <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
-			<hr>
+		<div class="tab-pane active" id="activity_wrap">
+			
 			<?php include "template/logged_in/member/profile_activity.php"; ?>
 		</div>
 						
 		<div class="tab-pane" id="notifications_wrap">
-			<h2>Notifications <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
-			<hr>
+			
 			<?php include "template/logged_in/member/profile_notification.php"; ?>
 		</div>
-		<!--
-		<div  class="points_wrap" style="display:none;">
-			<h2>Total points <?=$member_data['points']['total'];?><!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a></h2>
-			<hr>
-			<?php include "template/logged_in/member/profile_points.php"; ?>
-		</div>
-		-->
-		<div class="tab-pane" id="survey_wrap">
-			<h2>Survey <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
-			<hr>
-			<?php include "template/logged_in/member/profile_survey.php";?>
-		</div>
-		
-		<div class="tab-pane" id="messages_wrap">
-			<h2>Messages <!--<a href="#" class="div_hide btn btn-link" onclick="return false;">Hide Section</a>--></h2>
-			<hr>
-			<?php include "template/logged_in/member/profile_message_system.php";?>
-		</div>
+		<section class="tab-pane"  id="follow_wrap">
+			<?php include "template/logged_in/member/profile_follow.php"; ?>
+		</section>
 		</div>
 		<h2>Products You've Added 
 			
 		</h2>
-		<hr>
+	
 		<ul class="thumbnails" id="products-added"></ul>
+		<div id="products-added-info"></div>
 	</div>
 
-	<div class="span3">
-		<!--
-		<div class="span3" id="afix" data-spy="affix" >
-			<a href="#addProduct"  role="button" class="btn btn-primary btn-block" data-toggle="modal">Add Product <i class="icon-plus icon-white"></i></a>
-			<a href="#" onclick="goTo('.setting_wrap');return false;"  class="btn btn-block settings_btn">Account Settings</a>
-			<a href="#" onclick="goTo('.activity_wrap');return false;" class="btn btn-block activity_btn">Activity</a>
-			<a href="#" onclick="goTo('.notifications_wrap');return false;" class="btn btn-block notifications_btn">Notifications</a>
-			<a href="#" onclick="goTo('.points_wrap');return false;" class="btn btn-block points_btn">Points</a>
-			<a href="#" onclick="goTo('.survey_wrap');return false;" class="btn btn-block points_btn">Survey List</a>
-			<a href="<?=SITE_ROOT."/create-survey.php";?>" onclick="" class="btn btn-block points_btn">Create Survey</a>
-			<a href="#"  class="btn btn-block messages_btn">Messages</a>
-			<hr>
-		-->
-			<ul class="unstyled well">
-			  <li><a href="#" class="btn btn-link ">Terms</a></li>
-			  <li><a href="#" class="btn btn-link ">Twitter</a></li>
-			  <li><a href="#" class="btn btn-link ">Contact</a></li>
-			  <li><a href="#" class="btn btn-link ">About</a></li>
-			  <li><a href="#" class="btn btn-link ">Support</a></li>
-			</ul>
-		</div>
-	  
-	</div>
+	    <div class="span3">
+		<div class=" afix-div">
+		  <div class="thumbnail" style="background-color:white;overflow:hidden;margin-bottom:20px;width:220px;">
+		 <span class="lead" style=""><strong>Top Trending</strong></span><br>
+						<?php
+							$tags = $database->product_tag->getMostUsedTags(20);
+							$data = $database->tag->getMultiple($tags);
+
+							foreach ($data as $item){
+								if ($item != ''){
+								echo '<a href="search.php?query='.urlencode($item).'"><span id="custom-tag" style="white-space: nowrap;overflow: hidden;max-width: 100px;text-overflow: ellipsis;">'.$item.'</span></a>';
+								}
+							}
+						?>
+					</div>
+					
+					<div class="thumbnail" style="background-color:white;overflow:hidden;width:220px;">
+					<span class="lead" style=""><strong>Top Reviewers</strong></span><br>
+						<?php
+							$members = $database->product_feedback->getTopReviewers(15);
+							$data = $database->member->getMultiple($members);
+							
+							foreach ($data as $item){
+								if ($item != ''){
+								echo '<a href="'.SITE_ROOT.'/member/'.$item['seo_title'].'"><span id="custom-tag-green"  style="white-space: nowrap;overflow: hidden;max-width: 100px;text-overflow: ellipsis;">'.$item['login'].'</span></a>';
+								}
+							}
+						?>
+					</div>
+		 
   </div>
+  </div>
+	</div>
+	
+  </div>
+
 </div>
 
 <?php include "template/logged_in/footer.php"; ?>
@@ -154,22 +149,14 @@ goTo("<?=$_GET['action']?>")
 function goTo(value){
 	  $('#'+value).tab('show');
 }
+$('.afix-div').affix()
+var pa_limit = 3;
+function morePa(){
+	pa_limit += 9;
+	render.productsAdded(member_id,pa_limit);
+}
+render.productsAdded(member_id,pa_limit);
 
-
-render.productsAdded(member_id,3);
-/*
-var toggleSection = function(section) {
-	$(section + '_btn').click(function() {
-		$(section +'_wrap').slideToggle('fast');
-		return false;
-	});
-};
-toggleSection('.settings');
-toggleSection('.notifications');
-toggleSection('.messages');
-toggleSection('.points');
-toggleSection('.activity');
-*/
 $('.notification .remove').click(function() {
 	
 	var parent = $(this).parent();

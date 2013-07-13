@@ -20,3 +20,9 @@ var follow = new function() {
 	
 }
 if (typeof product_id != 'undefined') follow.checkState("#follow-product-btn");
+
+function unFollow (e,pid) {
+	$.post(site_root+"/backend/ajax.post/follow_product_toggle_state.php",{product_id:pid},function(data){
+		$(e).parent().hide();
+	});
+}

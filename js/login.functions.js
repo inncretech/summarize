@@ -22,4 +22,23 @@
 		
 	}
 	login.trigger("#sign-in-btn","#sign-in-form");
+	
+	 var forgot = new function() {
+		var parent = this;
+		this.trigger = function (trigger,form) {
+			$(trigger).click(function(){
+				$.post(site_root+"/backend/ajax.post/forgot.php",{login:$("#forgot-login").val(),email:$("#forgot-email").val()},function(data){
+					console.log(data);
+					if (data == "true"){
+						$("#forgot-success").show();
+					}else{
+						$("#forgot-error").show();
+					}
+				});
+			});
+		}
+		
+	
+	}
+	forgot.trigger("#forgot-trigger");
 })();

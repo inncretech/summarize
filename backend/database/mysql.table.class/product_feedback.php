@@ -65,6 +65,16 @@ class product_feedback
 		
 	}
 	
+	function getTopReviewers($limit){
+		
+		$member_id = Array();
+		$data = mysql_query("SELECT COUNT(created_by),created_by FROM ".($this->table)." WHERE created_by IN (SELECT member_id FROM member) GROUP BY created_by ORDER BY COUNT(created_by) DESC LIMIT 0,".$limit,$this->connection);
+		While ($info = mysql_fetch_array($data)){
+			array_push($member_id,$info["created_by"]);
+		}
+		return $member_id;
+	}
+	
 	function getByProduct($product_id)
 	{
 		$data = Array();

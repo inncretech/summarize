@@ -20,6 +20,30 @@ class member
 		return (mysql_num_rows($data)>0);
 	}
 	
+	function getMultiple($member_id_array)
+	{
+		$tag_name = Array();
+		foreach ($member_id_array as $id){
+			$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `member_id` = $id",$this->connection);
+			$info = mysql_fetch_array($data);
+			array_push($tag_name,$info);
+		}
+		
+		return $tag_name;
+	}
+	
+	function checkEmail($email)
+	{	
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `email`='$email'",$this->connection);
+		return (mysql_num_rows($data)>0);
+	}
+	
+	function checkLogin($login)
+	{	
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `login`='$login'",$this->connection);
+		return (mysql_num_rows($data)>0);
+	}
+	
 	function getSeoTitle($member_id)
 	{
 		$data = mysql_query("SELECT `seo_title` FROM ".($this->table)." WHERE `member_id` = '$member_id'",$this->connection);
@@ -41,9 +65,7 @@ class member
 		$password 			= md5($post["crypted_password"]);
 		
 		$data = mysql_query("UPDATE ".($this->table)." SET `crypted_password` = '$password'  WHERE `member_id`='$member_id'",$this->connection);
-		
-		
-		
+				
 	}
 	
 	function countSocialNetwork()
@@ -84,6 +106,15 @@ AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY",$this->connect
 
 		return mysql_fetch_array($data);
 	}
+	
+	function getByEmail($email)
+	{	
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `email`='$email'",$this->connection);
+
+		return mysql_fetch_array($data);
+	}
+	
+
 	
 	function getAll()
 	{	

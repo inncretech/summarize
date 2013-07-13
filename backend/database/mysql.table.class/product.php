@@ -77,7 +77,17 @@ AND created_at < curdate() - INTERVAL DAYOFWEEK(curdate())-1 DAY AND `applicatio
 		return $value;
 	}
 	
-
+	
+	function getCreatedBy($created_by,$limit)
+	{	
+		$value = Array();
+	
+		$data = mysql_query("SELECT * FROM ".($this->table)." WHERE `created_by`='$created_by' AND `application`=0 ORDER BY created_at DESC LIMIT ".$limit,$this->connection);
+		while($info=mysql_fetch_array($data)){
+			array_push($value,$info);
+		}
+		return $value;
+	}
 	
 	function getRandomCreated($created_by,$limit)
 	{	

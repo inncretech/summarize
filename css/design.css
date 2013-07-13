@@ -523,7 +523,24 @@ top: 72px;
 left: 55px;
 z-index: 0;
 }
-
+#custom-tag-green{
+	padding: 3px 5px;
+	border-radius: 3px;
+	border: 1px solid #EEE;
+	background-color:#468847;
+	color: white;
+	font-size: 13px;
+	margin: 3px 3px 3px 0;
+	display: inline-block;
+	padding-bottom: 3px;
+	
+}
+#custom-tag-green:hover{
+	background-color: #ff7518;
+}
+#custom-tag:hover{
+	background-color: #ff7518;
+}
 .ui-menu .ui-menu-item a {
     color: #444;
     border: none;
@@ -546,5 +563,5 @@ z-index: 0;
 }
 
 #main{
-min-height:540px;
+min-height:640px;
 }

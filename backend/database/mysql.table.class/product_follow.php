@@ -15,6 +15,17 @@ class product_follow
 		return ((mysql_num_rows($data))>0);
 	}
 	
+	function getProducts($member_id)
+	{
+		$value = Array();
+		$data 	= mysql_query("SELECT * FROM ".($this->table)." WHERE `member_id` = '$member_id' ",$this->connection);
+		while ($info = mysql_fetch_array($data)){
+			array_push($value,$info);
+		}
+	
+		return $value;
+	}
+	
 	
 	function getFollowers($product_id)
 	{

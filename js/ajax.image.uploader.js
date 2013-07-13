@@ -5,7 +5,7 @@
 			$(trigger).change(function(){ 
 			$(alert).text('');
 			$(alert).text('Please wait...');
-			$(form).ajaxForm({target: target,success: function(data){$(alert).text('Upload Image');}}).submit();
+			$(form).ajaxForm({target: target,success: function(data){console.log(data);$(alert).text('Upload Image');}}).submit();
 			});
 		}
 		

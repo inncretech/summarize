@@ -213,23 +213,11 @@ var render = new function() {
 	this.advancedSearchItems = function () {
 		
 		$.post(site_root+"/backend/ajax.get/advanced_search.php?categories=true",{query:$('#advanced-search').val(),'categories[]':categoryList},function(data){
-			
+			$("#main").css("width","940px");
 			$("#main").html("");
 			
 			var code = "<div class='row'><div class='span12'>";
-				code += "<ul class='breadcrumb'>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.HighestRated();'>Highest Rated</a>";
-				code += "<span class='divider'>|</span>";
-				code += "</li>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.MostViewed();'>Most Viewed</a>";
-				code += "<span class='divider'>|</span>";
-				code += "</li>";
-				code += "<li>";
-				code += "<a href='#' onclick='render.RecentlyAdded();'>Recently Added</a>";
-				code += "</li>";
-				code += "</ul>";
+
 				code += "<h2>Searched items</h2><hr  style='margin-top: -5px'><ul class='thumbnails'>";
 			 obj = JSON.parse(data);
 			 
@@ -530,13 +518,14 @@ var render = new function() {
 		$.post(site_root+"/backend/ajax.get/products_added.php",{member_id:member_id,limit:limit}, function(data) {
 		
 		obj = JSON.parse(data);
-			if (obj.length==0){$("#products-added").append("<div class='alert alert-warning'>No products added at this time.</div>");}
+			if (obj.length==0){$("#products-added-info").append("<div class='alert alert-warning'>No products added at this time.</div>");}
 			else{
+			var code = "";
 			$.each(obj, function(key, val) {
 				if (val.dislikes==null) val.dislikes=0;
 				if (val.likes==null) val.likes=0;
 				//alert(val.image);
-				code = "<li class='span3'>";
+				code += "<li class='span3'>";
 				code += "<div class='thumbnail'  style='background-color:white;' onclick=\"window.location.href='"+site_root+"/product/"+val.seo_title+"'\" onmouseover='render.showDesc(this);' >";
 				code += "<a href='#' class='thumb'>";
                 code += "<div class='overlay' style='opacity: 0.9;height: 215px;width:220px;overflow: hidden;display:none;position: absolute;color: #555;background-color: white;'>"+val.description+"";
@@ -555,8 +544,11 @@ var render = new function() {
                 code += "</div>";
 				code += "</div>";
 				code += "</li>";
-				$("#products-added").append(code);
+				
+				
 			});
+				$("#products-added").html(code);
+				$("#products-added-info").html("<div class='alert alert-warning' onclick='morePa();' style='text-align:center;cursor:pointer;'><strong>Load More</strong></div>");
 			}
 		
 		});

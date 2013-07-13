@@ -23,6 +23,8 @@ class member_info
 		return $data;
 	}
 	
+	
+	
 	function update($post,$member_id)
 	{	
 
